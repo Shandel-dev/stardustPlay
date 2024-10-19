@@ -1,0 +1,18 @@
+:root{
+    --cor-primaria: #e5e1ee;
+    --cor-secundaria: #0e1428;
+    --cor-secundaria-hover: #152042;
+    --cor-terciaria: #c1292e;
+    --cor-quarta: #f1d302;
+    --cor-quinta: #d0d38f;
+    --fonte-principal: "Poppins", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    position: relative;
+    z-index: -2;
+}

@@ -1,0 +1,5 @@
+.rodape{
+    display: flex;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quinta);
+}

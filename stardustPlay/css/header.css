@@ -47,18 +47,33 @@ header{
     display: flex;
     position: absolute;
     z-index: 3;
-    top: 100%;
-    left: 0;
+    top: 0;
+    left: calc(0 - 1em);
     transform: translateX(-100%);
     width: 250px;
     height: 100vh;
-    background-color: var(--cor-quinta);
+    background-color: var(--cor-secundaria);
     transition: 0.5s;
+}
+.close{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    transition: 1s;
 }
 
 .container_menu_burguer_btn:checked ~.container_sidebar{
     transform: translateX(0);
     transition: 0.5s;
+}
+.container_menu_burguer_btn:checked ~.container_sidebar_close>.close{
+    background-color: rgba(0, 0, 0, 0.247);
+    display: block;
+    transition: 1s;
 }
 
 .linkHome{
@@ -77,14 +92,16 @@ header{
     all: unset;
     height: 2em;
     width: 25em;
-    background-color: var(--cor-primaria);
-    border: 2px solid var(--cor-terciaria);
-    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-quinta);
+    color: white;
     border-radius: 1em;
     padding-left: 1em;
 }
 .container_pesquisa::placeholder{
-    color: rgba(0, 0, 0, 0.70);
+    color: rgba(255, 255, 255, 0.76);
+}
+.container_pesquisa:focus{
+    border: 2px solid var(--cor-terciaria);
 }
 
 /*TERCEIRO CONTAINER*/

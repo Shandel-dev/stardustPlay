@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    height: 100vh;
+}
+.container_child{
+    width: 50%;
+    height: 100%;
+}
+
+.homeLink{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    padding: 0.3em;
+    border: 3px solid var(--cor-quinta);
+    border-radius: 4em;
+}
+.homeLink:hover{
+    filter: brightness(80%);
+    transition: 0.3s;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-quinta);
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/starwarsWallpaper.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor-primaria);
+}
+
+.banner_content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.banner_vantagens{
+    display: flex;
+    gap: 1em;
+}
+
+.banner_vantagens_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6em;
+    color: var(--cor-quinta);
+}
+.banner_vantagens_item img{
+    background-color: var(--cor-secundaria);
+    padding: 0.8em;
+    border: 2px solid var(--cor-quarta);
+    border-radius: 4em;
+}

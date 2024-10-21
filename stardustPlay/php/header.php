@@ -5,9 +5,11 @@
         <div class="container"> <!--primeiro container-->
             <input type="checkbox" class="container_menu_burguer_btn" id="sidebar">
             <label for="sidebar"><span class="container_menu_burguer"></span></label>
-            <div class="container_sidebar">
+            <div class="container_sidebar"></div>
+            <label for="sidebar" class="container_sidebar_close">
+                <div class="close"></div>
+            </label>
 
-            </div>
             <a href="pagInicial.php" class="linkHome">
                 <img src="../imgs/Stardust_logo_mini.png" alt="Logo" class="linkHome_logo">
                 <p>Stardust</p>
@@ -29,6 +31,6 @@
 
 <script>
     function linkLogin(){
-        window.location = "login.php";
+        window.location = "signIn.php";
     }
 </script>

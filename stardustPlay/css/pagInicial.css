@@ -35,9 +35,11 @@
     color: var(--cor-quarta);
     width: 10em;
     padding: 0.5em 0;
+    transition: 0.2s;
 }
 .banner_container_item:hover{
     background-color: var(--cor-secundaria-hover);
+    transition: 0.2s;
 }
 
 .banner_container_item p{

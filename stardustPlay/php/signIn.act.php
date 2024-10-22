@@ -1,0 +1,32 @@
+<?php
+@session_start();
+require('connect.php');
+
+
+$email_info = $_POST['email'];
+$senha_info = $_POST['senha'];
+
+$usuario = mysqli_query($conn, "SELECT * FROM `tbl_usuarios` where `email` = '$email_info'");
+
+//verifica se retorno exatamente 1 email
+if($usuario ->num_rows == 1){
+    $usuario = mysqli_fetch_assoc($usuario);
+    if(password_verify($senha_info, $usuario['senha'])){
+        $_SESSION['logado'] = true;
+        $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['foto'] = $usuario['foto'];
+        $_SESSION['welcome'] = "Olá, " . $usuario['nome'];
+        $irPara = "location: pagInicial.php";
+
+    } else{
+        $msg = "Usuário ou senha incorretos!";
+        $irPara = "location: signIn.php";
+    }
+} else{
+    $msg = "Usuário ou senha incorretos!";
+    $irPara = "location: signIn.php";
+}
+
+$_SESSION['msg'] = $msg;
+header($irPara);
+exit();

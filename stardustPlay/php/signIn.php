@@ -14,13 +14,6 @@
                 <input type="password" name="senha" placeholder="Digite sua senha" required>
                 <input type="submit" value="LOGIN">
             </form>
-            <?php
-            
-            if(isset($_SESSION['msg'])){
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-            }
-            ?>
         </main>
         <aside class="container_child banner">
             <div class="banner_content">

@@ -27,10 +27,10 @@
                     <input type="password" name="senha" placeholder="Crie uma senha forte" required>
                     <p>Você é:</p>
                     <label for="user">
-                        <input type="radio" name="ocupacao" value="usuario" id="user" checked>Usuário
+                        <input type="radio" name="ocupacao" value="Usuario" id="user" required>Usuário
                     </label>
                     <label for="dev">
-                        <input type="radio" name="ocupacao" value="desenvolvedor" id="dev">Desenvolvedor
+                        <input type="radio" name="ocupacao" value="Desenvolvedor" id="dev">Desenvolvedor
                     </label>
                     <input type="submit" value="Criar conta">
                 </form>

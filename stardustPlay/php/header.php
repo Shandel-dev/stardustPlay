@@ -16,32 +16,34 @@
             </a>
 
         </div>
-        <div class="container"> <!--segundo container-->
-            <input type="search" name="pesquisar" placeholder="Pesquisar" class="container_pesquisa">
-        </div>
-        <div class="container"> <!--terceiro container-->
-            
-            <?php
-            @session_start();
-            if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
-                echo "<p>" . $_SESSION['welcome'] . "</p>";
-                echo "<img src=$_SESSION[foto]>";
-                echo "<a href=logout.php>Sair da conta</a>";
-                //echo "</a>";
-            } else{
-                echo "<div class=container_login onclick='javascript:linkLogin()'>";
-                echo "<img src=../imgs/perfil_icon.svg alt=Login class=container_login_img>";
-                echo "<p class=container_login_txt>Fazer login</p>";
-                echo "</div>";
-            }           
-            ?>
 
+        <!--segundo container-->
+        <input type="search" name="pesquisar" placeholder="Pesquisar" class="container_pesquisa">
+
+
+        <div class="container"> <!--terceiro container-->
+
+        <?php
+        @session_start();
+        if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
+            echo "<div class=container_logado>";
+            echo "<p>" . $_SESSION['welcome'] . "</p>";
+            echo "<img src=$_SESSION[foto] class=logado_foto>";
+            echo "<a href=logout.php><img src=../imgs/icon_logout.svg class=logado_logout></a>";
+            echo "</div>";
+        } else {
+            echo "<div class=container_login onclick='javascript:linkLogin()'>";
+            echo "<img src=../imgs/perfil_icon.svg alt=Login class=container_login_img>";
+            echo "<p class=container_login_txt>Fazer login</p>";
+            echo "</div>";
+        }
+        ?>
         </div>
     </nav>
 </header>
 
 <script>
-    function linkLogin(){
+    function linkLogin() {
         window.location = "signIn.php";
     }
 </script>

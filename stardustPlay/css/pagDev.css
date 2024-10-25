@@ -2,7 +2,22 @@
     text-align: center;
 }
 
-.container_opcoes{
+.container_main{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+}
+
+.opcoes_item{
+    display: flex;
+    align-items: center;
+    padding: 1em 0.5em;
+    flex-grow: 1;
+    flex-basis: 28em;
+    gap: 1em;
+    border: 2px solid black;
 }
 

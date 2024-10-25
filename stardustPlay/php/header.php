@@ -11,7 +11,7 @@
             </label>
 
             <a href="pagInicial.php" class="linkHome">
-                <img src="../imgs/Stardust_logo_mini.png" alt="Logo" class="linkHome_logo">
+                <img src="../imgs/Stardust_logo_mini.png" alt="Logo" class="linkHome_logo container_imgs">
                 <p>Stardust</p>
             </a>
 
@@ -26,11 +26,11 @@
         <?php
         @session_start();
         if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
-            echo "<div class=container_logado>";
+            //echo "<div class=container_logado>";
             echo "<p>" . $_SESSION['welcome'] . "</p>";
-            echo "<img src=$_SESSION[foto] class=logado_foto>";
-            echo "<a href=logout.php><img src=../imgs/icon_logout.svg class=logado_logout></a>";
-            echo "</div>";
+            echo "<img src=$_SESSION[foto] class='logado_foto container_imgs'>";
+            echo "<a href=logout.php><img src=../imgs/icon_logout.svg class='container_imgs'></a>";
+            //echo "</div>";
         } else {
             echo "<div class=container_login onclick='javascript:linkLogin()'>";
             echo "<img src=../imgs/perfil_icon.svg alt=Login class=container_login_img>";

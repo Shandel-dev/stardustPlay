@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 25/10/2024 às 12:35
+-- Tempo de geração: 24/10/2024 às 23:12
 -- Versão do servidor: 8.3.0
 -- Versão do PHP: 8.0.30
 
@@ -135,14 +135,7 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
   `senha` varchar(150) NOT NULL,
   `ocupacao` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
-
---
--- Despejando dados para a tabela `tbl_usuarios`
---
-
-INSERT INTO `tbl_usuarios` (`id_user`, `nome`, `email`, `telefone`, `foto`, `senha`, `ocupacao`) VALUES
-(19, 'Shandel', 'shandelvm16@gmail.com', '(11)91034-6024', '../profilePhotos/91793c4bc723216c06a573ff8578fa4a.jpg', '$2y$10$KTTzNo76PabmSGpanGcbaO2VHAFYlanj5mUBluo2cozV8eqrvypvW', 'Desenvolvedor');
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Restrições para tabelas despejadas

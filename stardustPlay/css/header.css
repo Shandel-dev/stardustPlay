@@ -9,7 +9,6 @@ header{
     align-items: center;
     position: relative;
     top: 0;
-    padding: 0.3em 1em;
     background-color: var(--cor-secundaria);
     color: var(--cor-quinta);
     border-bottom: 5px solid var(--cor-terciaria);
@@ -18,7 +17,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    row-gap: 2em;
+    gap: 1em;
+}
+.container_imgs{
+    height: 3em;
+    margin: 0.5em 0;
 }
 
 /*PRIMEIRO CONTAINER*/
@@ -31,7 +34,6 @@ header{
     background-position: center;
     display: inline-block;
     background-size: cover;
-    margin-right: 3em;
     transition: 0.2s;
 }
 
@@ -83,10 +85,6 @@ header{
     color: var(--cor-quinta);
 }
 
-.linkHome_logo{
-    height: 50px;
-}
-
 /*SEGUNDO CONTAINER*/
 
 .container_pesquisa{
@@ -114,19 +112,27 @@ header{
     gap: 1em;
 }       /*foto de perfil*/
 .logado_foto{
-    height: 3em;
     width: 3em;
     border-radius: 10em;
     object-fit: cover;
     border: 2px solid var(--cor-quinta);
 }
 
+.container>a{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*caso não esteja logado*/
 .container_login{
     display: flex;
     align-items: center;
     border: 1px solid var(--cor-quarta);
     padding: 0.5em 0.5em;
     border-radius: 2em;
+    margin-right: 1em;
     cursor: pointer;
 }
 

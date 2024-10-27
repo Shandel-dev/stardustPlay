@@ -1,0 +1,61 @@
+input[type='radio'] {
+    display: none; /* Oculta os inputs de rádio */
+}
+
+.option_plataform {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.option_plataform label {
+    padding: 0.5em 1em;
+    border: 2px solid;
+    border-radius: 1em;
+    transition: 0.5s;
+}
+
+.option_plataform label:hover {
+    color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+/* Muda a cor da label correspondente ao rádio selecionado */
+#cat1:checked ~ .option_plataform label:nth-child(1),
+#cat2:checked ~ .option_plataform label:nth-child(2),
+#cat3:checked ~ .option_plataform label:nth-child(3),
+#cat4:checked ~ .option_plataform label:nth-child(4),
+#cat5:checked ~ .option_plataform label:nth-child(5){
+    color: var(--cor-secundaria);
+}
+
+.container_slides {
+    display: flex;
+}
+
+/* Esconde todas as plataformas por padrão */
+.plataforma {
+    display: none;
+    width: 100%;
+    padding: 2em;
+    border: 2px solid var(--cor-secundaria);
+}
+
+/* Mostra a plataforma correspondente ao rádio selecionado */
+#cat1:checked ~ .container_slides #playstation,
+#cat2:checked ~ .container_slides #xbox,
+#cat3:checked ~ .container_slides #nintendo,
+#cat4:checked ~ .container_slides #computer,
+#cat5:checked ~ .container_slides #mobile {
+    display: flex; /* Exibe a div correspondente */
+    flex-direction: column;
+}
+
+.plataforma_banner{
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2em;
+    aspect-ratio: 16/4;
+}

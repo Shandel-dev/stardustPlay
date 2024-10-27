@@ -7,7 +7,7 @@
 
     <section class="banner">
         <div class="banner_container">
-            <a href="">     <!--jogos-->
+            <a href="pagJogos.php">     <!--jogos-->
                 <div class="banner_container_item"> 
                     <img src="../imgs/controle_icon.svg" alt="">
                     <p>JOGOS</p>

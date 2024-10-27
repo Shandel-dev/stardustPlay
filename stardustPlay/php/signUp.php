@@ -23,7 +23,8 @@
                     <input type="text" name="nome" placeholder="Crie um nome de usuário" required>
                     <input type="text" name="email" placeholder="Informe seu email (@gmail.com)" required>
                     <input type="text" name="telefone" placeholder="Informe seu telefone" required>
-                    <input type="file" name="foto">
+                    <label for="foto">Envie uma foto de perfil(Opcional)</label>
+                    <input type="file" name="foto" id="foto">
                     <input type="password" name="senha" placeholder="Crie uma senha forte" required>
                     <p>Você é:</p>
                     <label for="user">

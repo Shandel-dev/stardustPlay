@@ -1,11 +1,13 @@
 
 :root{
-    --cor-primaria: #e5e1ee;
-    --cor-secundaria: #0e1428;
-    --cor-secundaria-hover: #152042;
-    --cor-terciaria: #c1292e;
-    --cor-quarta: #f1d302;
-    --cor-quinta: #d0d38f;
+    --cor-primaria: #000e18;    /*cor de fundo*/
+    --cor-primaria-hover: #011a2c;
+    --cor-primaria-glass: #01213a77;
+    --cor-secundaria: #d3e538;
+    --cor-secundaria-hover: #c8d836;
+    --cor-terciaria: #f8ffe9;   /*cor da fonte*/
+    --cor-quarta: #c1292e;
+    --cor-quinta: #f1d302;
     --fonte-principal: "Poppins", sans-serif;
 }
 
@@ -13,8 +15,13 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
     font-family: var(--fonte-principal);
     position: relative;
     z-index: -2;
     overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-quinta);
 }

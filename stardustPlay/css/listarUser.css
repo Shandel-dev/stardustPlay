@@ -1,0 +1,18 @@
+.container_profiles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.card_profile{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1em;
+    align-items: center;
+    border: 2px solid var(--cor-secundaria);
+}
+.card_profile img{
+    height: 5em;
+    width: 5em;
+    object-fit: cover;
+}

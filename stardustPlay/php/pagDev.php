@@ -6,7 +6,7 @@
     <?php include('header.php'); ?>
     <h1 class="dev_titulo">O que gostaria de fazer <?php echo $_SESSION['nome']; ?>?</h1>
     <main class="container_main">
-        <div class="opcoes_item"> <!--primeiro item-->
+        <div class="opcoes_item" onclick="linkListarUsers()"> <!--primeiro item-->
             <div class="item_icons">
                 <img src="../imgs/icon_lista.svg" alt="Listar usuários cadastrados">
             </div>
@@ -16,7 +16,7 @@
                 <p class="description_text">Liste e gerencie todos os usuários cadastrados na <strong>StarDust</strong></p>
             </div>
         </div>
-        <div class="opcoes_item"> <!--segundo item-->
+        <div class="opcoes_item" onclick="linkFormGame()"> <!--segundo item-->
             <div class="item_icons">
                 <img src="../imgs/icon_controle.svg" alt="Cadastrar jogo">
             </div>
@@ -47,6 +47,15 @@
             </div>
         </div>
     </main>
+
+    <script>
+        function linkListarUsers(){
+            window.location = "listarUsers.php";
+        }
+        function linkFormGame(){
+            window.location = "formGame.php";
+        }
+    </script>
 
 </body>
 

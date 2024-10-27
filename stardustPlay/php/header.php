@@ -11,7 +11,7 @@
             </label>
 
             <a href="pagInicial.php" class="linkHome">
-                <img src="../imgs/Stardust_logo_mini.png" alt="Logo" class="linkHome_logo container_imgs">
+                <img src="../imgs/logo_light_stardust.png" alt="Logo" class="linkHome_logo container_imgs">
                 <p>Stardust</p>
             </a>
 
@@ -33,7 +33,7 @@
             //echo "</div>";
         } else {
             echo "<div class=container_login onclick='javascript:linkLogin()'>";
-            echo "<img src=../imgs/perfil_icon.svg alt=Login class=container_login_img>";
+            echo "<img src=../imgs/perfil_icon_dark.svg alt=Login class=container_login_img>";
             echo "<p class=container_login_txt>Fazer login</p>";
             echo "</div>";
         }

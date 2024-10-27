@@ -1,7 +1,7 @@
 .container{
     display: flex;
     height: 100vh;
-    color: var(--cor-quinta);
+    color: var(--cor-terciaria);
 }
 
 .homeLink{
@@ -9,7 +9,7 @@
     top: 1em;
     left: 1em;
     padding: 0.3em;
-    border: 3px solid var(--cor-quinta);
+    border: 3px solid var(--cor-terciaria);
     border-radius: 4em;
     transition: 0.3s;
 }
@@ -28,7 +28,6 @@
     background-image: url(../imgs/wallpaperSunset.png);
     background-position: center;
     background-size: cover;
-    color: var(--cor-primaria);
 }
 .banner_content{
     display: flex;
@@ -47,13 +46,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
     width: 50%;
 }
 .formulario_content{
     display: flex;
     flex-direction: column;
-    background-color: var(--cor-secundaria-hover);
+    background-color: var(--cor-primaria-hover);
 }
 .formulario_content form{
     display: flex;

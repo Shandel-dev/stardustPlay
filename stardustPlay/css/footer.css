@@ -1,5 +1,8 @@
 .rodape{
     display: flex;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-quinta);
+    background-color: var(--cor-primaria-glass);
+    backdrop-filter: blur(30px);
+    box-shadow: 30px 0 0 var(--cor-primaria);
+    border-top: 2px solid var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }

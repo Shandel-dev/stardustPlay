@@ -1,7 +1,6 @@
-
 :root{
-    --cor-primaria: #000e18;    /*cor de fundo*/
-    --cor-primaria-hover: #011a2c;
+    --cor-primaria: #00090f;    /*cor de fundo*/
+    --cor-primaria-hover: #011d31;
     --cor-primaria-glass: #01213a77;
     --cor-secundaria: #d3e538;
     --cor-secundaria-hover: #c8d836;
@@ -11,9 +10,13 @@
     --fonte-principal: "Poppins", sans-serif;
 }
 
-body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     font-family: var(--fonte-principal);
@@ -23,5 +26,5 @@ body{
 }
 a{
     text-decoration: none;
-    color: var(--cor-quinta);
+    color: var(--cor-terciaria);
 }

@@ -3,23 +3,29 @@
 <header>
     <nav class="cabecalho">
         <div class="container"> <!--primeiro container-->
-            <input type="checkbox" class="container_menu_burguer_btn" id="sidebar">
-            <label for="sidebar"><span class="container_menu_burguer"></span></label>
-            <div class="container_sidebar"></div>
-            <label for="sidebar" class="container_sidebar_close">
-                <div class="close"></div>
-            </label>
-
             <a href="pagInicial.php" class="linkHome">
                 <img src="../imgs/logo_light_stardust.png" alt="Logo" class="linkHome_logo container_imgs">
-                <p>Stardust</p>
             </a>
-
+            <a href="pagJogos.php">
+                <p>JOGOS</p>
+            </a>
+            <a href="pagCate.php">
+                <p>CATEGORIAS</p>
+            </a>
+            <?php
+                if (isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor") {
+                    echo "<a href=pagDev.php>";
+                    echo "Dev<i class='fa-solid fa-code'></i>";
+                    echo "</a>";
+                }
+            ?>
         </div>
 
         <!--segundo container-->
-        <input type="search" name="pesquisar" placeholder="Pesquisar" class="container_pesquisa">
-
+        <div class="content_pesquisa">
+            <input type="search" id="pesquisar" name="pesquisar" placeholder="Pesquisar" class="container_pesquisa">
+            <img src="../imgs/icon_lupa.svg" alt="pesquisar" onclick="javascript:pesquisar()">
+        </div>
 
         <div class="container"> <!--terceiro container-->
 
@@ -45,5 +51,15 @@
 <script>
     function linkLogin() {
         window.location = "signIn.php";
+    }
+    function pesquisar(){
+        let texto = document.querySelector('#pesquisar').value;
+        if(texto != ""){
+            //window.location = "pesquisar.act.php?texto="+texto;
+            window.location = "pagListar?texto=" + encodeURIComponent(texto);
+        } else{
+            console.log("nada escrito");
+        }
+        
     }
 </script>

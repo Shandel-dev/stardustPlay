@@ -43,7 +43,6 @@
                         <option value="Sobrevivência">Sobrevivência</option>
                         <option value="RPG">RPG (Role-Playing Game)</option>
                         <option value="Simulação">Simulação</option>
-                        <option value="Estratégia">Estratégia</option>
                         <option value="Esportes/Corrida">Esportes/Corrida</option>
                         <option value="Terror/Horror">Terror/Horror</option>
                     </select>

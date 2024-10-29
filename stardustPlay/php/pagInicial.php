@@ -13,7 +13,7 @@
                     <p>JOGOS</p>
                 </div>
             </a>
-            <a href="">     <!--categorias-->
+            <a href="pagCate.php">     <!--categorias-->
                 <div class="banner_container_item"> 
                     <img src="../imgs/categoria_icon.svg" alt="">
                     <p>CATEGORIAS</p>

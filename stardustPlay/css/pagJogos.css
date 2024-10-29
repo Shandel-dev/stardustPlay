@@ -38,7 +38,6 @@ input[type='radio'] {
     display: none;
     width: 100%;
     padding: 2em;
-    border: 2px solid var(--cor-secundaria);
 }
 
 /* Mostra a plataforma correspondente ao rádio selecionado */
@@ -57,5 +56,38 @@ input[type='radio'] {
     background-size: cover;
     background-position: center;
     border-radius: 2em;
-    aspect-ratio: 16/4;
+    aspect-ratio: 16/4.5;
+}
+.plataforma_titulo{
+    text-align: center;
+}
+
+.plataform_container_cate{
+    margin-top: 2em;
+}
+
+.swiper{
+    aspect-ratio: 16/4.5;
+}
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_jogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--cor-secundaria-hover);
+    padding: 0.5em;
+    border-radius: 1em;
+}
+.card_jogo img{
+    border-radius: 1em;
+    border: 1px solid var(--cor-terciaria);
+    width: 100%;
+    aspect-ratio: 16/9;
 }

@@ -8,41 +8,66 @@
 
     $jogos = mysqli_query(
         $conn,
-        "SELECT j.categoria, j.nome, j.preco, i.poster\n"
+        "SELECT j.id_jogo, j.categoria, j.nome, j.preco, i.poster\n"
 
             . "FROM tbl_jogos as j\n"
 
             . "JOIN tbl_images as i\n"
 
-            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%'\n"
+            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%' OR j.categoria='$texto'\n"
 
             . "ORDER BY j.nome;"
     );
     ?>
 
     <div class="container_resul">
-        <p>
+        <h3>
             <?php
             echo $jogos->num_rows . " resultado(s) para " . $texto;
             ?>
-        </p>
+        </h3>
     </div>
 
     <div class="content_cards">
         <?php
         while ($jogo = mysqli_fetch_assoc($jogos)) {
-            echo "<div class= card_jogo>";
+            $preco_sup = str_replace(".", "<sup> ", $jogo['preco']);
 
-            echo "<img src=$jogo[poster]>";
-            echo "<p class=jogo_cate>#" . $jogo['categoria'] . "</p>";
+            echo "<div class= card_jogo onclick=javascript:pagCompra($jogo[id_jogo])>";
+
+            echo "<img src=$jogo[poster] class=jogo_poster>";
+
+            echo "<div class=container_cate_plata>";
+                echo "<p class=jogo_cate><sup>#" . $jogo['categoria'] . "</sup></p>";
+                echo "<div class=container_plataformas>";
+                
+                    $plataformas = mysqli_query($conn, "SELECT p.logo
+                    FROM `tbl_jogos` as j
+                    JOIN `tbl_jogo_plataforma` as jp
+                    ON j.id_jogo = jp.id_jogo
+                    JOIN `tbl_plataforma` as p
+                    ON p.id_plataforma = jp.id_plataforma
+                    WHERE j.id_jogo = '$jogo[id_jogo]';");
+
+                    while($plataforma = mysqli_fetch_assoc($plataformas)){
+                        echo "<img src=" . $plataforma['logo'] . ">";
+                    }
+
+                echo "</div>";
+            echo "</div>";
+
             echo "<h3 class=jogo_nome>" . $jogo['nome'] . "</h3>";
-            echo "<p class=jogo_preco>R$ " . $jogo['preco'] . "</p>";
+            echo "<h4 class=jogo_preco>R$ " . $preco_sup . "</sup></h4>";
 
             echo "</div>";
         }
         ?>
     </div>
-
+    <script>
+        function pagCompra(idJogo){
+            window.location = "comprarJogo.php?id=" + idJogo;
+        }
+    </script>
 </body>
 
 </html>

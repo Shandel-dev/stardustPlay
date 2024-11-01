@@ -1,14 +1,13 @@
 header{
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     top: 0;
+    z-index: 3;
 }
-
 .cabecalho{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: 0;
     background-color: var(--cor-primaria-glass);
     backdrop-filter: blur(30px);
     box-shadow: 0px 0px 40px var(--cor-primaria-hover);
@@ -26,11 +25,59 @@ header{
     margin: 0.5em 0;
 }
 
+.txt_cate{
+    position: relative;
+}
+
+.categoria_container{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+}
+
 /*PRIMEIRO CONTAINER*/
 .linkHome{
     display: flex;
     text-decoration: none;
     color: var(--cor-terciaria);
+}
+.opcoes{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+.opcoes li{
+    cursor: pointer;
+}
+
+#categoria{
+    display: none;
+}
+
+.lista_menu{
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    width: auto;
+    list-style: none;
+    box-shadow: 0px 0px 20px var(--cor-primaria-hover);
+}
+
+.opcoes_btn:checked ~ .lista_menu{
+    display: block;
+}
+.lista_menu_item{
+    background-color: var(--cor-primaria-glass);
+    backdrop-filter: blur(30px);
+}
+.lista_menu_link{
+    padding: 0.5em;
+    display: flex;
+}
+.lista_menu_item:hover{
+    background-color: rgba(126, 122, 122, 0.61);
 }
 
 /*SEGUNDO CONTAINER*/

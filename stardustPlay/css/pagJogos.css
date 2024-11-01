@@ -6,6 +6,8 @@ input[type='radio'] {
     display: flex;
     justify-content: space-around;
     padding: 1em;
+    padding-top: 5em;
+
 }
 
 .option_plataform label {
@@ -66,28 +68,60 @@ input[type='radio'] {
     margin-top: 2em;
 }
 
-.swiper{
-    aspect-ratio: 16/4.5;
-}
 .swiper-slide{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.swiper-button-prev,
+.swiper-button-next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-terciaria);
+    font-size: 2.5em;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    content: "";
+}
+.swiper-button-next:active,
+.swiper-button-prev:active{
+    color: var(--cor-primaria);
+}
+
 .card_jogo{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: linear-gradient(0deg, rgb(16, 20, 22) 0%, rgb(46, 50, 59) 50%);
     height: 100%;
     width: 100%;
-    border: 1px solid var(--cor-secundaria-hover);
     padding: 0.5em;
     border-radius: 1em;
 }
 .card_jogo img{
     border-radius: 1em;
-    border: 1px solid var(--cor-terciaria);
+    margin-bottom: 0.2em;
     width: 100%;
     aspect-ratio: 16/9;
+}
+
+.card_categoria{
+    color: var(--cor-secundaria);
+    font-weight: 300;
+}
+
+.card_preco{
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: var(--cor-secundaria);
+}
+
+.card_link{
+    text-align: center;
+    background-color: greenyellow;
+    color: var(--cor-primaria);
+    border-radius: 0.5em;
 }

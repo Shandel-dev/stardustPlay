@@ -4,7 +4,7 @@
 <body>
     <?php include('header.php'); ?>
     <?php require('connect.php');
-    function gerarConsulta($id_plataforma, $categorias) //função que gera uma consulta baseada na plataforma e categorias
+    function gerarConsulta($id_plataforma, $categorias, $ordem) //função que gera uma consulta baseada na plataforma e categorias
     {
         $consulta = "SELECT j.id_jogo, j.nome, j.empresa, j.categoria, j.preco, i.banner, p.id_plataforma\n"
             . "FROM tbl_jogos as j\n"
@@ -19,11 +19,29 @@
 
             . "WHERE p.id_plataforma = '$id_plataforma' and j.categoria IN('$categorias')\n"
 
-            . "ORDER by j.nome\n"
+            . "ORDER by $ordem\n"
 
             . "LIMIT 8;";
         return $consulta;
     }
+
+    function whileSwiper($jogos)
+    {
+        while ($jogo = mysqli_fetch_assoc($jogos)) {
+            echo "<div class=swiper-slide>";
+            echo "<div class=card_jogo>";
+            echo "<img src=" . $jogo['banner'] . " loading='lazy'>";
+            echo "<p class=card_categoria><sup>#" . $jogo['categoria'] . "</sup></p>";
+            echo "<h3>" . $jogo['nome'] . "</h3>";
+            echo "<p><sup>" . $jogo['empresa'] . "</sup></p>";
+            $preco_str = str_replace(".", ",", $jogo['preco']);
+            echo "<p class=card_preco>R$ " . $preco_str . "</p>";
+            echo "<a href=comprarJogo.php?id=" . $jogo['id_jogo'] . " class=card_link><b>Mais info.</b></a>";
+            echo "</div>";
+            echo "</div>";
+        }
+    }
+
     ?>
 
     <div>
@@ -41,14 +59,13 @@
             <label for="cat4">Computador</label>
             <label for="cat5">Mobile</label>
         </section>
-        <div class="container_slides">
-            <div class="plataforma" id="playstation">
+        <section class="container_slides">
+            <article class="plataforma" id="playstation">
                 <span class="plataforma_banner" style="background-image: url(../imgs/PlayStationBanner.jpg);"></span>
                 <h1 class="plataforma_titulo">Play Has Not Limits</h1>
 
-                <div class="plataform_container_cate"> <!--para ação e sobrevivencia-->
+                <div class="plataform_container_cate"> <!--para ação e RPG-->
                     <?php
-                    $jogos = mysqli_query($conn, gerarConsulta(1, "Ação/Aventura', 'RPG"));
                     ?>
                     <h3>Explore, lute e evolua!</h3>
                     <!-- Slider main container -->
@@ -57,80 +74,585 @@
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <?php
-                            while ($jogo = mysqli_fetch_assoc($jogos)) {
-                                echo "<div class=swiper-slide>";
-                                    echo "<div class=card_jogo>";
-                                        echo "<img src=" . $jogo['banner'] . ">";
-                                        echo "<p>#" . $jogo['categoria'] . "</p>";
-                                        echo "<h3>" . $jogo['nome'] . "</h3>";
-                                        echo "<p>" . $jogo['empresa'] . "</p>";
-                                        echo "<h2>R$ " . $jogo['preco'] . "</h2>";
-                                        echo "<a href=#>Ver mais</a>";
-                                    echo "</div>";
-                                echo "</div>";
-                            }
+                            $jogos = mysqli_query($conn, gerarConsulta(1, "Ação/Aventura', 'RPG", "j.nome"));
+                            whileSwiper($jogos);
                             ?>
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
 
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
 
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
                         <!-- If we need scrollbar -->
                         <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
-                <div class="plataform_container_cate">
-                    <?php
-                    $jogos = mysqli_query($conn, gerarConsulta(1, "Sobrevivência', 'Simulação"));
-                    ?>
+                <div class="plataform_container_cate"> <!--SOBREVIVENCIA E SIMULAÇÃO-->
                     <h3>Testes extremos de sobrevivência e simulação!</h3>
                     <div class="swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <?php
-                            while ($jogo = mysqli_fetch_assoc($jogos)) {
-                                echo "<div class=swiper-slide>";
-                                    echo "<div class=card_jogo>";
-                                        echo "<img src=" . $jogo['banner'] . ">";
-                                        echo "<p>#" . $jogo['categoria'] . "</p>";
-                                        echo "<h3>" . $jogo['nome'] . "</h3>";
-                                        echo "<p>" . $jogo['empresa'] . "</p>";
-                                        echo "<h2>R$ " . $jogo['preco'] . "</h2>";
-                                        echo "<a href=#>Ver mais</a>";
-                                    echo "</div>";
-                                echo "</div>";
-                            }
+                            $jogos = mysqli_query($conn, gerarConsulta(1, "Sobrevivência', 'Simulação", "j.nome"));
+                            whileSwiper($jogos);
                             ?>
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
 
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
 
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
                         <!-- If we need scrollbar -->
                         <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
-            </div>
-            <div class="plataforma" id="xbox">
+                <div class="plataform_container_cate"> <!--ESPORTES/CORRIDA-->
+                    <h3>Jogue, corra, conquiste: o esporte é sua paixão!</h3>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(1, "Esportes/Corrida", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate"> <!--TERROR/HORROR-->
+                    <h3>Sussurros na penumbra, sustos a cada esquina!</h3>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(1, "Terror/Horror", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="plataforma" id="xbox">
                 <span class="plataforma_banner" style="background-image: url(../imgs/xboxBanner.png);"></span>
-            </div>
-            <div class="plataforma" id="nintendo">
+                <h1 class="plataforma_titulo">Its Good to Play Together</h1>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Descubra, batalhe e desenvolva suas habilidades!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(2, "Ação/Aventura', 'RPG", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Desafie-se a viver, simular e prosperar!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(2, "Sobrevivência', 'Simulação", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Experimente a emoção do esporte e supere todos os desafios!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(2, "Esportes/Corrida", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Descubra o desconhecido e sobreviva ao horror!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(2, "Terror/Horror", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="plataforma" id="nintendo">
                 <span class="plataforma_banner" style="background-image: url(https://preview.redd.it/nintendo-banner-for-opera-gx-v0-sghgnidyb22d1.png?width=1920&format=png&auto=webp&s=715f7dd172bb9a5df79759dafd5151ebea6d6f28);"></span>
-            </div>
-            <div class="plataforma" id="computer">
-                <span class="plataforma_banner" style="background-image: url(https://www.udacity.com/_next/image?url=https%3A%2F%2Fvideo.udacity-data.com%2Ftopher%2F2024%2FOctober%2F670986e9_cs212%2Fcs212.jpg&w=3840&q=75);"></span>
-            </div>
-            <div class="plataforma" id="mobile">
-                <span class="plataforma_banner" style="background-image: url(https://static.www.tencent.com/uploads/2020/12/28/8b27503d629ab0253bc5673a2546ff95.png);"></span>
-            </div>
-        </div>
+                <h1 class="plataforma_titulo">Switch and Play</h1>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Viva aventuras, lute contra adversários e evolua!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(3, "Ação/Aventura', 'RPG", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Explore, adapte-se e sobreviva em mundos imprevisíveis!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(3, "Sobrevivência', 'Simulação", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Corra, desafie seus limites e alcance o pódio!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(3, "Esportes/Corrida", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Abrace a escuridão e prepare-se para um susto a cada esquina!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(3, "Terror/Horror", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="plataforma" id="computer">
+                <span class="plataforma_banner" style="background-image: url(../imgs/banner_computer.png);"></span>
+                <h1 class="plataforma_titulo">Controle Total, Diversão Ilimitada!</h1>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Desbrave, enfrente desafios e cresça!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(4, "Ação/Aventura', 'RPG", "j.id_jogo"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Aventure-se, combata e evolua!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(4, "Sobrevivência', 'Simulação", "j.id_jogo"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Deslize, drible e vença em emocionantes competições!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(4, "Esportes/Corrida", "j.nome desc"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Viva o terror, enfrente o sobrenatural e mantenha-se vivo!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(4, "Terror/Horror", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="plataforma" id="mobile">
+                <span class="plataforma_banner" style="background-image: url(../imgs/banner_mobile.png);"></span>
+                <h1 class="plataforma_titulo">Onde Você For, O Jogo Vai Junto!</h1>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Lute com bravura, evolua e desvende segredos!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(5, "Ação/Aventura', 'RPG", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Construa seu abrigo, colete recursos e sobreviva ao inesperado!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(5, "Sobrevivência', 'Simulação", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>Domine a pista e mostre seu talento em emocionantes competições!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(5, "Esportes/Corrida", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="plataform_container_cate">
+                    <?php
+                    ?>
+                    <h3>A cada passo, o terror se aproxima; esteja preparado para o pior!</h3>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $jogos = mysqli_query($conn, gerarConsulta(5, "Terror/Horror", "j.nome"));
+                            whileSwiper($jogos);
+                            ?>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+
+                        <div class="swiper-button-prev"> <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
 
     </div>
     <script src="../javascript/pagJogos.js"></script>

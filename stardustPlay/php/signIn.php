@@ -3,38 +3,52 @@
 
 <body>
     <div class="container">
-        <a href="pagInicial.php">
-            <img src="../imgs/home_icon.svg" alt="Ir para pagina principal" class="homeLink">
+        <a href="pagInicial.php" class="homeLink">
+            <i class="fa-solid fa-house-chimney"></i>
         </a>
+
         <main class="container_child formulario">
             <form action="signIn.act.php" method="post">
-                <h1>Faça seu login</h1>
-                <h4>Por favor preencha os campos abaixo</h4>
-                <input type="text" name="email" placeholder="Digite seu email" required>
-                <input type="password" name="senha" placeholder="Digite sua senha" required>
-                <input type="submit" value="LOGIN">
+                <div class="container_texto">
+                    <h1 class="texto_titulo">Entre em sua conta</h1>
+                    <p class="texto_subtitulo">Por favor preencha os campos abaixo</p>
+                </div>
+                <input type="text" name="email" class="form_email" placeholder="Digite seu email" autofocus required>
+                <input type="password" name="senha" class="form_pass" placeholder="Digite sua senha" required>
+
+                <label for="enviar" class="form_submit"><b>FAZER LOGIN</b></label>
+                <input type="submit" id="enviar" value="FAZER LOGIN" class="form_submit" style="display: none;">
+                <a href="#" style="text-align: end;">Esqueceu a senha?</a>
             </form>
         </main>
+
+
+
         <aside class="container_child banner">
-            <div class="banner_content">
-                <h1 class="banner_content_titulo">Sign Up</h1>
-                <h3 class="banner_content_subtitulo">É novo por aqui? Crie uma nova conta</h3>
-                <div class="banner_vantagens">
-                    <div class="banner_vantagens_item">
-                        <img src="../imgs/controle_icon.svg" alt="">
-                        <p>Jogos</p>
-                    </div>
-                    <div class="banner_vantagens_item">
-                        <img src="../imgs/categoria_icon.svg" alt="">
-                        <p>Categorias</p>
-                    </div>
-                    <div class="banner_vantagens_item">
-                        <img src="../imgs/pagamento_icon.svg" alt="">
-                        <p>Compras</p>
-                    </div>
+
+            <div class="banner_texto">
+                <h1 class="texto_titulo">Sign Up</h1>
+                <p class="banner_content_subtitulo">É novo por aqui? Crie uma nova conta</p>
+            </div>
+
+            <div class="banner_vantagens">
+                <div class="banner_vantagens_item">
+                    <img src="../imgs/controle_icon.svg" alt="">
+                    <p>Jogos</p>
                 </div>
-                <p><input type="checkbox">Ao me cadastrar, concordo com os termos e condições</p>
-                <a href="signUp.php"><button>Criar Conta</button></a>
+                <div class="banner_vantagens_item">
+                    <img src="../imgs/categoria_icon.svg" alt="">
+                    <p>Categorias</p>
+                </div>
+                <div class="banner_vantagens_item">
+                    <img src="../imgs/pagamento_icon.svg" alt="">
+                    <p>Compras</p>
+                </div>
+            </div>
+
+            <div class="banner_link">
+                <label for="termos"><input type="checkbox" id="termos">Ao me cadastrar, concordo com os termos e condições</label>
+                <a href="signUp.php" class="link_btn">Fazer Cadastro</a>
             </div>
         </aside>
 

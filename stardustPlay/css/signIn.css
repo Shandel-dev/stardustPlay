@@ -1,3 +1,7 @@
+body{
+    background-image: url(../imgs/starwarsWallpaper.jpeg);
+}
+
 .container{
     display: flex;
     height: 100vh;
@@ -9,14 +13,14 @@
 
 .homeLink{
     position: absolute;
-    top: 1em;
-    left: 1em;
-    padding: 0.3em;
-    border: 3px solid var(--cor-terciaria);
-    border-radius: 4em;
+    top: 0.2em;
+    left: 0.2em;
+    font-size: 3rem;
+    border-radius: 1em;
+    transition: 0.3s;
 }
 .homeLink:hover{
-    filter: brightness(80%);
+    color: var(--cor-secundaria);
     transition: 0.3s;
 }
 
@@ -25,35 +29,82 @@
     justify-content: center;
     align-items: center;
     background-color: var(--cor-primaria);
+    padding: 15% 5% 15%;
+
 }
+.container_texto{
+    margin-bottom: 2em;
+}
+
+.texto_titulo{
+    letter-spacing: 0.1em;
+    font-size: 32px;
+    color: var(--cor-secundaria);
+}
+
 
 .formulario form{
     display: flex;
     flex-direction: column;
-    color: var(--cor-quinta);
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
 }
+
+.form_email, .form_pass, .form_submit{
+    all: unset;
+    background-color: var(--cor-primaria);
+    padding-left: 1em;
+    height: 3.5em;
+    border-radius: 3em;
+    margin-bottom: 1em;
+}
+
+.form_email,
+.form_pass{
+    border: 1px solid var(--cor-terciaria);
+}
+.form_email:focus,
+.form_pass:focus{
+    border: 1px solid var(--cor-secundaria);
+}
+
+.form_submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+.form_submit:hover{
+    background-color: var(--cor-quinta);
+}
+
 
 /*BANNER LATERAL*/
 
 .banner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../imgs/starwarsWallpaper.jpeg);
-    background-size: cover;
-    background-position: center;
+    justify-content: space-between;
+    align-items: end;
+    padding: 15% 5% 15%;
     color: var(--cor-terciaria);
+    background-color: var(--cor-primaria-glass);
+
 }
 
-.banner_content{
+.banner_texto{
     display: flex;
     flex-direction: column;
     align-items: end;
 }
+
 .banner_vantagens{
     display: flex;
-    gap: 1em;
+    gap: 2em;
 }
 
 .banner_vantagens_item{
@@ -68,3 +119,25 @@
     border: 2px solid var(--cor-quinta);
     border-radius: 4em;
 }
+
+.banner_link{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2em;
+}
+.banner_link input{
+    accent-color: var(--cor-secundaria);
+}
+
+.link_btn{
+    padding: 0.5em 1em;
+    border-radius: 5em;
+    border: 2px solid;
+    transition: 0.5s;
+}
+.link_btn:hover{
+    color: var(--cor-secundaria);
+    transition: 0.5s;
+}
+

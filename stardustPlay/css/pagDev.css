@@ -1,17 +1,18 @@
 .dev_titulo{
+    margin-top: 5em;
     text-align: center;
 }
 
 .container_main{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    height: 50vh;
     gap: 1em;
     padding: 1em;
 }
 
-.opcoes_item{
+.opcoes_item_dev{
     display: flex;
     align-items: center;
     padding: 1em 0.5em;
@@ -22,7 +23,56 @@
     border-radius: 1em;
     cursor: pointer;
 }
-.opcoes_item:hover{
+.opcoes_item_dev:hover{
     border: 3px double var(--cor-quinta);
 }
+
+input[type="checkbox"]{
+    display: none;
+}
+
+span{
+    display: none;
+    position: fixed;
+    top: 50%;
+    transform: translatey(-50%);
+    background-color: var(--cor-primaria);
+    border: 4px double var(--cor-secundaria);
+}
+
+#database:checked + .modal_database{
+    display: block;
+}
+
+span .close{
+    display: flex;
+    border-bottom: 2px dashed var(--cor-secundaria);
+    justify-content: space-between;
+    padding: 0 1em;
+    font-size: 1.5em;
+}
+.close .database_titulo{
+    color: var(--cor-terciaria);
+}
+.close i{
+    cursor: pointer;
+    color: var(--cor-quarta);
+}
+.close i:active{
+    color: var(--cor-quinta);
+}
+
+
+span img{
+    padding: 2em;
+    /*width: 45em;*/
+    height: 70vh;
+}
+
+#paleta:checked + .modal_pallete{
+    display: block;
+}
+
+
+
 

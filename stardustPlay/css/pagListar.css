@@ -1,15 +1,22 @@
+.container_resul{
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
 .content_cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     padding: 2em;
-    gap: 1em;
+    gap: 2em;
 }
 
 .card_jogo{
-    border: 2px solid var;
-    width: 15em;
+    flex-basis: 15em;
+    flex-basis: 1;
+    cursor: pointer;
 }
 
 .card_jogo img{
@@ -21,4 +28,24 @@
 .card_jogo:hover > img{
     border-bottom: 3px solid var(--cor-secundaria);
     transition: 0.2s;
+}
+
+.jogo_preco{
+    color: var(--cor-secundaria);
+}
+
+.container_plataformas{
+    display: flex;
+}
+
+.container_cate_plata{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_plataformas img{
+    height: 1.5em;
+    aspect-ratio: 1/1;
 }

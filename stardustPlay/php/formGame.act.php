@@ -18,6 +18,7 @@ $trailer = $_POST['trailer'];
 $preco_str = str_replace(",", ".", $preco);
 $nome_str = str_replace("'", " ", $nome);
 $descricao_str = str_replace("'", " ", $descricao);
+$descricao_br = nl2br($descricao_str);
 
 $trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $trailer);
 
@@ -64,9 +65,9 @@ move_uploaded_file($screen3['tmp_name'], $screen3_hash);
 if(mysqli_query($conn, "INSERT INTO `tbl_images`
 (`id_image`,`poster`,`logo`,`banner`, `trailer`, `screen1`,`screen2`,`screen3`) VALUES
 (DEFAULT, '$poster_hash', '$logo_hash', '$banner_hash', '$trailer_embed', '$screen1_hash', '$screen2_hash', '$screen3_hash');")){
-    $msg = "Imagens guardadas com sucesso!";
+    $msg = "Imagens guardadas com sucesso! ";
 } else{
-    $msg = "Algo deu errado no upload das imagens";
+    $msg = "Algo deu errado no upload das imagens ";
 }
 
 $id_image = $conn->insert_id;   //recupera o ultimo id gerado na tbl_images
@@ -74,10 +75,10 @@ $id_image = $conn->insert_id;   //recupera o ultimo id gerado na tbl_images
 //inserindo dados na tabela tbl_jogos
 if (mysqli_query($conn, "INSERT INTO tbl_jogos
 (`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `slogan`, `descricao`, `id_imgs`) VALUES
-(DEFAULT, '$nome_str', '$empresa', '$categoria', '$preco_str', '$slogan', '$descricao_str','$id_image');")) {
-    $msg .= " Dados do jogo enviados para tbl_jogos!";
+(DEFAULT, '$nome_str', '$empresa', '$categoria', '$preco_str', '$slogan', '$descricao_br','$id_image');")) {
+    $msg .= "- Dados do jogo enviados para tbl_jogos! ";
 } else {
-    $msg .= " Erro no tnvio de dados para a tbl_jogos!" . mysqli_error($conn);
+    $msg .= "- Erro no tnvio de dados para a tbl_jogos!" . mysqli_error($conn);
 }
 
 $id_jogo = $conn->insert_id;    //recupera o id gerado na tbl_jogos
@@ -87,9 +88,9 @@ foreach($plataformas as $id_plataforma){
     if(mysqli_query($conn, "INSERT INTO `tbl_jogo_plataforma`
     (`id`, `id_jogo`, `id_plataforma`) VALUES
     (DEFAULT, '$id_jogo', '$id_plataforma');")){
-        $msg .= "Dados enviados para tbl_plataforma com sucesso!";
+        $msg .= "|";
     } else{
-        $msg .= "Ocorreu algum erro" . mysqli_error($conn);
+        $msg .= "- Ocorreu algum erro" . mysqli_error($conn);
     }
 }
 

@@ -4,7 +4,6 @@
     display: flex;
     position: relative;
     justify-content: center;
-    z-index: -1;
     height: 70vh;
     background-image: url(../imgs/banner_espaco.jpg);
     background-position: center;
@@ -16,6 +15,7 @@
 .banner_container{
     display: flex;
     position: absolute;
+    z-index: 10;
     overflow: hidden;
     background-color: var(--cor-primaria);
     border-radius: 2em;

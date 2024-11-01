@@ -1,46 +1,58 @@
+body{
+    background-image: url(../imgs/wallpaperSunset.png);
+}
+
 .container{
     display: flex;
     height: 100vh;
-    color: var(--cor-terciaria);
 }
 
 .homeLink{
     position: absolute;
-    top: 1em;
-    left: 1em;
-    padding: 0.3em;
-    border: 3px solid var(--cor-terciaria);
-    border-radius: 4em;
+    top: 0.2em;
+    left: 0.2em;
+    font-size: 3rem;
     transition: 0.3s;
 }
 .homeLink:hover{
-    filter: brightness(80%);
+    color: var(--cor-secundaria);
     transition: 0.3s;
 }
 
 .banner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     height: 100vh;
     width: 50%;
-    background-image: url(../imgs/wallpaperSunset.png);
-    background-position: center;
-    background-size: cover;
+    padding: 10% 10% 10%;
+    background-color: var(--cor-primaria-glass);
 }
-.banner_content{
+
+.banner_titulo{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.banner_link{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 70%;
+    gap: 0.5em;
 }
-.banner_content>div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.banner_link a{
+    border: 2px solid;
+    padding: 0.5em 4em;
+    border-radius: 3em;
+    font-size: 1.3rem;
+    transition: 0.5s;
 }
+.banner_link a:hover{
+    color: var(--cor-secundaria);
+    transition: 0.5s;
+}
+
+/*---------------------------------------------------------*/
 
 .formulario{
     display: flex;
@@ -52,9 +64,75 @@
 .formulario_content{
     display: flex;
     flex-direction: column;
-    background-color: var(--cor-primaria-hover);
+    align-items: center;
+    padding: 2em;
+    border-radius: 2em;
+    background-color: var(--cor-primaria-glass);
 }
+.formulario_content>label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--cor-primaria);
+    width: 10em;
+    height: 10em;
+    overflow: hidden;
+    border: 3px double var(--cor-secundaria);
+    margin: 0.5em 0 1em;
+    text-align: center;
+    cursor: pointer;
+    color: var(--cor-terciaria)!important;
+}
+
+#image_profile{
+    display: none;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 .formulario_content form{
     display: flex;
     flex-direction: column;
+}
+
+.formulario_content label,.ocupacao{
+    color: var(--cor-secundaria);
+}
+
+.formulario_content form input[type='file']{
+    display: none;
+}
+
+.formulario_content form input[type='text'], input[type='password']{
+    all: unset;
+    width: 20em;
+    height: 2em;
+    background-color: var(--cor-primaria);
+    padding-left: 1em;
+    border: 2px solid rgba(255, 255, 255, 0.507);
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+.formulario_content form input[type='text']:focus, input[type='password']:focus{
+    border: 2px solid var(--cor-quinta);
+}
+
+
+.formulario_content form input[type='radio']{
+    accent-color: var(--cor-secundaria);
+}
+
+.enviar_btn{
+    text-align: center;
+    background-color: var(--cor-quinta);
+    margin-top: 1em;
+    padding: 0.5em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.enviar_btn p{
+    color: var(--cor-primaria);
 }

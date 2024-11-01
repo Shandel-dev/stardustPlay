@@ -16,7 +16,7 @@
                         <label for="poster" class="container_upload" id="img_poster">
                             <img src="" alt="Poster" class="upload_img" style="display: none;">
                             <span class="placeholder"><i class="fa-solid fa-upload"></i> Poster(2:3)</span>
-                            <input type="file" name="poster" class="upload_input" id="poster" accept=".png, .jpg, .jpeg, .jfif, .webp" required>
+                            <input type="file" name="poster" class="upload_input" id="poster" accept=".png, .jpg, .jpeg, .jfif, .webp, .avif" required>
                         </label>
 
                         <div class="ctn_logo_name">
@@ -36,8 +36,8 @@
                     <label for="youtube">Link do trailer(YouTube):</label>
                     <input type="text" name="trailer" id="youtube" required>
 
-                    <label for="categoria">Categoria: </label>
-                    <select name="categoria" id="categoria" required>
+                    <label for="categoria_option">Categoria: </label>
+                    <select name="categoria" id="categoria_option" required>
                         <option value="">Selecione</option>
                         <option value="Ação/Aventura">Ação/Aventura</option>
                         <option value="Sobrevivência">Sobrevivência</option>
@@ -78,8 +78,8 @@
                     <label for="slogan">Slogan</label>
                     <input type="text" name="slogan" id="slogan" required>
 
-                    <label for="descricao" style="position: relative;">Descrição do jogo <p id="qtnTxt">0/1000</p></label>
-                    <textarea type="text" name="descricao" id="descricao" maxlength="1000" required></textarea>
+                    <label for="descricao" style="position: relative;">Descrição do jogo: <p id="qtnTxt">0/1500</p></label>
+                    <textarea type="text" name="descricao" id="descricao" maxlength="1500" required></textarea>
                 </div>
             </div>
             <div class="content_gallery">
@@ -107,25 +107,26 @@
 
             <div class="content_submit">
                 <div>
-                    <a href="pagDev.php"> <strong>Voltar a página de Desenvolvedor</strong></a>
+                    <a href="pagDev.php"> <strong><- Voltar a página de Desenvolvedor</strong></a>
                     <input type="submit" value="Enviar dados">
                 </div>
                 <hr>
-                <div>
+                <div class="submit_message">
                     <p>Atenção! Forneça os dados do jogo de maneira precisa. Lembre-se: a responsabilidade por informações incorretas ou incoerentes no cadastro recai sobre o <strong>DESENVOLVEDOR!</strong></p>
-                </div>
-                <div>
-                    <img src="../imgs/logo_light_stardust.png" alt="logo stardust">
-                    <h3>StarDust Play</h3>
-                    <p>
+                    <p class="db_mensage">
                         <?php
                             @session_start();
                             if(isset($_SESSION['msg'])){
+                                echo "Relatório => ";
                                 echo $_SESSION['msg'];
                                 unset($_SESSION['msg']);
                             }
                         ?>
                     </p>
+                </div>
+                <div>
+                    <img src="../imgs/logo_light_stardust.png" alt="logo stardust">
+                    <h3>StarDust Play</h3>
                 </div>
             </div>
         </section>

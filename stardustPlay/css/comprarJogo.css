@@ -211,6 +211,20 @@ button {
     background-color: var(--cor-quinta);
 }
 
+.game_edit{
+    display: flex;
+    color: var(--cor-terciaria);
+    align-items: center;
+    padding: 0.5em 1em;
+    border: 2px solid;
+    box-shadow: 0px 0px 10px var(--cor-primaria);
+}
+.game_edit:hover{
+    color: var(--cor-secundaria);
+}
+
+/*-----------------------------------------------------------*/
+
 .game_description {
     display: flex; 
     margin-top: 1em;

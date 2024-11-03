@@ -33,7 +33,7 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                             <img src="<?php echo $jogo['logo']; ?>" alt="" class="game_logo">
                             <p class="game_dev"><?php echo $jogo['empresa']; ?></p>
                             <h1 class="game_nome"><?php echo $jogo['nome']; ?></h1>
-                            <p><sup>#<?php echo $jogo['categoria'];?></sup></p>
+                            <p><sup>#<?php echo $jogo['categoria']; ?></sup></p>
                         </div>
                         <div>
                             <p class="game_pass"><sup>Disponível na StarDust Pass</sup></p>
@@ -94,6 +94,13 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                     </select>
                     <button class="comprar_btn"><b>Confirmar Compra</b></button>
                 </div>
+
+                <?php
+                if (isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor") {
+                    echo "<a href='editarJogo.php?id=$idJogo' class='game_edit'><i class='fa-solid fa-pen-to-square'></i>Editar jogo</a>";
+                }
+                ?>
+
             </article>
 
 

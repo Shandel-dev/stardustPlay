@@ -1,0 +1,233 @@
+.titulo{
+    margin: 3em 0 2em;
+    text-align: center;
+}
+
+.container_datagame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3em;
+}
+
+.container_datagame input[type='text'], input[type='number'], select, textarea{
+    all: unset;
+    color: var(--cor-terciaria);
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 0.5em;
+    padding-left: 0.5em;
+    margin-bottom: 1em;
+    height: 1.5em;
+    align-items: center;
+}
+
+textarea{
+    display: block;
+    overflow-wrap: break-word;
+    height: 15em;
+}
+
+.container_datagame input:focus, select:focus, textarea:focus{
+    border: 2px solid var(--cor-quinta);
+}
+
+.info_data select option{
+    background-color: var(--cor-primaria);
+}
+
+
+.content_info{  /*contem as 2 partes do formulario*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+}
+
+.info_data{     /*parte 1 e 2 do formulario*/
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 20em;
+}
+.ctn_poster_logo{
+    display: flex;
+    gap: 1em;
+}
+
+#img_poster{
+    height: 300px;
+    aspect-ratio: 2/3;
+}
+
+input[type="checkbox"]{
+    accent-color: var(--cor-secundaria);
+}
+
+.ctn_logo_name{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#img_logo{
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+
+#img_banner{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#qtnTxt{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*-----------------------------------------*/
+.content_gallery{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.galley_screens{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.img_screen{
+    height: 200px;
+    aspect-ratio: 16/9;
+}
+
+
+.container_upload{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 4px solid;
+    border-radius: 1em;
+    color: var(--cor-quinta);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.upload_img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.upload_input{
+    display: none;
+}
+
+.container_upload:hover{
+    color: var(--cor-quarta);
+    transition: 0.2s;
+}
+.container_upload:active{
+    color: var(--cor-quarta);
+}
+
+.info_plataforma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_plataformas{
+    display: flex;
+    gap: 1em;
+}
+.container_plataformas img{
+    height: 30px;
+}
+
+.container_lbl_plataforma{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em 3em;
+    margin-top: 0.5em;
+}
+
+.plataforma_title{
+    margin: 1em 0 0.5em;
+    text-align: center;
+}
+
+.lbl_plataforma{
+    color: var(--cor-terciaria);
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: 2px inset;
+    border-radius: 1em;
+}
+
+input[type='checkbox']{
+    display: none;
+}
+
+input[type='checkbox']:checked +label{
+    color: var(--cor-secundaria);
+    border: 2px solid;
+}
+
+/*content_submit*/
+.content_submit{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+}
+.content_submit div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 0 3em;
+}
+
+.content_submit div:last-child{
+    display: flex;
+    justify-content: center;
+    padding: 0 5em;
+}
+.content_submit a{
+    color: var(--cor-primaria);
+    padding: 0.5em;
+    background-color: var(--cor-secundaria);
+    border-radius: 1em;
+}
+.content_submit input[type='submit']{
+    all: unset;
+    padding: 0.5em;
+    border-radius: 1em;
+    background-color: var(--cor-quarta);
+    cursor: pointer;
+}
+
+hr{
+    margin-top: 1em;
+    border: 1px solid var(--cor-secundaria);
+
+    width: 100%;
+}
+
+.content_submit div img{
+    height: 4em;
+}
+
+.submit_message{
+    display: flex;
+    flex-direction: column;
+}
+
+.db_mensage{
+    color: var(--cor-quinta);
+    text-align: center;
+}

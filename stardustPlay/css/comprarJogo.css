@@ -148,7 +148,7 @@ body {
     color: var(--cor-secundaria);
 }
 
-.game_pay label {
+.game_pay .lbl_payment {
     display: flex;
     align-items: center;
     width: 100%;
@@ -158,7 +158,7 @@ body {
     backdrop-filter: blur(30px);
 }
 
-.game_pay label:hover {
+.game_pay .lbl_payment:hover {
     color: var(--cor-secundaria);
     backdrop-filter: blur(90px);
     transition: 0.2s;
@@ -168,7 +168,7 @@ body {
     accent-color: var(--cor-secundaria);
 }
 
-.game_pay label i {
+.game_pay .lbl_payment i {
     font-size: 2rem;
 }
 
@@ -182,7 +182,7 @@ body {
 }
 
 .container_confirm select,
-button {
+.comprar_btn{
     all: unset;
     display: flex;
     align-items: center;
@@ -190,7 +190,7 @@ button {
     flex-grow: 1;
     flex-basis: 10em;
     text-align: center;
-    padding: 0.5em 1em;
+    padding: 0.5em 1em !important;
     height: 1.5em;
     cursor: pointer;
 }
@@ -202,12 +202,12 @@ button {
 }
 
 
-.container_confirm button {
+.container_confirm .comprar_btn {
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
 
-.container_confirm button:active {
+.container_confirm .comprar_btn:active {
     background-color: var(--cor-quinta);
 }
 

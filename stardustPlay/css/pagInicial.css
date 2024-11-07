@@ -1,61 +1,97 @@
-/* section banner */
-
-.banner{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    height: 70vh;
-    background-image: url(../imgs/banner_espaco.jpg);
-    background-position: center;
-    background-size: cover;
-    border-bottom: 4px solid var(--cor-quinta);
-    filter: brightness(80%);
+body {
+    background-image: url(../imgs/wallpaper1.png);
 }
 
-.banner_container{
+.container_pagina{
     display: flex;
-    position: absolute;
-    z-index: 10;
-    overflow: hidden;
-    background-color: var(--cor-primaria);
-    border-radius: 2em;
-    border: 4px solid var(--cor-quinta);
-    top: 100%;
-    transform: translateY(-50%);   
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 35vh 10vh 10vh;
+    background: linear-gradient(0deg, rgba(0,9,14,1) 0%, rgba(0,9,14,0) 100%);}
+
+.container_pagina >section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.5em;
 }
 
-.banner_container_item{
+/*-----------------------------------------------------------------------*/
+
+.linha{
+    border: 1px solid;
+    width: 80vw;
+}
+
+.section_pesquisar .pesquisar-titulo{
+    font-size: 3.5rem;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-secundaria);
+}
+
+.section_pesquisar input[type="search"]{
+    all: unset;
+    border: 2px solid;
+    width: 70vw;
+    padding: 0.5em;
+    border-radius: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+.section_pesquisar input[type="search"]::placeholder{
+    font-weight: 200;
+    color: var(--cor-terciaria);
+    background: url(../imgs/icon_lupa2.svg) no-repeat;
+    background-position: 1em;
+}
+.section_pesquisar input[type="search"]:focus{
+    border: 2px solid var(--cor-secundaria);
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.section_navegar .navegar-subtitulo{
+    color: var(--cor-secundaria);
+}
+
+.section_navegar .container_button{
+    display: flex;
+}
+.container_button{
+    gap: 3em;
+}
+.container_button .button_link{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: var(--cor-terciaria);
-    width: 10em;
-    padding: 0.5em 0;
-    transition: 0.2s;
-}
-.banner_container_item:hover{
-    background-color: var(--cor-primaria-hover);
-    transition: 0.2s;
 }
 
-.banner_container_item p{
-    margin: 0;
-    margin-top: 1em;
+.button_link:hover{
+    color: var(--cor-secundaria);
+}
+.button_link i{
+    font-size: 4rem;
 }
 
-/*section da descrição da empresa*/
+/*-------------------------------------------------------------------------------*/
 
-.myDescription{
+.categoria-subtitulo{
+    color: var(--cor-secundaria);
+}
+
+.section_categoria .lista_categorias{
     display: flex;
+    list-style: none;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin: 2em 5em;
+    gap: 1em;
 }
 
-.myDescription_msg{
-    width: 50%;
-    text-transform: uppercase;
-    text-align: justify;
+.lista_categoria_link:hover{
+    color: var(--cor-secundaria);
 }
-

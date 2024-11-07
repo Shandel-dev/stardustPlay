@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 03/11/2024 às 20:43
+-- Tempo de geração: 07/11/2024 às 01:30
 -- Versão do servidor: 8.3.0
 -- Versão do PHP: 8.0.30
 
@@ -256,13 +256,24 @@ INSERT INTO `tbl_plataforma` (`id_plataforma`, `nome`, `slogan`, `logo`) VALUES
 DROP TABLE IF EXISTS `tbl_user_jogo`;
 CREATE TABLE IF NOT EXISTS `tbl_user_jogo` (
   `id_compra` int NOT NULL AUTO_INCREMENT,
-  `data` date DEFAULT NULL,
+  `versao` varchar(40) DEFAULT NULL,
   `id_user` int DEFAULT NULL,
   `id_jogo` int DEFAULT NULL,
+  `data_compra` date DEFAULT (curdate()),
   PRIMARY KEY (`id_compra`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
+
+--
+-- Despejando dados para a tabela `tbl_user_jogo`
+--
+
+INSERT INTO `tbl_user_jogo` (`id_compra`, `versao`, `id_user`, `id_jogo`, `data_compra`) VALUES
+(1, 'XBOX', 23, 19, '2024-11-05'),
+(2, 'COMPUTER', 19, 5, '2024-11-05'),
+(14, 'XBOX', 19, 13, '2024-11-06'),
+(15, 'COMPUTER', 19, 7, '2024-11-06');
 
 -- --------------------------------------------------------
 

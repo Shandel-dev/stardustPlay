@@ -2,6 +2,7 @@
 
 include('topo.php');
 require('connect.php');
+@session_start();
 
 $idJogo = $_GET['id'];
 
@@ -63,20 +64,21 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                     </div>
                 </div>
             </article>
-            <article class="game_pay">
+
+            <form action="comprarJogo.act.php" method="post" class="game_pay">
                 <h2 class="game_pay_titulo">Opções de compra</h2>
-                <label for="payment">
-                    <input type="radio" name="payment" id="payment">
+                <label for="payment" class="lbl_payment">
+                    <input type="radio" name="payment" id="payment" value="pass" required>
                     <i class="fa-solid fa-ticket"></i>
                     <h4>Obtenha o StarDust Pass</h4>
                 </label>
-                <label for="payment2">
-                    <input type="radio" name="payment" id="payment2">
+                <label for="payment2" class="lbl_payment">
+                    <input type="radio" name="payment" id="payment2" value="pay">
                     <i class="fa-solid fa-credit-card"></i>
                     <h4>Adicione um método de pagamento para efetuar a compra</h4>
                 </label>
                 <div class="container_confirm">
-                    <select class="select_plataform">
+                    <select class="select_plataform" name="versao" required>
                         <option value="">Selecione a versão</option>
                         <?php
                         $plataformas = mysqli_query($conn, "SELECT p.nome
@@ -88,11 +90,30 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                             WHERE j.id_jogo = '$idJogo';");
 
                         while ($plataforma = mysqli_fetch_assoc($plataformas)) {
-                            echo "<option value=>" . $plataforma['nome'];
+                            echo "<option value='$plataforma[nome]'>" . $plataforma['nome'] . "</option>";
                         }
                         ?>
-                    </select>
-                    <button class="comprar_btn"><b>Confirmar Compra</b></button>
+                    </select>           
+
+                    <?php
+                    //verifica se o usuario já comprou o jogo
+                    if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
+                        $queryCompra = mysqli_query($conn, "SELECT * FROM `tbl_user_jogo`
+                        where `id_user` = '$_SESSION[iduser]' and `id_jogo` = '$idJogo'");
+                        if (mysqli_num_rows($queryCompra) == 0) {
+
+                            echo "<input type='hidden' name='idJogo' value='$idJogo'>";
+                            echo "<input type='hidden' name='idUser' value='" . $_SESSION['iduser'] . "'>";
+                            echo "<input type='submit' style='display: none;' id='enviar'>";
+                            echo "<label for='enviar' class='comprar_btn'><b><i class='fa-solid fa-cart-shopping'></i>Confirmar Compra</b></label>";
+                        } else {
+                            echo "<label for='enviar' class='comprar_btn'><b><i class='fa-solid fa-play'></i>Jogar</b></label>";
+                        }
+                    }else{
+                        echo "<label for='enviar' class='comprar_btn' onclick='facaLogin()'><b><i class='fa-solid fa-cart-shopping'></i> Comprar</b></label>";
+                    }
+                    ?>
+
                 </div>
 
                 <?php
@@ -101,7 +122,7 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                 }
                 ?>
 
-            </article>
+            </form>
 
 
         </section>

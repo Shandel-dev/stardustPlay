@@ -4,11 +4,13 @@
     --cor-primaria-glass: #01213a77;
     --cor-secundaria: #d3e538;
     --cor-secundaria-hover: #c8d836;
+    --cor-secundaria-glass: #d4e538c5;
     --cor-terciaria: #f8ffe9;   /*cor da fonte*/
     --cor-quarta: #c1292e;
     --cor-quinta: #f1d302;
     --fonte-principal: "Poppins", sans-serif;
     --fonte-titulo: "Montserrat Alternates", sans-serif;
+    --fonte-titulo2: "Audiowide", sans-serif;
     --fonte-texto: "lato", sans-serif;
 }
 

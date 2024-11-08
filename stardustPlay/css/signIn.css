@@ -29,7 +29,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--cor-primaria);
-    padding: 15% 5% 15%;
+    padding: 25vh 5% 25vh;
 
 }
 .container_texto{
@@ -54,8 +54,9 @@ body{
 .form_email, .form_pass, .form_submit{
     all: unset;
     background-color: var(--cor-primaria);
-    padding-left: 1em;
-    height: 3.5em;
+    padding: 0.5em 0 0.5em 1em;
+    /* padding-left: 1em;
+    height: 3.5em; */
     border-radius: 3em;
     margin-bottom: 1em;
 }
@@ -90,7 +91,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
-    padding: 15% 5% 15%;
+    padding: 25vh 5% 25vh;
     color: var(--cor-terciaria);
     background-color: var(--cor-primaria-glass);
 

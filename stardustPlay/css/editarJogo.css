@@ -100,7 +100,7 @@ input[type="checkbox"]{
     gap: 1em;
 }
 .img_screen{
-    height: 200px;
+    height: 11em;
     aspect-ratio: 16/9;
 }
 
@@ -173,8 +173,9 @@ input[type='checkbox']{
 }
 
 input[type='checkbox']:checked +label{
-    color: var(--cor-secundaria);
-    border: 2px solid;
+    color: var(--cor-primaria);
+    background-color: var(--cor-quinta);
+    border: 2px solid var(--cor-primaria);
 }
 
 /*content_submit*/

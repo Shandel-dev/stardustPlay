@@ -23,7 +23,7 @@ include('topo.php'); ?>
 
     <h1 class="titulo">Edite as informações do jogo</h1>
     <form action="editarJogo.act.php" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo $idJogo;?>">
+        <input type="hidden" name="id" value="<?php echo $idJogo; ?>">
         <section class="container_datagame">
             <div class="content_info">
                 <div class="info_data">
@@ -114,7 +114,13 @@ include('topo.php'); ?>
                     <input type="text" name="slogan" id="slogan" value="<?php echo $jogo['slogan']; ?>">
 
                     <label for="descricao" style="position: relative;">Descrição do jogo: <p id="qtnTxt"></p></label>
-                    <textarea type="text" name="descricao" id="descricao" maxlength="1500" required><?php echo $jogo['descricao'];?></textarea>
+                    <textarea type="text" name="descricao" id="descricao" maxlength="1500" required><?php
+                                                                                                    // Verifica se a descrição possui tags <br> e as substitui por quebras de linha reais
+                                                                                                    $descricao_texto = str_replace('<br>', "\n", $jogo['descricao']);
+
+                                                                                                    // Escapa caracteres especiais para exibição no HTML
+                                                                                                    echo htmlspecialchars($descricao_texto);
+                                                                                                    ?></textarea>
                 </div>
             </div>
             <div class="content_gallery">
@@ -139,6 +145,9 @@ include('topo.php'); ?>
 
             <div class="content_submit">
                 <div>
+                    <label for="verificar" style="display: flex;">
+                        <input type="checkbox" id="verificar" name="verificar" style="display: block;" required>
+                        Eu atualizei corretamente a área de plataformas</label>
                     <input type="submit" id="enviar" name="Atualizar dados">
                     <!-- <label for="enviar">Atualizar dados do jogo</label> -->
                 </div>

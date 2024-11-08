@@ -137,7 +137,9 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                     <?php
                     echo "<h2>Por dentro da experiência de " . $jogo['nome'] . "</h2>";
                     echo "<h4>Desenvolvido por " . $jogo['empresa'] . "</h4><br>";
-                    echo "<p>" . $jogo['descricao'] . "</p>";
+                    $descricao_texto = str_replace("\n", "<br>", $jogo['descricao']);
+                    //echo "<p>" . $jogo['descricao'] . "</p>";
+                    echo "<p>" . $descricao_texto . "</p>";
                     ?>
                 </div>
             </article>

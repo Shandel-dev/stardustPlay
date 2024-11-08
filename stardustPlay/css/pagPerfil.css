@@ -1,5 +1,6 @@
 .container-perfil {
     display: flex;
+    flex-direction: column;
     gap: 1em;
     padding: 10vh 5vw 5vh;
     width: 100vw;
@@ -10,33 +11,36 @@
 
 .perfil-user {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    justify-content: space-between;
     align-items: center;
     border: 2px solid var(--cor-secundaria);
     border-radius: 2em;
-    height: 100%;
     gap: 1em;
-    width: 35vw;
-    padding: 2em;
+    width: 100%;
+    padding: 1.5em;
+}
+
+.user_data{
+    display: flex;
+    flex-direction: row;
     gap: 1em;
 }
-.perfil-user > div{
+.user_data_foto{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-
-.perfil-jogos{
-    height: 100%;
-}
-
 
 .user_foto {
-    border: 3px double var(--cor-secundaria);
-    border-radius: 50%;
+    border: 3px double var(--cor-quinta);
+    border-radius: 1em;
     height: 10em;
     aspect-ratio: 1/1;
+}
+
+.user_data_content p{
+    color: var(--cor-secundaria);
+    font-size: 12px;
+    margin-top: 1em;
 }
 
 .user_editar {
@@ -47,6 +51,19 @@
     background-color: var(--cor-secundaria);
 }
 
+
+.user_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/*----------------------------------------------------------------*/
+
+.perfil-jogos{
+    height: 100%;
+}
 .container_jogos{
     height: 100%;
     overflow: hidden;

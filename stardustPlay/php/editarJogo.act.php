@@ -17,8 +17,9 @@ $preco_str = str_replace(",", ".", $preco);
 $slogan = $_POST['slogan'];
 
 $descricao = $_POST['descricao'];
-$descricao_str = str_replace("'", " ", $descricao);
-$descricao_br = nl2br($descricao_str);
+//$descricao_str = str_replace("'", " ", $descricao);
+//$descricao_br = nl2br($descricao_str);
+$descricao_br = mysqli_real_escape_string($conn, $descricao);
 
 $plataformas = $_POST['plataforma'];
 

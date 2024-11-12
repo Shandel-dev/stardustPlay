@@ -21,11 +21,12 @@
     ?>
 
     <div class="container_resul">
-        <h3>
+        <h2>
             <?php
-            echo $jogos->num_rows . " resultado(s) para " . $texto;
+            //echo $jogos->num_rows . " resultado(s) para " . $texto;
+            echo $texto . " (<small>" . $jogos->num_rows . " resultados</small>)";
             ?>
-        </h3>
+        </h2>
     </div>
 
     <div class="content_cards">

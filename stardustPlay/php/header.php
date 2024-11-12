@@ -19,11 +19,11 @@
                     <li class="lista_menu_item"><a href="pagListar?texto=Sobrevivência" class="lista_menu_link">Sobrevivência</a></li>
                     <li class="lista_menu_item"><a href="pagListar?texto=Simulação" class="lista_menu_link">Simulação</a></li>
                     <li class="lista_menu_item"><a href="pagListar?texto=Esportes/Corrida" class="lista_menu_link">Esportes/Corrida</a></li>
-                    <li class="lista_menu_item"><a href="pagListar?texto=Terror/Horror" class="lista_menu_link">Terror/Horror</a></li>
+                    <li class="lista_menu_item"><a href="pagListar?texto=Terror/Suspense" class="lista_menu_link">Terror/Suspense</a></li>
                 </ul>
 
                 <li class="opcoes_item"><a href="pagJogos.php">JOGOS</a></li>
-                <li class="opcoes_item"><a href="#">MEUS JOGOS</a></li>
+                <li class="opcoes_item"><a href="pagPerfil.php">MEUS JOGOS</a></li>
             </ul>
             
         </div>

@@ -44,7 +44,7 @@
                         <option value="RPG">RPG (Role-Playing Game)</option>
                         <option value="Simulação">Simulação</option>
                         <option value="Esportes/Corrida">Esportes/Corrida</option>
-                        <option value="Terror/Horror">Terror/Horror</option>
+                        <option value="Terror/Suspense">Terror/Suspense</option>
                     </select>
 
                     <label for="preco">Preço(R$):
@@ -52,21 +52,25 @@
                     </label>
 
                     <h3>Jogo disponível para:</h3>
-                    <label for="playstation">
-                        <input type="checkbox" name="plataforma[]" id="playstation" value="1">PlayStation
-                    </label>
-                    <label for="xbox">
-                        <input type="checkbox" name="plataforma[]" id="xbox" value="2">Xbox
-                    </label>
-                    <label for="nintendo">
-                        <input type="checkbox" name="plataforma[]" id="nintendo" value="3">Nintendo
-                    </label>
-                    <label for="computador">
-                        <input type="checkbox" name="plataforma[]" id="computador" value="4">Computador
-                    </label>
-                    <label for="mobile">
-                        <input type="checkbox" name="plataforma[]" id="mobile" value="5">Mobile
-                    </label>
+
+
+                    <div class="container_lbl_plataforma">
+                        <input type="checkbox" name="plataforma[]" id="playstation" value="1">
+                        <label class="lbl_plataforma" for="playstation">PlayStation</label>
+
+                        <input type="checkbox" name="plataforma[]" id="xbox" value="2">
+                        <label class="lbl_plataforma" for="xbox">Xbox</label>
+
+                        <input type="checkbox" name="plataforma[]" id="nintendo" value="3">
+                        <label class="lbl_plataforma" for="nintendo">Nintendo</label>
+
+                        <input type="checkbox" name="plataforma[]" id="computador" value="4">
+                        <label class="lbl_plataforma" for="computador">Computador</label>
+
+                        <input type="checkbox" name="plataforma[]" id="mobile" value="5">
+                        <label class="lbl_plataforma" for="mobile">Mobile</label>
+                    </div>
+
                 </div>
 
                 <div class="info_data">
@@ -115,12 +119,12 @@
                     <p>Atenção! Forneça os dados do jogo de maneira precisa. Lembre-se: a responsabilidade por informações incorretas ou incoerentes no cadastro recai sobre o <strong>DESENVOLVEDOR!</strong></p>
                     <p class="db_mensage">
                         <?php
-                            @session_start();
-                            if(isset($_SESSION['msg'])){
-                                echo "Relatório => ";
-                                echo $_SESSION['msg'];
-                                unset($_SESSION['msg']);
-                            }
+                        @session_start();
+                        if (isset($_SESSION['msg'])) {
+                            echo "Relatório => ";
+                            echo $_SESSION['msg'];
+                            unset($_SESSION['msg']);
+                        }
                         ?>
                     </p>
                 </div>

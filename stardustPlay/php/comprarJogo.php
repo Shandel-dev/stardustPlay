@@ -121,16 +121,14 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                     echo "<a href='editarJogo.php?id=$idJogo' class='game_edit'><i class='fa-solid fa-pen-to-square'></i>Editar jogo</a>";
                 }
                 ?>
-
             </form>
 
 
         </section>
 
-        <hr class="slogan_hr">
-        <h2 class="game_slogan"><?php echo $jogo['slogan']; ?></h2>
-
+        
         <section class="game_description">
+            <h2 class="game_slogan"><?php echo $jogo['slogan']; ?></h2>
             <article class="descricao">
 
                 <div class="descricao_texto">
@@ -153,9 +151,9 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <?php echo "<div class=swiper-slide><iframe src= " . $jogo['trailer'] . " class=galeria_image alt='TRAILER INDISPONÍVEL NO MOMENTO'></iframe></div>"; ?>
-                        <?php echo "<div class=swiper-slide><img src=" . $jogo['screen1'] . " class=galeria_image alt='IMAGEM INDISPONÍVEL!'></div>"; ?>
-                        <?php echo "<div class=swiper-slide><img src=" . $jogo['screen2'] . " class=galeria_image alt='IMAGEM INDISPONÍVEL!'></div>"; ?>
-                        <?php echo "<div class=swiper-slide><img src=" . $jogo['screen3'] . " class=galeria_image alt='IMAGEM INDISPONÍVEL!'></div>"; ?>
+                        <?php echo "<div class=swiper-slide><img src=" . $jogo['screen1'] . " class=galeria_image alt='IMAGEM INDISPONÍVEL!' loading='lazy'></div>"; ?>
+                        <?php echo "<div class=swiper-slide><img src=" . $jogo['screen2'] . " class=galeria_image alt='IMAGEM INDISPONÍVEL!' loading='lazy'></div>"; ?>
+                        <?php echo "<div class=swiper-slide><img src=" . $jogo['screen3'] . " class=galeria_image alt='IMAGEM INDISPONÍVEL!' loading='lazy'></div>"; ?>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>

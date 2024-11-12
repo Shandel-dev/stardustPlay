@@ -20,10 +20,19 @@
                     <i class="fa-solid fa-gamepad"></i>
                     <p>JOGOS</p>
                 </a>
-                <a href="pagPerfil.php" class="button_link">
+                <a href="
+                <?php
+                if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
+                    echo "pagPerfil.php";
+                } else{
+                    echo "javascript:notLogado()";
+                }
+                ?>
+                " class="button_link">
                     <i class="fa-solid fa-user"></i>
                     <p>SEU PERFIL</p>
                 </a>
+
                 <a href="
                 <?php
                 if(isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor"){
@@ -58,6 +67,9 @@
     <script>
         function notDev() {
             alert("Você não é um desenvolvedor!");
+        }
+        function notLogado(){
+            alert("Entre ou Cadastre-se na StarDust!");
         }
     </script>
 </body>

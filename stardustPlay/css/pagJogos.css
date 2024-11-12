@@ -12,14 +12,13 @@ input[type='radio'] {
 
 .option_plataform label {
     padding: 0.5em 1em;
+    color: rgba(255, 255, 255, 0.685);
     border: 2px solid;
     border-radius: 1em;
-    transition: 0.5s;
 }
 
 .option_plataform label:hover {
     color: var(--cor-secundaria);
-    transition: 0.3s;
 }
 
 /* Muda a cor da label correspondente ao rádio selecionado */
@@ -39,7 +38,7 @@ input[type='radio'] {
 .plataforma {
     display: none;
     width: 100%;
-    padding: 2em;
+
 }
 
 /* Mostra a plataforma correspondente ao rádio selecionado */
@@ -57,15 +56,24 @@ input[type='radio'] {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 2em;
-    aspect-ratio: 16/4.5;
+    border-radius: 1em;
+    aspect-ratio: 16/3.5;
+    margin: 0 2em;
 }
 .plataforma_titulo{
     text-align: center;
+    font-family: var(--fonte-titulo2);
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+}
+.categoria_slogan{
+    padding-left: 2em;
+    font-family: var(--fonte-titulo1);
 }
 
 .plataform_container_cate{
-    margin-top: 2em;
+    margin: 2em 0;
 }
 
 .swiper-slide{
@@ -95,17 +103,29 @@ input[type='radio'] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(0deg, rgb(16, 20, 22) 0%, rgb(46, 50, 59) 50%);
     height: 100%;
     width: 100%;
     padding: 0.5em;
     border-radius: 1em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.card_jogo:hover{
+    border: 1px solid var(--cor-secundaria);
+    transition: 0.3s;
 }
 .card_jogo img{
     border-radius: 1em;
     margin-bottom: 0.2em;
     width: 100%;
     aspect-ratio: 16/9;
+}
+
+.card_nome{
+    font-family: var(--fonte-titulo-jogo);
+    font-weight: 300;
 }
 
 .card_categoria{
@@ -115,8 +135,9 @@ input[type='radio'] {
 
 .card_preco{
     font-size: 1.4rem;
-    font-weight: 200;
+    font-weight: 400;
     color: var(--cor-secundaria);
+    font-family: var(--fonte-titulo1);
 }
 
 .card_link{

@@ -12,13 +12,14 @@ $categoria = $_POST['categoria'];
 $preco = $_POST['preco'];
 $plataformas = $_POST['plataforma']; //array de plataformas selecionadas
 $slogan = $_POST['slogan'];
-$descricao = $_POST['descricao'];
 $trailer = $_POST['trailer'];
 
 $preco_str = str_replace(",", ".", $preco);
 $nome_str = str_replace("'", " ", $nome);
+
+$descricao = $_POST['descricao'];
 $descricao_str = str_replace("'", " ", $descricao);
-$descricao_br = nl2br($descricao_str);
+$descricao_br = mysqli_real_escape_string($conn, $descricao_str);
 
 $trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $trailer);
 

@@ -30,5 +30,5 @@ const descricao = document.getElementById('descricao');
 
 descricao.addEventListener('input', function(){
     let descricaoLenght = descricao.value.length;
-    quantTxt.innerHTML = descricaoLenght + "/1000";
+    quantTxt.innerHTML = descricaoLenght + "/1500";
 });

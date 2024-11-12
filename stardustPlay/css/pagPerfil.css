@@ -2,18 +2,18 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 10vh 5vw 5vh;
+    padding: 10vh 5vw 0vh;
     width: 100vw;
     height: 100vh;
-    border: 2px solid;
-    overflow: hidden;
 }
+
+
 
 .perfil-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid var(--cor-secundaria);
+    background: var(--cor-gradiente-um);
     border-radius: 2em;
     gap: 1em;
     width: 100%;
@@ -28,6 +28,29 @@
 .user_data_foto{
     display: flex;
     flex-direction: column;
+    gap: 0.5em;
+}
+
+.user_data_foto div{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+.user_data_foto div a{
+    padding: 0.2em;
+    font-size: 1.1rem;
+}
+
+.user_excluir{
+    background-color: var(--cor-quarta);
+}
+
+.user_perfil{
+    color: var(--cor-quinta);
+    border: 2px solid;
+    font-weight: 500;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .user_foto {
@@ -62,13 +85,60 @@
 /*----------------------------------------------------------------*/
 
 .perfil-jogos{
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 0;
 }
 .container_jogos{
-    height: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
     overflow-y: scroll;
+    gap: 1em;
 }
 .container_jogos::-webkit-scrollbar{
     display: none;
+}
+
+.card-jogo{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 27em;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    background: var(--cor-gradiente-dois);
+}
+.card-jogo_image{
+    aspect-ratio: 1/1;
+    height: 20vh;
+    border-radius: 1em;
+}
+
+.card-jogo_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.info_main{
+    display: flex;
+    flex-direction: column;
+}
+
+.info_links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.link_play{
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    padding: 0.5em 0;
+    text-align: center;
 }

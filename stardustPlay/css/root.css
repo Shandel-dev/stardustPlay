@@ -1,16 +1,18 @@
 :root{
-    --cor-primaria: #00090f;    /*cor de fundo*/
-    --cor-primaria-hover: #011d31;
+    --cor-primaria: #00090e;    /*cor de fundo*/
+    --cor-gradiente-um: linear-gradient(45deg, #001424 0%, #000f18 60%);
+    --cor-gradiente-dois: linear-gradient(45deg, #0b0f16 0%, #141a27 60%);
+    --cor-primaria-hover: #141e25;
     --cor-primaria-glass: #01213a77;
     --cor-secundaria: #d3e538;
     --cor-secundaria-hover: #c8d836;
     --cor-secundaria-glass: #d4e538c5;
-    --cor-terciaria: #f8ffe9;   /*cor da fonte*/
+    --cor-terciaria: #e2e7d5;   /*cor da fonte*/
     --cor-quarta: #c1292e;
     --cor-quinta: #f1d302;
-    --fonte-principal: "Poppins", sans-serif;
-    --fonte-titulo: "Montserrat Alternates", sans-serif;
+    
     --fonte-titulo2: "Audiowide", sans-serif;
+    --fonte-titulo-jogo: "Russo one", sans-serif;
     --fonte-texto: "lato", sans-serif;
 }
 
@@ -26,7 +28,7 @@ body{
     overflow-x: hidden;
     color: var(--cor-terciaria);
     font-family: var(--fonte-texto);
-    background-color: var(--cor-primaria);
+    background: var(--cor-primaria);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

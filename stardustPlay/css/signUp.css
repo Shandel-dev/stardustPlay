@@ -1,26 +1,27 @@
-body{
+    body {
     background-image: url(../imgs/wallpaperSunset.png);
 }
 
-.container{
+.container {
     display: flex;
     height: 100vh;
     overflow: hidden;
 }
 
-.homeLink{
+.homeLink {
     position: absolute;
     top: 0.2em;
     left: 0.2em;
     font-size: 3rem;
     transition: 0.3s;
 }
-.homeLink:hover{
+
+.homeLink:hover {
     color: var(--cor-secundaria);
     transition: 0.3s;
 }
 
-.banner{
+.banner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,53 +31,56 @@ body{
     background-color: var(--cor-primaria-glass);
 }
 
-.banner_titulo{
+.banner_titulo {
     font-size: 2rem;
     text-align: center;
 }
 
-.banner_link{
+.banner_link {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
 }
-.banner_link a{
+
+.banner_link a {
     border: 2px solid;
     padding: 0.5em 4em;
     border-radius: 3em;
     font-size: 1.3rem;
     transition: 0.5s;
 }
-.banner_link a:hover{
+
+.banner_link a:hover {
     color: var(--cor-secundaria);
     transition: 0.5s;
 }
 
 /*---------------------------------------------------------*/
 
-.formulario{
+.formulario {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--cor-primaria);
     width: 50%;
 }
-.formulario_content{
+
+.formulario_content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em 2em;
     border-radius: 2em;
     background-color: var(--cor-primaria-glass);
-    font-size: 14px;
+    font-size: 1rem;
 }
-.formulario_content>label{
+
+.formulario_content>label {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: var(--cor-primaria);
     flex-basis: 1;
     height: 8em;
     aspect-ratio: 1;
@@ -85,10 +89,10 @@ body{
     margin: 0.5em 0 1em;
     text-align: center;
     cursor: pointer;
-    color: var(--cor-terciaria)!important;
+    color: var(--cor-terciaria) !important;
 }
 
-#image_profile{
+#image_profile {
     display: none;
     object-fit: cover;
     width: 100%;
@@ -96,46 +100,75 @@ body{
     border-radius: 50%;
 }
 
-.formulario_content form{
+.formulario_content form {
     display: flex;
     flex-direction: column;
 }
 
-.formulario_content label,.ocupacao{
+.formulario_content label,
+.ocupacao {
     color: var(--cor-secundaria);
 }
 
-.formulario_content form input[type='file']{
+.formulario_content form input[type='file'] {
     display: none;
 }
 
-.formulario_content form input[type='text'], input[type='password']{
+.formulario_content form input[type='text'],
+input[type='password'], input[type='email'] {
     all: unset;
     width: 20em;
     padding: 0.3em 0 0.3em 1em;
     background-color: var(--cor-primaria);
-    padding-left: 1em;
     border: 2px solid rgba(255, 255, 255, 0.507);
     border-radius: 1em;
     margin-bottom: 1em;
 }
-.formulario_content form input[type='text']:focus, input[type='password']:focus{
+
+.formulario_content form input[type='text']:focus,
+input[type='password']:focus, input[type='email']:focus{
     border: 2px solid var(--cor-quinta);
 }
 
+/*------------------------------------------------------------------*/
 
-.formulario_content form input[type='radio']{
-    accent-color: var(--cor-secundaria);
+.lbl_ocupacoes{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
 }
 
-.enviar_btn{
+.lbl_ocupacoes label{
     text-align: center;
-    background-color: var(--cor-quinta);
+    border: 2px solid var(--cor-secundaria);
+    flex: 1 1 5em;
+    padding: 0.3em;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+    border-radius: 2em;
+}
+
+.formulario_content form input[type='radio'] {
+    display: none;
+}
+.formulario_content form input[type='radio']:checked + label{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-secundaria);
+
+}
+
+/*----------------------------------------------------------------------*/
+
+.enviar_btn {
+    text-align: center;
+    background-color: var(--cor-secundaria);
     margin-top: 1em;
     padding: 0.5em 0;
     border-radius: 0.5em;
     cursor: pointer;
 }
-.enviar_btn p{
+
+.enviar_btn p {
     color: var(--cor-primaria);
 }

@@ -8,30 +8,32 @@
     require('connect.php');
 
     $usuarios = mysqli_query($conn, "SELECT * FROM `tbl_usuarios`;");
-    
-    echo var_dump($usuarios);
 
     echo "<div class=container_profiles>";
-    while($user = mysqli_fetch_assoc($usuarios)){
+    while ($user = mysqli_fetch_assoc($usuarios)) {
         echo "<div class=card_profile>";
 
-            echo "<img src= $user[foto]>";
-            echo "<h4>Nome: $user[nome]</h4>";
-            echo "<p>$user[ocupacao]</p>";
-            echo "<p>Email: $user[email]</p>";
-            echo "<p>Telefone: $user[telefone]</p>";
-            echo "<a href=javascript:excluirUser($user[id_user])>Banir/Excluir usuário</a>";
+        echo "<p><sub>$user[ocupacao]</sub></p>";
+        echo "<img src= $user[foto]>";
+        echo "<h3>Nome: $user[nome]</h3>";
+        
+        echo "<p><sub>Email</sub></p>";
+        echo "<p>$user[email]</p>";
+        
+        echo "<p><sub>Telefone</sub></p>";
+        echo "<p>$user[telefone]</p>";
+        echo "<a href=javascript:excluirUser($user[id_user])><i class='fa-solid fa-user-slash'></i> Banir/Excluir usuário</a>";
         echo "</div>";
     }
     echo "</div>";
     ?>
 
     <script>
-        function excluirUser(iduser){
+        function excluirUser(iduser) {
             resposta = confirm("Deseja banir/excluir este usuário?");
-            if(resposta){
-                window.location = "excluirUser.php?id=" +iduser;
-            } else{
+            if (resposta) {
+                window.location = "excluirUser.php?id=" + iduser;
+            } else {
                 console.log("resposta falsa");
             }
         }

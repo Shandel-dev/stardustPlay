@@ -110,7 +110,7 @@ input[type="checkbox"]{
     display: flex;
     justify-content: center;
     align-items: center; 
-    border: 4px solid;
+    border: 2px solid;
     border-radius: 1em;
     color: var(--cor-quinta);
     cursor: pointer;
@@ -164,8 +164,9 @@ input[type="checkbox"]{
     color: var(--cor-terciaria);
     cursor: pointer;
     padding: 0.5em 1em;
-    border: 2px inset;
+    border: 2px inset var(--cor-secundaria);
     border-radius: 1em;
+    font-weight: 800;
 }
 
 input[type='checkbox']{
@@ -174,8 +175,7 @@ input[type='checkbox']{
 
 input[type='checkbox']:checked +label{
     color: var(--cor-primaria);
-    background-color: var(--cor-quinta);
-    border: 2px solid var(--cor-primaria);
+    background-color: var(--cor-secundaria);
 }
 
 /*content_submit*/

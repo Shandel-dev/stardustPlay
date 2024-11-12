@@ -58,7 +58,7 @@ include('topo.php'); ?>
                         <option value="RPG" <?= $jogo['categoria'] == "RPG" ? 'selected' : '' ?>>RPG (Role-Playing Game)</option>
                         <option value="Simulação" <?= $jogo['categoria'] == "Simulação" ? 'selected' : '' ?>>Simulação</option>
                         <option value="Esportes/Corrida" <?= $jogo['categoria'] == "Esportes/Corrida" ? 'selected' : '' ?>>Esportes/Corrida</option>
-                        <option value="Terror/Horror" <?= $jogo['categoria'] == "Terror/Horror" ? 'selected' : '' ?>>Terror/Horror</option>
+                        <option value="Terror/Suspense" <?= $jogo['categoria'] == "Terror/Suspense" ? 'selected' : '' ?>>Terror/Suspense</option>
                     </select>
 
                     <label for="preco">Preço(R$):

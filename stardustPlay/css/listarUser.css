@@ -1,18 +1,35 @@
-.container_profiles{
+.container_profiles {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    padding: 5em 5vw 5vh;
 }
-.card_profile{
+
+.card_profile {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1 1 25em;
     padding: 1em;
     align-items: center;
     border: 2px solid var(--cor-secundaria);
+    border-radius: 2em;
 }
-.card_profile img{
-    height: 5em;
-    width: 5em;
+
+.card_profile img {
+    height: 15vh;
+    aspect-ratio: 1/1;
+    border: 3px double var(--cor-quinta);
+    border-radius: 1em;
     object-fit: cover;
+}
+
+.card_profile sub {
+    color: var(--cor-secundaria);
+}
+
+.card_profile a {
+    margin-top: 0.3em;
+    padding: 0.3em;
+    background-color: var(--cor-quarta);
+    border-radius: 0.5em;
 }

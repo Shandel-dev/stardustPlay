@@ -11,15 +11,16 @@ $nome_str = str_replace("'", " ", $nome);
 
 $empresa = $_POST['empresa'];
 $trailer = $_POST['trailer'];
+$trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $trailer);
 $categoria = $_POST['categoria'];
 $preco = $_POST['preco'];
 $preco_str = str_replace(",", ".", $preco);
 $slogan = $_POST['slogan'];
 
 $descricao = $_POST['descricao'];
+$descricao_br = mysqli_real_escape_string($conn, $descricao);
 //$descricao_str = str_replace("'", " ", $descricao);
 //$descricao_br = nl2br($descricao_str);
-$descricao_br = mysqli_real_escape_string($conn, $descricao);
 
 $plataformas = $_POST['plataforma'];
 
@@ -92,6 +93,7 @@ if(mysqli_query($conn, "UPDATE `tbl_images` SET
 `logo` = '$destino[logo]',
 `poster` = '$destino[poster]',
 `banner` = '$destino[banner]',
+`trailer` = '$trailer_embed',
 `screen1` = '$destino[screen1]',
 `screen2` = '$destino[screen2]',
 `screen3` = '$destino[screen3]'

@@ -14,7 +14,7 @@
 }
 
 .card_jogo{
-    flex-basis: 14em;
+    flex-basis: 14.5em;
     flex-basis: 1;
     cursor: pointer;
 }
@@ -28,6 +28,10 @@
 .card_jogo:hover > img{
     border-bottom: 3px solid var(--cor-secundaria);
     transition: 0.2s;
+}
+
+.jogo_nome{
+    font-family: var(--fonte-nome);
 }
 
 .jogo_preco{

@@ -109,8 +109,22 @@
     gap: 1em;
     padding: 0.5em;
     border-radius: 1em;
+    border: 1px solid transparent;
     background: var(--cor-gradiente-dois);
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.card-jogo:hover{
+    border: 1px solid var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+.card-jogo:hover .link_play{
+    color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
 .card-jogo_image{
     aspect-ratio: 1/1;
     height: 20vh;
@@ -137,8 +151,7 @@
 }
 
 .link_play{
-    color: var(--cor-primaria);
-    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     padding: 0.5em 0;
     text-align: center;
 }

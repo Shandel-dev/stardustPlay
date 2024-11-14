@@ -23,7 +23,7 @@
                 </ul>
 
                 <li class="opcoes_item"><a href="pagJogos.php">JOGOS</a></li>
-                <li class="opcoes_item"><a href="pagPerfil.php">MEUS JOGOS</a></li>
+                <li class="opcoes_item"><a href="pagPerfil.php">PERFIL</a></li>
             </ul>
             
         </div>

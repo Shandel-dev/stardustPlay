@@ -12,7 +12,7 @@
     position: absolute;
     top: 0.2em;
     left: 0.2em;
-    font-size: 3rem;
+    font-size: 2.5rem;
     transition: 0.3s;
 }
 
@@ -34,6 +34,8 @@
 .banner_titulo {
     font-size: 2rem;
     text-align: center;
+    font-weight: 400;
+    font-family: var(--fonte-titulo);
 }
 
 .banner_link {
@@ -64,6 +66,9 @@
     align-items: center;
     background-color: var(--cor-primaria);
     width: 50%;
+}
+.formulario_titulo{
+    font-family: var(--fonte-nome);
 }
 
 .formulario_content {
@@ -128,6 +133,17 @@ input[type='password'], input[type='email'] {
 .formulario_content form input[type='text']:focus,
 input[type='password']:focus, input[type='email']:focus{
     border: 2px solid var(--cor-quinta);
+}
+
+.container_password{
+    position: relative;
+}
+
+#exibir_olho{
+    position: absolute;
+    right: 0.5em;
+    bottom: 50%;
+    cursor: pointer;
 }
 
 /*------------------------------------------------------------------*/

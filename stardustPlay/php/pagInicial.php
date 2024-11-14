@@ -58,7 +58,7 @@
                 <li class="lista_categoria_item"><a href="pagListar?texto=Sobrevivência" class="lista_categoria_link"><i class="fa-solid fa-fire"></i> Sobrevivência</a></li>
                 <li class="lista_categoria_item"><a href="pagListar?texto=Simulação" class="lista_categoria_link"><i class="fa-solid fa-mask"></i> Simulação</a></li>
                 <li class="lista_categoria_item"><a href="pagListar?texto=Esportes/Corrida" class="lista_categoria_link"><i class="fa-solid fa-basketball"></i> Esportes/Corrida</a></li>
-                <li class="lista_categoria_item"><a href="pagListar?texto=Terror/Horror" class="lista_categoria_link"><i class="fa-solid fa-ghost"></i> Terror/Horror</a></li>
+                <li class="lista_categoria_item"><a href="pagListar?texto=Terror/Suspense" class="lista_categoria_link"><i class="fa-solid fa-ghost"></i> Terror/Suspense</a></li>
             </ul>
         </section>
 

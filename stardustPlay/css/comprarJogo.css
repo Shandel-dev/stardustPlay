@@ -46,7 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 40%;
     min-width: 22em;
 }
 
@@ -64,7 +64,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-nome);
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
 .game_logo {
@@ -83,19 +85,20 @@ body {
     align-items: center;
     border-radius: 1em;
     padding: 0.1em 0.3em;
+    font-size: 0.9rem;
     color: var(--cor-primaria);
     background-color: var(--cor-secundaria);
 
 }
 
 .game_preco {
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-nome);
     font-size: 2rem;
 }
 
 .game_slogan {
     font-weight: 200;
-    font-family: var(--fonte-titulo-jogo);
+    font-family: var(--fonte-titulo);
     font-size: 2em;
     text-align: center;
     padding: 0 3em;
@@ -107,7 +110,6 @@ body {
     flex-direction: column;
     margin: auto;
     align-items: center;
-    font-family: var(--fonte-texto);
     color: var(--cor-secundaria);
 }
 

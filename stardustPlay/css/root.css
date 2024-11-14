@@ -1,6 +1,6 @@
 :root{
     --cor-primaria: #00090e;    /*cor de fundo*/
-    --cor-gradiente-um: linear-gradient(45deg, #001424 0%, #000f18 60%);
+    --cor-gradiente-um: linear-gradient(45deg, #01233f 0%, #112430 60%);
     --cor-gradiente-dois: linear-gradient(45deg, #0b0f16 0%, #141a27 60%);
     --cor-primaria-hover: #141e25;
     --cor-primaria-glass: #01213a77;
@@ -11,8 +11,8 @@
     --cor-quarta: #c1292e;
     --cor-quinta: #f1d302;
     
-    --fonte-titulo2: "Audiowide", sans-serif;
-    --fonte-titulo-jogo: "Russo one", sans-serif;
+    --fonte-titulo: "Righteous", sans-serif;
+    --fonte-nome: "Quicksand", sans-serif;
     --fonte-texto: "lato", sans-serif;
 }
 

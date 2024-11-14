@@ -24,7 +24,8 @@
 textarea{
     display: block;
     overflow-wrap: break-word;
-    height: 15em;
+    flex: 1 1 15em;
+    margin-bottom: 0;
 }
 
 .container_datagame input:focus, select:focus, textarea:focus{
@@ -100,7 +101,7 @@ input[type="checkbox"]{
     gap: 1em;
 }
 .img_screen{
-    height: 11em;
+    flex: 1 1 20em;
     aspect-ratio: 16/9;
 }
 

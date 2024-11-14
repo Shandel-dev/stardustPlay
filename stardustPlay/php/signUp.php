@@ -16,7 +16,7 @@
         </aside>
         <main class="formulario">
             <div class="formulario_content">
-                <h1>SIGN UP</h1>
+                <h1 class="formulario_titulo">SIGN UP</h1>
                 <label for="foto">
                     <span id="img_msg"><i class="fa-solid fa-camera-retro"></i> Foto de perfil</span>
                     <img src="" id="image_profile">
@@ -26,17 +26,23 @@
 
                     <input type="file" name="foto" id="foto">
 
-                    <label for="nome">Seu primeiro nome:</label>
+                    <label for="nome"><i class="fa-solid fa-user-pen"></i> Seu primeiro nome:</label>
                     <input type="text" id="nome" name="nome" placeholder="Crie um nome de usuário" autofocus autocomplete="off" required>
 
-                    <label for="email">Informe seu email:</label>
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Informe seu email:</label>
                     <input type="email" id="email" name="email" placeholder="email@gmail.com" autocomplete="off" required>
 
-                    <label for="telefone">Insira seu telefone:</label>
+                    <label for="telefone"><i class="fa-solid fa-phone"></i> Insira seu telefone:</label>
                     <input type="text" id="telefone" name="telefone" placeholder="(DDD)XXXXX-XXXX" autocomplete="off" maxlength="14" required>
 
-                    <label for="senha">Crie um senha forte:</label>
-                    <input type="password" id="senha" name="senha" placeholder="No mínimo 4 caracteres" minlength="4" autocomplete="off" required>
+                    <label for="senha"><i class="fa-solid fa-key"></i> Crie um senha forte:</label>
+
+                    <div class="container_password">
+                        <input type="password" id="senha" name="senha" placeholder="No mínimo 4 caracteres" minlength="4" autocomplete="off" required>
+                        <label for="exibir_check" id="exibir_olho"><i class="fa-solid fa-eye-slash"></i></label>
+                        <input type="checkbox" id="exibir_check" style="display: none;">
+                    </div>
+
                     
                     <p class="ocupacao">Você é:</p>                    
                     <div class="lbl_ocupacoes">

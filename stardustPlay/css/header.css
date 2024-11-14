@@ -46,6 +46,8 @@ header{
     display: flex;
     list-style: none;
     gap: 1em;
+    font-family: var(--fonte-nome);
+    font-weight: 400;
 }
 .opcoes li{
     cursor: pointer;

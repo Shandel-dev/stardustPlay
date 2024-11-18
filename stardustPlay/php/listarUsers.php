@@ -7,7 +7,8 @@
     include('header.php');
     require('connect.php');
 
-    $usuarios = mysqli_query($conn, "SELECT * FROM `tbl_usuarios`;");
+    $usuarios = mysqli_query($conn, "SELECT * FROM `tbl_usuarios`
+    ORDER BY ocupacao, id_user;");
 
     echo "<div class=container_profiles>";
     while ($user = mysqli_fetch_assoc($usuarios)) {

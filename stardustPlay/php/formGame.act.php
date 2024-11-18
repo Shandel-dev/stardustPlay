@@ -11,6 +11,7 @@ $empresa = $_POST['empresa'];
 $categoria = $_POST['categoria'];
 $preco = $_POST['preco'];
 $plataformas = $_POST['plataforma']; //array de plataformas selecionadas
+$hashtag = $_POST['hashtag'];
 $slogan = $_POST['slogan'];
 $trailer = $_POST['trailer'];
 
@@ -75,8 +76,8 @@ $id_image = $conn->insert_id;   //recupera o ultimo id gerado na tbl_images
 
 //inserindo dados na tabela tbl_jogos
 if (mysqli_query($conn, "INSERT INTO tbl_jogos
-(`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `slogan`, `descricao`, `id_imgs`) VALUES
-(DEFAULT, '$nome_str', '$empresa', '$categoria', '$preco_str', '$slogan', '$descricao_br','$id_image');")) {
+(`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `hashtag`, `slogan`, `descricao`, `id_imgs`) VALUES
+(DEFAULT, '$nome_str', '$empresa', '$categoria', '$preco_str', '$hashtag', '$slogan', '$descricao_br','$id_image');")) {
     $msg .= "- Dados do jogo enviados para tbl_jogos! ";
 } else {
     $msg .= "- Erro no tnvio de dados para a tbl_jogos!" . mysqli_error($conn);
@@ -97,5 +98,5 @@ foreach($plataformas as $id_plataforma){
 
 $_SESSION['msg'] = $msg;
 
-header("location: formGame.php");
+//header("location: formGame.php");
 exit();

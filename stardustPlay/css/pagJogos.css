@@ -6,7 +6,6 @@ input[type='radio'] {
     display: flex;
     justify-content: space-around;
     padding: 1em;
-    padding-top: 5em;
 
 }
 

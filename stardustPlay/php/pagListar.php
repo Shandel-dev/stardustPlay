@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../css/pagListar.css">
 
 <body>
-    <?php include('header.php');
+    <?php include('navbar.php');
     require('connect.php');
     $texto = $_GET['texto'];
 
@@ -14,9 +14,15 @@
 
             . "JOIN tbl_images as i\n"
 
-            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%' OR j.categoria='$texto'\n"
+            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%' OR j.hashtag like '%$texto%' OR j.categoria = '$texto'\n"
 
-            . "ORDER BY j.nome;"
+            . "ORDER BY 
+                CASE 
+                    WHEN j.nome LIKE '%$texto%' THEN 1 
+                    WHEN j.hashtag LIKE '%$texto%' THEN 2 
+                    ELSE 3 
+                END,
+                j.nome;"
     );
     ?>
 
@@ -24,7 +30,7 @@
         <h2>
             <?php
             //echo $jogos->num_rows . " resultado(s) para " . $texto;
-            echo $texto . " (<small>" . $jogos->num_rows . " resultados</small>)";
+            echo "Exibindo resultados para " . $texto . " (<small>" . $jogos->num_rows . " resultado(s)</small>)";
             ?>
         </h2>
     </div>

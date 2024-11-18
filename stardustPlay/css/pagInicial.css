@@ -2,6 +2,10 @@ body {
     background-image: url(../imgs/wallpaper1.png);
 }
 
+header{
+    position: fixed !important;
+}
+
 .container_pagina{
     display: flex;
     justify-content: space-between;
@@ -43,7 +47,6 @@ body {
     font-weight: 500;
     font-size: 1.3em;
     box-shadow: 0px 0px 10px black;
-
 }
 .section_pesquisar input[type="search"]::placeholder{
     font-weight: 300;

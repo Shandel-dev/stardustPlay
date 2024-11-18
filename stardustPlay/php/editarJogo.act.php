@@ -15,6 +15,7 @@ $trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed
 $categoria = $_POST['categoria'];
 $preco = $_POST['preco'];
 $preco_str = str_replace(",", ".", $preco);
+$hashtag = $_POST['hashtag'];
 $slogan = $_POST['slogan'];
 
 $descricao = $_POST['descricao'];
@@ -80,6 +81,7 @@ if(mysqli_query($conn, "UPDATE `tbl_jogos` SET
 `empresa` = '$empresa',
 `categoria` = '$categoria',
 `preco` = '$preco_str',
+`hashtag` = '$hashtag',
 `slogan` = '$slogan',
 `descricao` = '$descricao_br'
 WHERE `id_jogo` = '$idJogo';")){

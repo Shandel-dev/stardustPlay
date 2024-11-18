@@ -65,6 +65,11 @@ include('topo.php'); ?>
                         <input type="number" name="preco" id="preco" placeholder="R$0,00" step="0.01" min="0" value="<?php echo $jogo['preco']; ?>" required>
                     </label>
 
+                    <label for="hashtag">#Hashtags</label>
+                    <p id="mensage_tags"><i><?php echo $jogo['hashtag']?></i></p>
+                    <input type="text" name="hashtag" id="hashtag" placeholder="#hashtag1 #hashtag2 #hashtag3..." maxlength="250" value="<?php echo $jogo['hashtag']?>">
+
+
                     <div class="info_plataforma">
                         <p>Atualmente disponível para:</p>
                         <div class="container_plataformas">
@@ -114,13 +119,15 @@ include('topo.php'); ?>
                     <input type="text" name="slogan" id="slogan" value="<?php echo $jogo['slogan']; ?>">
 
                     <label for="descricao" style="position: relative;">Descrição do jogo: <p id="qtnTxt"></p></label>
-                    <textarea type="text" name="descricao" id="descricao" maxlength="1500" required><?php
-                                                                                                    // Verifica se a descrição possui tags <br> e as substitui por quebras de linha reais
-                                                                                                    $descricao_texto = str_replace('<br>', "\n", $jogo['descricao']);
+                    <textarea type="text" name="descricao" id="descricao" maxlength="1500" required>
+                        <?php
+                            // Verifica se a descrição possui tags <br> e as substitui por quebras de linha reais
+                            $descricao_texto = str_replace('<br>', "\n", $jogo['descricao']);
 
-                                                                                                    // Escapa caracteres especiais para exibição no HTML
-                                                                                                    echo htmlspecialchars($descricao_texto);
-                                                                                                    ?></textarea>
+                            // Escapa caracteres especiais para exibição no HTML
+                            echo htmlspecialchars($descricao_texto);
+                        ?>
+                    </textarea>
                 </div>
             </div>
             <div class="content_gallery">

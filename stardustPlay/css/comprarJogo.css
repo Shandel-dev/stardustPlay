@@ -2,6 +2,9 @@ body {
     backdrop-filter: blur(2px);
     overflow-y: hidden;
 }
+header{
+    position: fixed !important;
+}
 
 .content_game {
     position: relative;

@@ -68,6 +68,5 @@
         } else {
             console.log("nada escrito");
         }
-
     }
 </script>

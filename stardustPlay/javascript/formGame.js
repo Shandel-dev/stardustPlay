@@ -32,3 +32,20 @@ descricao.addEventListener('input', function(){
     let descricaoLenght = descricao.value.length;
     quantTxt.innerHTML = descricaoLenght + "/1500";
 });
+
+const tag = document.getElementById('hashtag');
+const mensage_tag = document.getElementById('mensage_tags');
+
+tag.addEventListener('input', (e)=>{
+    if(tag.value.length === 1 && !tag.value.startsWith('#')){
+        tag.value = `#${tag.value}`;
+    }
+    mensage_tag.innerText = tag.value;
+});
+
+tag.addEventListener('keydown', (e)=>{
+    if(e.code === 'Space'){
+        e.preventDefault(); // Impede o espaço padrão
+        tag.value += " #";
+    }
+})

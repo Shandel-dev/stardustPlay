@@ -1,0 +1,120 @@
+.jogo_nome{
+    font-family: var(--fonte-nome);
+}
+/*--------------------------------------------------------------*/
+.swiper-banner{
+    width: 100%;
+    height: 80vh;
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+.swiper-banner .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.swiper-banner .swiper-pagination-bullet{
+    background: var(--cor-secundaria);
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.918) 33%, rgba(0, 0, 0, 0.26) 66%, rgba(0, 0, 0, 0) 100%);
+    flex-grow: 1;
+    padding: 5vh 50% 10vw 5vh;
+    height: 100%;
+    gap: 0.5em;
+}
+.banner_mensagem{
+    color: var(--cor-quinta);
+}
+.banner_nome{
+    font-family: var(--fonte-nome);
+    text-transform: uppercase;
+}
+.banner_slogan{
+    text-align: center;
+    font-weight: 300;
+}
+.banner_preco{
+    color: var(--cor-secundaria);
+}
+.banner_link{
+    font-family: var(--fonte-nome);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.swiper-card .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 1em;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.swiper-card .swiper-slide:hover{
+    border: 2px solid var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+.card1_image{
+    width: 100%;
+    aspect-ratio: 16/8;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+/*---------------------------------------------------------------*/
+.swiper-grupo{
+    justify-content: center;
+    margin: 0 12vw 0;
+}
+
+.swiper-grupo .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.swiper-grupo .swiper-slide:hover > .jogo_image{
+    border-bottom: 3px solid var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+.swiper-grupo .jogo_image{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 1em 1em 0 0;
+    border-bottom: 3px solid transparent;
+}
+.grupo_nome{
+    font-size: 16px;
+}
+
+/*--------------------------------------------------------------------*/
+
+
+.swiper-poster .swiper-slide{
+    display: flex;
+    flex-direction: column;
+}
+.swiper-poster .swiper-slide img{
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+.swiper-poster .swiper-slide:hover > .poster_img{
+    border-bottom: 3px solid var(--cor-secundaria);
+    transition: 0.3s;
+}

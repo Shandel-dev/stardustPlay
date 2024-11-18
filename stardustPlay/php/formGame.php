@@ -51,7 +51,11 @@
                         <input type="number" name="preco" id="preco" placeholder="R$0,00" step="0.01" min="0" required>
                     </label>
 
-                    <h3>Jogo disponível para:</h3>
+                    <label for="hashtag">#Hashtags</label>
+                    <p id="mensage_tags"><i>Palavras-chaves que ajudam os usuários a encontrar este jogo</i></p>
+                    <input type="text" name="hashtag" id="hashtag" placeholder="#hashtag1 #hashtag2 #hashtag3..." maxlength="250">
+
+                    <h3 class="titulo_plataforma">Jogo disponível para:</h3>
 
 
                     <div class="container_lbl_plataforma">

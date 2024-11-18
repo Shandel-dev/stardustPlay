@@ -8,7 +8,7 @@
 .card_profile {
     display: flex;
     flex-direction: column;
-    flex: 1 1 25em;
+    flex: 1 1 20em;
     padding: 1em;
     align-items: center;
     border: 2px solid var(--cor-secundaria);

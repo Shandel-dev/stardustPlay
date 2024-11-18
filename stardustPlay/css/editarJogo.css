@@ -1,5 +1,5 @@
 .titulo{
-    margin: 3em 0 2em;
+    margin:0 2em;
     text-align: center;
 }
 
@@ -133,6 +133,11 @@ input[type="checkbox"]{
 }
 .container_upload:active{
     color: var(--cor-quarta);
+}
+
+#mensage_tags{
+    color: var(--cor-quinta);
+    text-transform: inherit;
 }
 
 .info_plataforma{

@@ -3,7 +3,10 @@
 <link rel="stylesheet" href="../css/pagInicial.css">
 
 <body>
-    <?php include('header.php'); ?>
+    <?php 
+    //include('header.php'); 
+    include('navbar.php');
+    ?>
 
     <main class="container_pagina">
 
@@ -16,7 +19,7 @@
         <section class="section_navegar">
             <h2 class="navegar-subtitulo">Navegue por</h2>
             <div class="container_button">
-                <a href="pagJogos.php" class="button_link">
+                <a href="gameHub.php" class="button_link">
                     <i class="fa-solid fa-gamepad"></i>
                     <p>JOGOS</p>
                 </a>
@@ -47,7 +50,6 @@
                 </a>
             </div>
         </section>
-
         
         <section class="section_categoria">
             <hr class="linha">

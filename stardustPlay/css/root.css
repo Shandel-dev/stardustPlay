@@ -1,9 +1,9 @@
 :root{
-    --cor-primaria: #00090e;    /*cor de fundo*/
+    --cor-primaria: #011016;    /*cor de fundo*/
     --cor-gradiente-um: linear-gradient(45deg, #01233f 0%, #112430 60%);
     --cor-gradiente-dois: linear-gradient(45deg, #0b0f16 0%, #141a27 60%);
     --cor-primaria-hover: #141e25;
-    --cor-primaria-glass: #01213a77;
+    --cor-primaria-glass: #00090ec2;
     --cor-secundaria: #d3e538;
     --cor-secundaria-hover: #c8d836;
     --cor-secundaria-glass: #d4e538c5;

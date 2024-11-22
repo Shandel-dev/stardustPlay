@@ -72,7 +72,7 @@
     </div>
     <script>
         function pagCompra(idJogo){
-            window.location = "comprarJogo.php?id=" + idJogo;
+            window.location = "pagGame.php?id=" + idJogo;
         }
     </script>
 </body>

@@ -13,8 +13,7 @@
 
 .container_datagame input[type='text'], input[type='number'], select, textarea{
     all: unset;
-    color: var(--cor-terciaria);
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
     border-radius: 0.5em;
     padding-left: 0.5em;
     margin-bottom: 1em;
@@ -30,7 +29,7 @@ textarea{
 }
 
 .container_datagame input:focus, select:focus, textarea:focus{
-    border: 2px solid var(--cor-quinta);
+    border: 2px solid var(--cor-quarta);
 }
 
 .info_data select option{
@@ -63,7 +62,7 @@ textarea{
 }
 
 input[type="checkbox"]{
-    accent-color: var(--cor-secundaria);
+    accent-color: var(--cor-terciaria);
 }
 
 .ctn_logo_name{
@@ -114,7 +113,7 @@ input[type="checkbox"]{
     align-items: center; 
     border: 4px dashed;
     border-radius: 1em;
-    color: var(--cor-quinta);
+    color: var(--cor-quarta);
     cursor: pointer;
     transition: 0.2s;
 }
@@ -129,15 +128,12 @@ input[type="checkbox"]{
 }
 
 .container_upload:hover{
-    color: var(--cor-quarta);
+    color: rgb(243, 23, 8);
     transition: 0.2s;
-}
-.container_upload:active{
-    color: var(--cor-quarta);
 }
 
 #mensage_tags{
-    color: var(--cor-quinta);
+    color: var(--cor-quarta);
     text-transform: inherit;
 }
 
@@ -158,7 +154,7 @@ input[type="checkbox"]{
 }
 
 .lbl_plataforma{
-    border: 2px inset var(--cor-secundaria);
+    border: 2px inset var(--cor-terciaria);
     cursor: pointer;
     padding: 0.5em 1em;
     border-radius: 1em;
@@ -167,7 +163,7 @@ input[type="checkbox"]{
 
 .container_lbl_plataforma input[type="checkbox"]:checked+label{
     color: var(--cor-primaria);
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
 }
 
 /*content_submit*/
@@ -193,20 +189,20 @@ input[type="checkbox"]{
 .content_submit a{
     color: var(--cor-primaria);
     padding: 0.5em;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
     border-radius: 1em;
 }
 .content_submit input[type='submit']{
     all: unset;
     padding: 0.5em;
     border-radius: 1em;
-    background-color: var(--cor-quarta);
+    background-color: red;
     cursor: pointer;
 }
 
 hr{
     margin-top: 1em;
-    border: 1px solid var(--cor-secundaria);
+    border: 1px solid var(--cor-terciaria);
 
     width: 100%;
 }
@@ -221,6 +217,6 @@ hr{
 }
 
 .db_mensage{
-    color: var(--cor-quinta);
+    color: var(--cor-quarta);
     text-align: center;
 }

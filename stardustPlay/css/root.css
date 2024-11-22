@@ -1,17 +1,21 @@
 :root{
-    --cor-primaria: #011016;    /*cor de fundo*/
+    --cor-primaria: #00090e;    /*cor de fundo*/
+    --cor-primaria-glass: #00090ec2;
+
+    --cor-secundaria: #0d0f18;    /*cor de fundo*/
+    --cor-secundaria-glass: #131520a6;
+
+    --cor-terciaria: #d3e538;
+    --cor-terciaria-glass: #d4e538c5;
+
+    --cor-quarta: #f1d302;
+
+    --cor-quinta: #c5cab7;   /*cor da fonte*/
+
     --cor-gradiente-um: linear-gradient(45deg, #01233f 0%, #112430 60%);
     --cor-gradiente-dois: linear-gradient(45deg, #0b0f16 0%, #141a27 60%);
-    --cor-primaria-hover: #141e25;
-    --cor-primaria-glass: #00090ec2;
-    --cor-secundaria: #d3e538;
-    --cor-secundaria-hover: #c8d836;
-    --cor-secundaria-glass: #d4e538c5;
-    --cor-terciaria: #e2e7d5;   /*cor da fonte*/
-    --cor-quarta: #c1292e;
-    --cor-quinta: #f1d302;
     
-    --fonte-titulo: "Righteous", sans-serif;
+    --fonte-titulo: "Exo", sans-serif;
     --fonte-nome: "Quicksand", sans-serif;
     --fonte-texto: "lato", sans-serif;
 }
@@ -26,15 +30,16 @@ body{
     position: relative;
     z-index: 0;
     overflow-x: hidden;
-    color: var(--cor-terciaria);
+    color: var(--cor-quinta);
     font-family: var(--fonte-texto);
-    background: var(--cor-primaria);
+    background: var(--cor-secundaria);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    font-size: 16px;
 }
 a{
     text-decoration: none;
-    color: var(--cor-terciaria);
+    color: var(--cor-quinta);
 }

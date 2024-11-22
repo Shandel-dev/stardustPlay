@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--cor-gradiente-um);
+    background-color: var(--cor-primaria);
     border-radius: 2em;
     gap: 1em;
     width: 100%;
@@ -39,11 +39,11 @@
 }
 
 .user_excluir{
-    background-color: var(--cor-quarta);
+    background-color: red;
 }
 
 .user_perfil{
-    color: var(--cor-quinta);
+    color: var(--cor-quarta);
     border: 2px solid;
     font-weight: 500;
     flex-grow: 1;
@@ -51,25 +51,25 @@
 }
 
 .user_foto {
-    border: 3px double var(--cor-quinta);
+    border: 3px double var(--cor-quarta);
     border-radius: 1em;
     height: 10em;
     aspect-ratio: 1/1;
 }
 
 .user_data_content p{
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     font-size: 12px;
     margin-top: 1em;
 }
 
-.user_editar {
+/* .user_editar {
     text-align: center;
     padding: 0.5em 0;
     width: 10em;
     color: var(--cor-primaria);
-    background-color: var(--cor-secundaria);
-}
+    background-color: var(--cor-terciaria);
+} */
 
 
 .user_info{
@@ -77,6 +77,9 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
+}
+.user_info i{
+    font-size: 1.5rem;
 }
 
 /*----------------------------------------------------------------*/
@@ -106,18 +109,18 @@
     padding: 0.5em;
     border-radius: 1em;
     border: 1px solid transparent;
-    background: var(--cor-gradiente-dois);
+    background: var(--cor-primaria);
     cursor: pointer;
     transition: 0.3s;
 }
 
 .card-jogo:hover{
-    border: 1px solid var(--cor-secundaria);
+    border: 1px solid var(--cor-terciaria);
     transition: 0.3s;
 }
 
 .card-jogo:hover .link_play{
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     transition: 0.3s;
 }
 
@@ -147,7 +150,6 @@
 }
 
 .link_play{
-    color: var(--cor-terciaria);
     padding: 0.5em 0;
     text-align: center;
 }

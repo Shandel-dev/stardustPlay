@@ -40,7 +40,6 @@ tag.addEventListener('input', (e)=>{
     if(tag.value.length === 1 && !tag.value.startsWith('#')){
         tag.value = `#${tag.value}`;
     }
-    mensage_tag.innerText = tag.value;
 });
 
 tag.addEventListener('keydown', (e)=>{

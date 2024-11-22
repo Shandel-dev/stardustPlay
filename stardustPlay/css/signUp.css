@@ -17,7 +17,7 @@
 }
 
 .homeLink:hover {
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     transition: 0.3s;
 }
 
@@ -28,7 +28,7 @@
     height: 100vh;
     width: 50%;
     padding: 15vh 5vw 10vh;
-    background-color: var(--cor-primaria-glass);
+    background-color: var(--cor-secundaria-glass);
 }
 
 .banner_titulo {
@@ -54,7 +54,7 @@
 }
 
 .banner_link a:hover {
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     transition: 0.5s;
 }
 
@@ -77,7 +77,6 @@
     align-items: center;
     padding: 1em 2em;
     border-radius: 2em;
-    background-color: var(--cor-primaria-glass);
     font-size: 1rem;
 }
 
@@ -86,15 +85,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    flex-basis: 1;
-    height: 8em;
-    aspect-ratio: 1;
+    width: 8em;
+    aspect-ratio: 1/1;
     overflow: hidden;
-    border: 3px double var(--cor-secundaria);
+    border: 3px double var(--cor-terciaria);
     margin: 0.5em 0 1em;
     text-align: center;
     cursor: pointer;
-    color: var(--cor-terciaria) !important;
+    color: var(--cor-quinta) !important;
 }
 
 #image_profile {
@@ -112,7 +110,7 @@
 
 .formulario_content label,
 .ocupacao {
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 .formulario_content form input[type='file'] {
@@ -124,7 +122,6 @@ input[type='password'], input[type='email'] {
     all: unset;
     width: 20em;
     padding: 0.3em 0 0.3em 1em;
-    background-color: var(--cor-primaria);
     border: 2px solid rgba(255, 255, 255, 0.507);
     border-radius: 1em;
     margin-bottom: 1em;
@@ -132,7 +129,7 @@ input[type='password'], input[type='email'] {
 
 .formulario_content form input[type='text']:focus,
 input[type='password']:focus, input[type='email']:focus{
-    border: 2px solid var(--cor-quinta);
+    border: 2px solid var(--cor-terciaria);
 }
 
 .container_password{
@@ -156,10 +153,9 @@ input[type='password']:focus, input[type='email']:focus{
 
 .lbl_ocupacoes label{
     text-align: center;
-    border: 2px solid var(--cor-secundaria);
     flex: 1 1 5em;
     padding: 0.3em;
-    color: var(--cor-terciaria);
+    color: var(--cor-quinta);
     cursor: pointer;
     border-radius: 2em;
 }
@@ -168,9 +164,7 @@ input[type='password']:focus, input[type='email']:focus{
     display: none;
 }
 .formulario_content form input[type='radio']:checked + label{
-    background-color: var(--cor-secundaria);
-    color: var(--cor-primaria);
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
 
 }
 
@@ -178,7 +172,7 @@ input[type='password']:focus, input[type='email']:focus{
 
 .enviar_btn {
     text-align: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
     margin-top: 1em;
     padding: 0.5em 0;
     border-radius: 0.5em;

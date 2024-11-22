@@ -4,7 +4,7 @@ include('topo.php'); ?>
 
 <body>
 
-    <?php include('header.php');
+    <?php include('navbar.php');
     require('connect.php');
 
     $idJogo = $_GET['id'];
@@ -17,8 +17,6 @@ include('topo.php'); ?>
 
     $jogo = mysqli_fetch_assoc($jogos);
 
-    // var_dump($jogos);
-    // var_dump($jogo);
     ?>
 
     <h1 class="titulo">Edite as informações do jogo</h1>
@@ -66,7 +64,6 @@ include('topo.php'); ?>
                     </label>
 
                     <label for="hashtag">#Hashtags</label>
-                    <p id="mensage_tags"><i><?php echo $jogo['hashtag']?></i></p>
                     <input type="text" name="hashtag" id="hashtag" placeholder="#hashtag1 #hashtag2 #hashtag3..." maxlength="250" value="<?php echo $jogo['hashtag']?>">
 
 

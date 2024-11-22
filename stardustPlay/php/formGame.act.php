@@ -7,19 +7,23 @@ extract($_FILES);
 
 //dados do jogo
 $nome = $_POST['nome'];
+$nome_escape = mysqli_real_escape_string($conn, $nome);
+
 $empresa = $_POST['empresa'];
+$empresa_escape = mysqli_real_escape_string($conn, $empresa);
+
 $categoria = $_POST['categoria'];
 $preco = $_POST['preco'];
 $plataformas = $_POST['plataforma']; //array de plataformas selecionadas
 $hashtag = $_POST['hashtag'];
 $slogan = $_POST['slogan'];
+$slogan_escape = mysqli_real_escape_string($conn, $slogan);
+
 $trailer = $_POST['trailer'];
 
 $preco_str = str_replace(",", ".", $preco);
-$nome_str = str_replace("'", " ", $nome);
 
 $descricao = $_POST['descricao'];
-$descricao_str = str_replace("'", " ", $descricao);
 $descricao_br = mysqli_real_escape_string($conn, $descricao_str);
 
 $trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $trailer);
@@ -77,7 +81,7 @@ $id_image = $conn->insert_id;   //recupera o ultimo id gerado na tbl_images
 //inserindo dados na tabela tbl_jogos
 if (mysqli_query($conn, "INSERT INTO tbl_jogos
 (`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `hashtag`, `slogan`, `descricao`, `id_imgs`) VALUES
-(DEFAULT, '$nome_str', '$empresa', '$categoria', '$preco_str', '$hashtag', '$slogan', '$descricao_br','$id_image');")) {
+(DEFAULT, '$nome_escape', '$empresa_escape', '$categoria', '$preco_str', '$hashtag', '$slogan_escape', '$descricao_br','$id_image');")) {
     $msg .= "- Dados do jogo enviados para tbl_jogos! ";
 } else {
     $msg .= "- Erro no tnvio de dados para a tbl_jogos!" . mysqli_error($conn);

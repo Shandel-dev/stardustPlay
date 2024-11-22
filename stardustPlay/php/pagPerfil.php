@@ -7,7 +7,7 @@ require('connect.php');
 
 <body>
 
-    <?php include('header.php');
+    <?php include('navbar.php');
     $idUser = $_SESSION['iduser'];
 
     $usuarios = mysqli_query($conn, "SELECT * FROM `tbl_usuarios`

@@ -7,9 +7,12 @@ require('connect.php');
 $idJogo = $_POST['id'];
 
 $nome = $_POST['nome'];
-$nome_str = str_replace("'", " ", $nome);
+// $nome_str = str_replace("'", " ", $nome);
+$nome_escape = mysqli_real_escape_string($conn, $nome);
 
 $empresa = $_POST['empresa'];
+$empresa_escape = mysqli_real_escape_string($conn, $empresa);
+
 $trailer = $_POST['trailer'];
 $trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $trailer);
 $categoria = $_POST['categoria'];
@@ -17,6 +20,7 @@ $preco = $_POST['preco'];
 $preco_str = str_replace(",", ".", $preco);
 $hashtag = $_POST['hashtag'];
 $slogan = $_POST['slogan'];
+$slogan_escape = mysqli_real_escape_string($conn, $slogan);
 
 $descricao = $_POST['descricao'];
 $descricao_br = mysqli_real_escape_string($conn, $descricao);
@@ -77,12 +81,12 @@ foreach($screensNome as $screen){
 
 //atualizar a tbl de jogos
 if(mysqli_query($conn, "UPDATE `tbl_jogos` SET
-`nome` = '$nome_str',
-`empresa` = '$empresa',
+`nome` = '$nome_escape',
+`empresa` = '$empresa_escape',
 `categoria` = '$categoria',
 `preco` = '$preco_str',
 `hashtag` = '$hashtag',
-`slogan` = '$slogan',
+`slogan` = '$slogan_escape',
 `descricao` = '$descricao_br'
 WHERE `id_jogo` = '$idJogo';")){
     $msg = "dados atualizados com sucesso!";
@@ -113,4 +117,4 @@ if(isset($plataformas)){
     }
 }
 $_SESSION['msg'] = $msg;
-header("location: pagInicial.php");
+header("location: pagGame?id=" . $idJogo);

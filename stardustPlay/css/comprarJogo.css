@@ -90,7 +90,7 @@ header{
     padding: 0.1em 0.3em;
     font-size: 0.9rem;
     color: var(--cor-primaria);
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
 
 }
 
@@ -113,7 +113,7 @@ header{
     flex-direction: column;
     margin: auto;
     align-items: center;
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 .plataformas_container {
@@ -142,7 +142,7 @@ header{
 
 .game_pay_titulo {
     font-family: var(--fonte-titulo);
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 .game_pay .lbl_payment {
@@ -156,11 +156,11 @@ header{
 }
 
 .game_pay .lbl_payment:hover {
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 .game_pay input[type="radio"] {
-    accent-color: var(--cor-secundaria);
+    accent-color: var(--cor-terciaria);
 }
 
 .game_pay .lbl_payment i {
@@ -198,24 +198,19 @@ header{
 
 
 .container_confirm .comprar_btn {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
-}
-
-.container_confirm .comprar_btn:active {
-    background-color: var(--cor-quinta);
 }
 
 .game_edit{
     display: flex;
-    color: var(--cor-terciaria);
     align-items: center;
     padding: 0.5em 1em;
     border: 2px solid;
     box-shadow: 0px 0px 10px var(--cor-primaria);
 }
 .game_edit:hover{
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 /*-----------------------------------------------------------*/
@@ -253,7 +248,7 @@ header{
     font-family: var(--fonte-titulo);
 }
 .descricao h4{
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 .descricao p{
     font-size: 22px;
@@ -300,7 +295,7 @@ header{
     align-items: center;
     justify-content: center;
     text-shadow: 0px 0px 20px var(--cor-primaria);
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     font-size: 2.5em;
 }
 .swiper-button-next::after,

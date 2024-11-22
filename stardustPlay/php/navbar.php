@@ -1,32 +1,35 @@
 <link rel="stylesheet" href="../css/navbar.css">
 
 <header class="cabecalho">
-    <a href="" class="link_index">
+    <a href="pagInicial.php" class="link_index">
         <img src="../imgs/logo_light_stardust.png" alt="" class="link_logo">
         <h2 class="link_titulo"><b>StarDust</b>Play</h2>
     </a>
     <ul class="lista_menu">
-        <li class="lista_menu_item" id="btnCategoria">Categorias
-            <ul class="lista_categorias_navbar" id="menuCategoria">
-                <li class="lista_categorias_item"><a href="" class="lista_categorias_ancora">Ação/Aventura</a></li>
-                <li class="lista_categorias_item"><a href="" class="lista_categorias_ancora">RPG</a></li>
-                <li class="lista_categorias_item"><a href="" class="lista_categorias_ancora">Sobrevivência</a></li>
-                <li class="lista_categorias_item"><a href="" class="lista_categorias_ancora">Simulação</a></li>
-                <li class="lista_categorias_item"><a href="" class="lista_categorias_ancora">Esportes/Corrida</a></li>
-                <li class="lista_categorias_item"><a href="" class="lista_categorias_ancora">Terror/Suspense</a></li>
+        <li class="lista_menu_item"><a href="gameHub.php" class="lista_menu_link" style="padding: 0.3em;"><i class="fa-solid fa-gamepad"></i> Jogos</a></li>
+        <li class="lista_menu_item" id="btnCategoria">
+            <input type="checkbox" name="lbl_categoria" id="lbl_categoria" style="display: none;">
+            <label for="lbl_categoria"><i class="fa-solid fa-caret-right"></i> Categorias</label>
+            <ul class="lista_categorias_navbar" id="dropdown_categorias">
+                <li class="lista_categorias_item"><a href="pagListar?texto=Ação/Aventura" class="lista_categorias_ancora">Ação/Aventura</a></li>
+                <li class="lista_categorias_item"><a href="pagListar?texto=RPG" class="lista_categorias_ancora">RPG</a></li>
+                <li class="lista_categorias_item"><a href="pagListar?texto=Sobrevivência" class="lista_categorias_ancora">Sobrevivência</a></li>
+                <li class="lista_categorias_item"><a href="pagListar?texto=Simulação" class="lista_categorias_ancora">Simulação</a></li>
+                <li class="lista_categorias_item"><a href="pagListar?texto=Esportes/Corrida" class="lista_categorias_ancora">Esportes/Corrida</a></li>
+                <li class="lista_categorias_item"><a href="pagListar?texto=Terror/Suspense" class="lista_categorias_ancora">Terror/Suspense</a></li>
             </ul>
-
         </li>
-        <li class="lista_menu_item"><a href="gameHub.php" class="lista_menu_link">Jogos</a></li>
         <li class="lista_menu_item"><a href="
         <?php
-        if (isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == 'Desenvolvedor') {
+        @session_start();
+        if (isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor") {
             echo "pagDev.php";
         } else {
             echo "javascript:notDev()";
         }
         ?>
-        " class="lista_menu_link">Desenvolvedor</a></li>
+        " class="lista_menu_link"><i class="fa-solid fa-code"></i> Desenvolvedor</a></li>
+        <li class="lista_menu_item"><a href="#"><i class="fa-solid fa-headset"></i> Suporte</a></li>
     </ul>
     <div class="container3">
         <form action="pagListar.php" method="get" id="pesquisarNavbar"></form>
@@ -59,30 +62,4 @@
 
 </header>
 
-<script>
-    function notDev() {
-        alert("Você não é um desenvolvedor!");
-    }
-
-    const avatar = document.getElementById('avatar')
-    const dropdown = document.getElementById('drop_perfil')
-
-    //Mostrar/Esconder menu
-    avatar.addEventListener('click', (e) => {
-        dropdown.style.display = dropdown.style.display == 'flex' ? 'none' : 'flex'
-    })
-
-    //Fechar menu
-    document.addEventListener('click', (event) => {
-        if (!avatar.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.style.display = "none"
-        }
-    })
-
-    const btnCategoria = document.getElementById('btnCategoria')
-    const menuCategoria = document.getElementById('menuCategoria')
-
-    btnCategoria.addEventListener('click', (e) => {
-        menuCategoria.style.display = menuCategoria.style.display == "flex" ? "none" : "flex"
-    })
-</script>
+<script src="../javascript/navbar.js"></script>

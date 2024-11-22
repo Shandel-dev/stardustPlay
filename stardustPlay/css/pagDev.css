@@ -18,12 +18,12 @@
     flex-grow: 1;
     flex-basis: 28em;
     gap: 1em;
-    border: 1px solid var(--cor-secundaria);
+    border: 1px solid var(--cor-terciaria);
     border-radius: 1em;
     cursor: pointer;
 }
 .opcoes_item_dev:hover{
-    border: 3px double var(--cor-quinta);
+    border: 3px double var(--cor-quarta);
 }
 
 input[type="checkbox"]{
@@ -36,7 +36,7 @@ span{
     top: 50%;
     transform: translatey(-50%);
     background-color: var(--cor-primaria);
-    border: 4px double var(--cor-secundaria);
+    border: 4px double var(--cor-terciaria);
 }
 
 #database:checked + .modal_database{
@@ -45,23 +45,15 @@ span{
 
 span .close{
     display: flex;
-    border-bottom: 2px dashed var(--cor-secundaria);
+    border-bottom: 2px dashed var(--cor-terciaria);
     justify-content: space-between;
     padding: 0 1em;
     font-size: 1.5em;
 }
-.close .database_titulo{
-    color: var(--cor-terciaria);
-}
 .close i{
     cursor: pointer;
-    color: var(--cor-quarta);
+    color: red;
 }
-.close i:active{
-    color: var(--cor-quinta);
-}
-
-
 span img{
     padding: 2em;
     /*width: 45em;*/
@@ -71,7 +63,3 @@ span img{
 #paleta:checked + .modal_pallete{
     display: block;
 }
-
-
-
-

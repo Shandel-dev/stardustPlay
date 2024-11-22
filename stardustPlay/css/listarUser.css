@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    padding: 5em 5vw 5vh;
+    padding: 2em 5vw 5vh;
 }
 
 .card_profile {
@@ -11,25 +11,25 @@
     flex: 1 1 20em;
     padding: 1em;
     align-items: center;
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
     border-radius: 2em;
 }
 
 .card_profile img {
     height: 15vh;
     aspect-ratio: 1/1;
-    border: 3px double var(--cor-quinta);
+    border: 3px double var(--cor-quarta);
     border-radius: 1em;
     object-fit: cover;
 }
 
 .card_profile sub {
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 .card_profile a {
     margin-top: 0.3em;
     padding: 0.3em;
-    background-color: var(--cor-quarta);
+    background-color: red;
     border-radius: 0.5em;
 }

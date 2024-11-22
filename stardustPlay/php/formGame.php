@@ -3,7 +3,7 @@
 
 <body>
 
-    <?php include('header.php'); ?>
+    <?php include('navbar.php'); ?>
 
     <h1 class="titulo">Formulário para cadastro de um jogo</h1>
     <form action="formGame.act.php" method="post" enctype="multipart/form-data">

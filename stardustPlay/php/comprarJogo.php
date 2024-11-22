@@ -19,7 +19,7 @@ $preco_str = str_replace(".", ",", $jogo['preco'])
 <link rel="stylesheet" href="../css/comprarJogo.css">
 
 <body style="background-image: url('<?php echo $jogo['banner']; ?>');">
-    <?php include('header.php'); ?>
+    <?php include('navbar.php'); ?>
     <!--<div class="gradiente"></div>-->
 
     <main class="content_game">

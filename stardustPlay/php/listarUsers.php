@@ -4,7 +4,7 @@
 <body>
     <?php
 
-    include('header.php');
+    include('navbar.php');
     require('connect.php');
 
     $usuarios = mysqli_query($conn, "SELECT * FROM `tbl_usuarios`

@@ -10,11 +10,12 @@ const swiperBanner = new Swiper(".swiper-banner", {
     },
     pagination: {
         el: ".swiper-pagination",
-        dynamicBullets: true,
+        Bullets: true,
         clickable: true,
     },
     autoplay: {
         delay: 10000,
+        disableOnInteraction: false
     },
 });
 
@@ -45,8 +46,8 @@ const swiperGrupo = new Swiper(".swiper-grupo", {
 
 const swiperPoster = new Swiper(".swiper-poster", {
     slidesPerView: 5.5,
+    spaceBetween: 20,
     centeredSlides: true,
-    spaceBetween: 15,
     loop: true,
     lazy: true,
     navigation: {
@@ -56,5 +57,5 @@ const swiperPoster = new Swiper(".swiper-poster", {
 });
 
 function linkJogo(idJogo){
-    window.location = "comprarJogo.php?id=" +idJogo;
+    window.location = "pagGame.php?id=" +idJogo;
 }

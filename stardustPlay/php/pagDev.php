@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../css/pagDev.css">
 
 <body>
-    <?php include('header.php'); ?>
+    <?php include('navbar.php'); ?>
     <h1 class="dev_titulo">O que gostaria de fazer <?php echo $_SESSION['nome']; ?>?</h1>
     <main class="container_main">
         <div class="opcoes_item_dev" onclick="linkListarUsers()"> <!--primeiro item-->

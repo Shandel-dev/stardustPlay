@@ -34,7 +34,7 @@ header{
 .section_pesquisar .pesquisar-titulo{
     font-size: 3.5rem;
     font-family: var(--fonte-titulo);
-    color: var(--cor-secundaria-glass);
+    color: var(--cor-terciaria-glass);
 }
 
 .section_pesquisar input[type="search"]{
@@ -49,20 +49,20 @@ header{
     box-shadow: 0px 0px 10px black;
 }
 .section_pesquisar input[type="search"]::placeholder{
-    font-weight: 300;
-    color: var(--cor-terciaria);
+    font-weight: 400;
+    color: var(--cor-quinta);
     background: url(../imgs/icon_lupa2.svg) no-repeat;
     background-position: 1em;
 }
 .section_pesquisar input[type="search"]:focus{
-    border: 2px solid var(--cor-secundaria-glass);
+    border: 2px solid var(--cor-terciaria);
 }
 
 /*--------------------------------------------------------------------------------*/
 
 .section_navegar .navegar-subtitulo{
     font-family: var(--fonte-nome);
-    color: var(--cor-secundaria-glass);
+    color: var(--cor-terciaria-glass);
 }
 
 .section_navegar .container_button{
@@ -78,7 +78,7 @@ header{
 }
 
 .button_link:hover{
-    color: var(--cor-secundaria-glass);
+    color: var(--cor-terciaria-glass);
 }
 .button_link i{
     font-size: 4rem;
@@ -88,7 +88,7 @@ header{
 
 .categoria-subtitulo{
     font-family: var(--fonte-nome);
-    color: var(--cor-secundaria-glass);
+    color: var(--cor-terciaria-glass);
 }
 
 .section_categoria .lista_categorias{
@@ -100,5 +100,5 @@ header{
 }
 
 .lista_categoria_link:hover{
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }

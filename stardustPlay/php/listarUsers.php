@@ -16,14 +16,15 @@
 
         echo "<p><sub>$user[ocupacao]</sub></p>";
         echo "<img src= $user[foto]>";
-        echo "<h3>Nome: $user[nome]</h3>";
+        echo "<p><sub>Nome</sub></p>";
+        echo "<h3>$user[nome]</h3>";
         
         echo "<p><sub>Email</sub></p>";
         echo "<p>$user[email]</p>";
         
         echo "<p><sub>Telefone</sub></p>";
         echo "<p>$user[telefone]</p>";
-        echo "<a href=javascript:excluirUser($user[id_user])><i class='fa-solid fa-user-slash'></i> Banir/Excluir usuário</a>";
+        echo "<a href=javascript:excluirUser($user[id_user])><i class='fa-solid fa-user-slash'></i> Excluir/Banir Usuário</a>";
         echo "</div>";
     }
     echo "</div>";

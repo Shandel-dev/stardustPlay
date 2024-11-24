@@ -7,7 +7,6 @@ $id = $_GET['id'];
 $usuarios = mysqli_query($conn, "SELECT * FROM `tbl_usuarios` WHERE `id_user` = '$id';");
 $user = mysqli_fetch_assoc($usuarios);
 
-$msg = "";
 $foto_padrao = '../profilePhotos/photoPadrao.png';
 
 
@@ -18,16 +17,11 @@ if (file_exists($user['foto']) && $user['foto'] != $foto_padrao) {
     $msg = "Foto de perfil inexistente ou já excluida";
 }
 
-echo $msg;
-
 mysqli_query($conn, "DELETE FROM `tbl_usuarios` WHERE `id_user` = '$id'");
 mysqli_query($conn, "DELETE FROM `tbl_user_jogo` WHERE `id_user` = '$id'");
 
 if ($id == $_SESSION['iduser']) {
-    $linkDestino = "pagInicial.php";
-    $_SESSION['logado'] = false;
-    unset($_SESSION['nome'], $_SESSION['foto']);
-    session_destroy();
+    $linkDestino = "logout.php";
 } else {
     $linkDestino = "listarUsers.php";
 }

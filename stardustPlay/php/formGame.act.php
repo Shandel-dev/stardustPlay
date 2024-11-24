@@ -24,7 +24,7 @@ $trailer = $_POST['trailer'];
 $preco_str = str_replace(",", ".", $preco);
 
 $descricao = $_POST['descricao'];
-$descricao_br = mysqli_real_escape_string($conn, $descricao_str);
+$descricao_br = mysqli_real_escape_string($conn, $descricao);
 
 $trailer_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $trailer);
 
@@ -71,9 +71,9 @@ move_uploaded_file($screen3['tmp_name'], $screen3_hash);
 if(mysqli_query($conn, "INSERT INTO `tbl_images`
 (`id_image`,`poster`,`logo`,`banner`, `trailer`, `screen1`,`screen2`,`screen3`) VALUES
 (DEFAULT, '$poster_hash', '$logo_hash', '$banner_hash', '$trailer_embed', '$screen1_hash', '$screen2_hash', '$screen3_hash');")){
-    $msg = "Imagens guardadas com sucesso! ";
+    $msg_image = "Imagens guardadas com sucesso! - ";
 } else{
-    $msg = "Algo deu errado no upload das imagens ";
+    $msg_image = "Algo deu errado no upload das imagens (" . mysqli_error($conn) . ") - ";
 }
 
 $id_image = $conn->insert_id;   //recupera o ultimo id gerado na tbl_images
@@ -82,9 +82,9 @@ $id_image = $conn->insert_id;   //recupera o ultimo id gerado na tbl_images
 if (mysqli_query($conn, "INSERT INTO tbl_jogos
 (`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `hashtag`, `slogan`, `descricao`, `id_imgs`) VALUES
 (DEFAULT, '$nome_escape', '$empresa_escape', '$categoria', '$preco_str', '$hashtag', '$slogan_escape', '$descricao_br','$id_image');")) {
-    $msg .= "- Dados do jogo enviados para tbl_jogos! ";
+    $msg_dados .= "Sucesso! O jogo <span>$nome</span> já está disponível para todos os usuários!<br>";
 } else {
-    $msg .= "- Erro no tnvio de dados para a tbl_jogos!" . mysqli_error($conn);
+    $msg_dados .= "Erro no envio de dados para a tbl_jogos! (" . mysqli_error($conn) . ")<br>";
 }
 
 $id_jogo = $conn->insert_id;    //recupera o id gerado na tbl_jogos
@@ -94,13 +94,15 @@ foreach($plataformas as $id_plataforma){
     if(mysqli_query($conn, "INSERT INTO `tbl_jogo_plataforma`
     (`id`, `id_jogo`, `id_plataforma`) VALUES
     (DEFAULT, '$id_jogo', '$id_plataforma');")){
-        $msg .= "|";
+        $msg_cate .= "|";
     } else{
-        $msg .= "- Ocorreu algum erro" . mysqli_error($conn);
+        $msg_cate .= "- Ocorreu algum erro" . mysqli_error($conn);
     }
 }
 
+$msg = $msg_dados .= $msg_image .= $msg_cate;
+
 $_SESSION['msg'] = $msg;
 
-//header("location: formGame.php");
+header("location: formGame.php");
 exit();

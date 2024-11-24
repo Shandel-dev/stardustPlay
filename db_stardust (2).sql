@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22/11/2024 às 02:23
+-- Tempo de geração: 24/11/2024 às 00:53
 -- Versão do servidor: 8.3.0
 -- Versão do PHP: 8.0.30
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `tbl_images` (
   `screen2` varchar(150) DEFAULT NULL,
   `screen3` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_image`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_images`
@@ -92,7 +92,14 @@ INSERT INTO `tbl_images` (`id_image`, `logo`, `banner`, `poster`, `trailer`, `sc
 (50, '../image_jogo/logo/7537c9b41b5c60122b85df4143592009.webp', '../image_jogo/banner/e41583efe3751225814d41bc46ad0e8e.webp', '../image_jogo/poster/8449c0e1acd23114d45859f5fd3fa763.webp', 'https://www.youtube.com/embed/lVPONdZBh6s?si=pNX9itPYHvtya2Jz', '../image_jogo/screen/8d69713565192a99ad2c08bebc8ff1c1.webp', '../image_jogo/screen/9e8cb641740cea430592e3e5c2956f09.webp', '../image_jogo/screen/cc76d94a14a8d6c2068317b56a0c42a3.webp'),
 (51, '../image_jogo/logo/5b0a03ebcf313777d0f3d4a593dd4fe2.webp', '../image_jogo/banner/50eefd777a46d79e2d5e7e16b10cec99.jpg', '../image_jogo/poster/77e0421dc58036deeed3ebb747df303d.jpg', 'https://www.youtube.com/embed/A-taWymx1WI?si=r0hn4hnx2UKHl5Ow', '../image_jogo/screen/f980e6ab507af79c5ec256a1da5fd4f6.webp', '../image_jogo/screen/5e522f5a556359446e20bb2431a381b0.jpg', '../image_jogo/screen/fa22948ddfc7e646d2c9fec6e5cf992f.webp'),
 (52, '../image_jogo/logo/c22a83422d1b4397e0d693714aee083a.webp', '../image_jogo/banner/eb71e4473fa5f2f8016515b3a2ef9e56.jpg', '../image_jogo/poster/deb38f92d1e77980562a2a8d9a684ed9.png', 'https://www.youtube.com/embed/hdHlIy0W4uU?si=_Z3tKXaa7YiZth5L', '../image_jogo/screen/fe05f22ccc0858064f71374e75eab77f.webp', '../image_jogo/screen/99892e1377691aabda160563d3d7870d.webp', '../image_jogo/screen/3ffc6d58ec7bf572d5b33c8cdb5556ac.webp'),
-(53, '../image_jogo/logo/b199e016402969581e3f3d908d85d123.jfif', '../image_jogo/banner/9eb69ce7d33b0ddaf019fd81a8d0b46b.webp', '../image_jogo/poster/62b6f2611edf18f9f95054fd5e50b61a.webp', 'https://www.youtube.com/embed/RP4UTOek0-Y?si=DplBJS2ZoeWJFkuq', '../image_jogo/screen/54cf8c0b7c2a0f163568a6e7befa6b0d.webp', '../image_jogo/screen/19ed22975bda94719369d6ca652d71e5.webp', '../image_jogo/screen/4081a18c8222035779d51c04db3b1d19.webp');
+(53, '../image_jogo/logo/b199e016402969581e3f3d908d85d123.jfif', '../image_jogo/banner/9eb69ce7d33b0ddaf019fd81a8d0b46b.webp', '../image_jogo/poster/62b6f2611edf18f9f95054fd5e50b61a.webp', 'https://www.youtube.com/embed/RP4UTOek0-Y?si=DplBJS2ZoeWJFkuq', '../image_jogo/screen/54cf8c0b7c2a0f163568a6e7befa6b0d.webp', '../image_jogo/screen/19ed22975bda94719369d6ca652d71e5.webp', '../image_jogo/screen/4081a18c8222035779d51c04db3b1d19.webp'),
+(54, '../image_jogo/logo/4e00999cfce2095dab904245e2269f79.png', '../image_jogo/banner/db52df6405eadb499baa85619bf983af.jpg', '../image_jogo/poster/30ec550a5170594e0fe4fabc7485e3d5.jpg', 'https://www.youtube.com/embed/eaW0tYpxyp0?si=-cWx_lawgTJ29PrR', '../image_jogo/screen/d8625d6846b0fa33ec1b0809adf3fe51.webp', '../image_jogo/screen/da26fcbb5723bb0cbe22198b0e72c07e.webp', '../image_jogo/screen/4f1265264000cac58c1c2d399f4ca852.webp'),
+(55, '../image_jogo/logo/80b4383f1230e6ab02eea34257edfbcf.png', '../image_jogo/banner/937d8007f1bf14d3adb2bf6c02b5f61a.png', '../image_jogo/poster/b2782598b82eb5abc63aa6f9d6c77a8d.jpg', 'https://www.youtube.com/embed/70d9irlxiB4?si=cobRMW-UD_Ql6xmZ', '../image_jogo/screen/213762a7e062a38ba828ab75a73331cb.webp', '../image_jogo/screen/890d7c3a4db9c007e9993ab7f2c05ab0.webp', '../image_jogo/screen/5830f4f016c2f95b652af1b77c1ffc2d.webp'),
+(56, '../image_jogo/logo/95da0600024e86d402e33c59d18dab5c.png', '../image_jogo/banner/0c8f2f0c47be57e8e025252b67567362.jpg', '../image_jogo/poster/8dc8c489ff056f65121afeb6fc517628.jpg', 'https://www.youtube.com/embed/u_CbHrBbHNQ?si=-czJDaiDPtlcXlnD', '../image_jogo/screen/cc195364d690dddf83fa3687f673d31e.webp', '../image_jogo/screen/cd3b1bacbf7aef63ea389f3f0a36863a.webp', '../image_jogo/screen/41967e4415fee540c55bf2ef6a7095bc.webp'),
+(57, '../image_jogo/logo/c4e7b9877d25d32b5ea393e994f1bd30.jpg', '../image_jogo/banner/52cdadedc6ab26d3f947a8563d3a163e.webp', '../image_jogo/poster/e7c490944a5994c4283d8660fe2c02b7.jpg', 'https://www.youtube.com/embed/m8oQllwqw_I?si=FXqQdpcbOVhktbc2', '../image_jogo/screen/527f6773364321489b6b19116a73c847.webp', '../image_jogo/screen/217ec1ce80d0f38b7f0e281153819569.webp', '../image_jogo/screen/11478ec1a96376acdad9d44658cf9e98.webp'),
+(58, '../image_jogo/logo/7212367287dd42eff7a5ec70b6b4f87d.png', '../image_jogo/banner/bf9b31ebbe3aebbf44430f03962975c5.jpg', '../image_jogo/poster/f948e8e0ec6bc1d3b0e25e413e5340a2.jpg', 'https://www.youtube.com/embed/0VxoWT0MyLE?si=uqwquWah3xcGD9vM', '../image_jogo/screen/933a0e9fe7034cfed045b74012d31ff6.webp', '../image_jogo/screen/e0620b56a7bc0a0c71018b4759398778.webp', '../image_jogo/screen/25d332a40d93d656def2c2a764ce9e0a.webp'),
+(59, '../image_jogo/logo/e6f0f9f9b45bf14212132ca0fe198223.png', '../image_jogo/banner/db247f2410bd2b419731ead4bbf4a4dd.jpg', '../image_jogo/poster/da543b143a4cd4dafc538b30c16bad6f.png', 'https://www.youtube.com/embed/M80K51DosFo?si=hFtzlVwRuHjrmCuI', '../image_jogo/screen/400fb9c92e03593996334feca37d6b1a.webp', '../image_jogo/screen/0d64dc4730844cf96e85ecd3865a6c42.webp', '../image_jogo/screen/028683c8835efd593ce87eab62b8a749.webp'),
+(60, '../image_jogo/logo/9b707bc04636b950bc56cabae55f3842.jpg', '../image_jogo/banner/d63a865709b86ca5a2fccaa337439d75.jpg', '../image_jogo/poster/a2e9844b871a2ddbc35a70441d58932d.webp', 'https://www.youtube.com/embed/QkkoHAzjnUs?si=qL9ilAwF2yanscEo', '../image_jogo/screen/ac5c67914fd70574da1943a41f61ab19.webp', '../image_jogo/screen/4ba2af54b967b41cf163e89e0b79b3d0.webp', '../image_jogo/screen/74114421b538792a48cda01029c56211.webp');
 
 -- --------------------------------------------------------
 
@@ -113,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `tbl_jogos` (
   `id_imgs` int DEFAULT NULL,
   PRIMARY KEY (`id_jogo`),
   KEY `id_imgs` (`id_imgs`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_jogos`
@@ -163,10 +170,17 @@ INSERT INTO `tbl_jogos` (`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `ha
 INSERT INTO `tbl_jogos` (`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `hashtag`, `slogan`, `descricao`, `id_imgs`) VALUES
 (45, 'Don\'t Starve Together', 'Klei Entertainment', 'Sobrevivência', 27.99, '#Cooperativo #Multiplayer #ImersaoSombria #MundoInospito', 'Sobreviva ao desconhecido com amigos—mas cuidado, a fome e a escuridão não perdoam!', '                        Em Don’t Starve Together, você e seus amigos são lançados em um mundo sombrio e estranho, onde a sobrevivência depende de trabalho em equipe e planejamento. Explore uma paisagem repleta de criaturas estranhas, desafios imprevisíveis e recursos escassos enquanto tenta resistir à fome, à loucura e aos perigos da escuridão. A cada dia, o ambiente se torna mais ameaçador, exigindo que você desenvolva estratégias para caçar, cultivar, construir abrigos e lidar com monstros que espreitam à noite.\r\n\r\nCada personagem possui habilidades únicas que podem ajudar a equipe a sobreviver, tornando a cooperação essencial para superar as adversidades e vencer os desafios da natureza hostil. O mundo de Don’t Starve Together é imprevisível e gerado aleatoriamente, garantindo que cada partida seja uma experiência única e repleta de surpresas.\r\n\r\nPara quem gosta de desafios de sobrevivência e de testar os limites da cooperação, Don’t Starve Together oferece uma aventura cativante e assustadora. Enfrente seus maiores medos ao lado de amigos e descubra se vocês têm o que é preciso para sobreviver... juntos!                    ', 48),
 (46, 'Dead Cells', 'Playdigious', 'Ação/Aventura', 47.49, '#Indie #Chefoes #Exploracao #PixelArt #MorteERecomeco', 'Morra, aprenda, e volte mais forte—lute sem piedade nas profundezas de um castelo em constante mudança!', 'Prepare-se para uma corrida brutal onde cada morte é só o começo! Em Dead Cells, você é uma entidade imortal tentando escapar de um castelo sinistro que muda toda vez que você volta para ele. Esqueça a segurança—este jogo é sobre aprender na marra! Cada tentativa te joga em meio a inimigos imprevisíveis, chefes sanguinários e perigos por todos os lados. Mas a melhor parte? Toda vez que você volta, está mais forte e pronto para encarar o que antes parecia impossível.\r\n\r\nCom dezenas de armas e habilidades para experimentar, você escolhe como quer lutar: seja com espadas, arcos, magias ou até granadas! Encontre o estilo que funciona pra você e caia dentro de combates rápidos e cheios de ação. Só cuidado: aqui, uma escolha errada pode ser fatal, e a morte significa recomeçar do zero. Mas, hey—cada erro te ensina algo novo!\r\n\r\nPara quem curte adrenalina e desafios, Dead Cells é o jogo perfeito. Entre, morra, aprenda e volte mais forte, porque esse castelo não vai se libertar sozinho!                    ', 49),
-(47, 'Five Nights at Freddy\'s 2', 'Scott Cawthon', 'Terror/Suspense', 16.59, '#Terror #Animatronic #Fnaf2 #Puppet #Jumpscare', 'Cinco noites de tensão pura—quem será que vai te encontrar no escuro?', '                        Bem-vindo de volta ao terror! Five Nights at Freddy\'s 2 te coloca de novo na pele de um vigia noturno com a missão aparentemente simples de monitorar câmeras... mas nada é tão fácil quando se está preso com animatrônicos sinistros que parecem ganhar vida após o expediente. Com um sistema de câmeras reformulado e novos corredores para vigiar, o medo só aumenta: os robôs não seguem mais regras e podem aparecer de qualquer lugar, a qualquer momento.\r\n\r\nNesta sequência, Freddy e seus amigos estão mais assustadores do que nunca. Esqueça portas para se proteger: agora, tudo o que você tem é uma máscara de Freddy para tentar confundi-los, mas será que isso será o suficiente para mantê-los afastados? Cada noite traz um novo desafio, com mais animatrônicos, sustos e adrenalina.\r\n\r\nSe você é fã de jogos de terror e adora aquela sensação de tensão crescente, Five Nights at Freddy s 2 vai te prender ao máximo. Prepare-se para uma experiência aterrorizante onde cada noite parece mais longa e cada som no escuro é uma ameaça. E então, acha que consegue sobreviver até o amanhecer?                                        ', 50),
-(48, 'Five Nights at Freddy\'s 4', 'Scott Cawthon', 'Terror/Suspense', 16.59, '#Terror #Animatronic #Fnaf4 #Jumpscare #Pesadelos', 'Sem câmeras, sem portas—só você, o medo e o que se esconde no escuro!', 'Esqueça o escritório e as câmeras: em Five Nights at Freddy’s 4, o terror invade sua própria casa. Agora, você é apenas uma criança trancada no quarto, tentando sobreviver às criaturas que se escondem no escuro. Sem trancas, sem barreiras, apenas uma lanterna como única defesa contra pesadelos que parecem mais reais a cada noite.\r\n\r\nCom novos animatrônicos que são pura manifestação do medo, este jogo leva o terror psicológico a um nível mais pessoal. Você vai ouvir sussurros, passos e até mesmo a respiração das criaturas espreitando nos corredores, dentro do armário e embaixo da cama. É você, sua lanterna e a coragem de enfrentar o medo, noite após noite, sabendo que cada pequeno barulho pode ser o último.\r\n\r\nSe você gosta de sentir o coração disparar e a tensão crescer a cada segundo, Five Nights at Freddy’s 4 é um desafio intenso de resistência e coragem. Enfrente seus piores pesadelos e descubra se consegue resistir ao horror até o amanhecer, onde cada noite é uma luta pela sobrevivência… e pela sanidade.                    ', 51),
-(49, 'Five Nights at Freddy\'s 3', 'Scott Cawthon', 'Terror/Suspense', 16.59, '#Terror #Animatronic #SpringTrap #Fnaf', 'Os horrores do passado nunca desaparecem—e agora, eles voltaram para te assombrar.', 'Bem-vindo ao Fazbear’s Fright! Trinta anos após os eventos terríveis no restaurante Freddy Fazbear’s Pizza, alguém decidiu transformar o local em uma atração de terror, trazendo de volta os medos e lendas que cercavam os animatrônicos. Mas aqui, o horror não é só uma decoração—ele é real. Como segurança noturno, sua tarefa é vigiar as câmeras e manter o local sob controle... mas logo você descobre que não está sozinho.\r\n\r\nEm Five Nights at Freddy’s 3, um animatrônico único e aterrorizante chamado Springtrap ronda os corredores, e cada erro pode ser fatal. Além disso, visões de antigos animatrônicos assombram suas noites, deixando você preso entre a paranoia e o medo real. Use os sistemas de ventilação e som para tentar manter Springtrap longe, mas cuidado—um movimento em falso e ele pode estar bem atrás de você.\r\n\r\nPrepare-se para noites de tensão e sustos constantes onde cada segundo conta. Five Nights at Freddy’s 3 te convida a enfrentar os fantasmas do passado, em uma experiência de terror imersiva e inesquecível. Será que você consegue sobreviver ao Fazbear’s Fright e sair ileso dessa nova atração de terror?                    ', 52),
-(50, 'Five Nights at Freddy\'s', 'Scott Cawthon', 'Terror/Suspense', 10.89, '#Terror #Animatronics #freddy #fox #5Noites', 'Fique atento, cada movimento pode ser o último... O pesadelo está à sua porta!', '                        Prepare-se para viver uma experiência aterrorizante em Five Nights at Freddy\'s. Neste jogo de suspense psicológico, você assume o papel de um guarda noturno em uma pizzaria cheia de animatrônicos assustadores. Sua missão é simples: sobreviver até o amanhecer. Mas há um problema… os animatrônicos não estão em modo de descanso durante a noite, e eles têm planos bem sombrios para você.\r\n\r\nCom recursos limitados, como luzes e câmeras de segurança, você precisa controlar a situação sem ser pego de surpresa. Cada noite fica mais intensa à medida que os animatrônicos se tornam mais agressivos e imprevisíveis. O jogo desafia seus reflexos e sua capacidade de lidar com a tensão crescente, enquanto você tenta manter os monstros longe o suficiente para garantir sua sobrevivência.\r\n\r\nFive Nights at Freddy\'s não é apenas um jogo de terror, é uma batalha psicológica contra o medo do desconhecido. Você consegue suportar o terror até o amanhecer, ou será mais uma vítima desses assassinos mecânicos?                    ', 53);
+(47, 'Five Nights at Freddy\'s 2', 'Scott Cawthon', 'Terror/Suspense', 16.59, '#FNAF #2 #Terror #Animatronic #Puppet', 'Cinco noites de tensão pura—quem será que vai te encontrar no escuro?', 'Bem-vindo de volta ao terror! Five Nights at Freddy\'s 2 te coloca de novo na pele de um vigia noturno com a missão aparentemente simples de monitorar câmeras... mas nada é tão fácil quando se está preso com animatrônicos sinistros que parecem ganhar vida após o expediente. Com um sistema de câmeras reformulado e novos corredores para vigiar, o medo só aumenta: os robôs não seguem mais regras e podem aparecer de qualquer lugar, a qualquer momento.\r\n\r\nNesta sequência, Freddy e seus amigos estão mais assustadores do que nunca. Esqueça portas para se proteger: agora, tudo o que você tem é uma máscara de Freddy para tentar confundi-los, mas será que isso será o suficiente para mantê-los afastados? Cada noite traz um novo desafio, com mais animatrônicos, sustos e adrenalina.\r\n\r\nSe você é fã de jogos de terror e adora aquela sensação de tensão crescente, Five Nights at Freddy s 2 vai te prender ao máximo. Prepare-se para uma experiência aterrorizante onde cada noite parece mais longa e cada som no escuro é uma ameaça. E então, acha que consegue sobreviver até o amanhecer?                                                            ', 50),
+(48, 'Five Nights at Freddy\'s 4', 'Scott Cawthon', 'Terror/Suspense', 16.59, '#FNAF #4 #Animatronic #Jumpscare #Pesadelos #Terror', 'Sem câmeras, sem portas—só você, o medo e o que se esconde no escuro!', '                        Esqueça o escritório e as câmeras: em Five Nights at Freddy’s 4, o terror invade sua própria casa. Agora, você é apenas uma criança trancada no quarto, tentando sobreviver às criaturas que se escondem no escuro. Sem trancas, sem barreiras, apenas uma lanterna como única defesa contra pesadelos que parecem mais reais a cada noite.\r\n\r\nCom novos animatrônicos que são pura manifestação do medo, este jogo leva o terror psicológico a um nível mais pessoal. Você vai ouvir sussurros, passos e até mesmo a respiração das criaturas espreitando nos corredores, dentro do armário e embaixo da cama. É você, sua lanterna e a coragem de enfrentar o medo, noite após noite, sabendo que cada pequeno barulho pode ser o último.\r\n\r\nSe você gosta de sentir o coração disparar e a tensão crescer a cada segundo, Five Nights at Freddy’s 4 é um desafio intenso de resistência e coragem. Enfrente seus piores pesadelos e descubra se consegue resistir ao horror até o amanhecer, onde cada noite é uma luta pela sobrevivência… e pela sanidade.                                        ', 51),
+(49, 'Five Nights at Freddy\'s 3', 'Scott Cawthon', 'Terror/Suspense', 16.59, '#FNAF #3 #SpringTrap #Terror #SpringTrap', 'Os horrores do passado nunca desaparecem—e agora, eles voltaram para te assombrar.', '                        Bem-vindo ao Fazbear’s Fright! Trinta anos após os eventos terríveis no restaurante Freddy Fazbear’s Pizza, alguém decidiu transformar o local em uma atração de terror, trazendo de volta os medos e lendas que cercavam os animatrônicos. Mas aqui, o horror não é só uma decoração—ele é real. Como segurança noturno, sua tarefa é vigiar as câmeras e manter o local sob controle... mas logo você descobre que não está sozinho.\r\n\r\nEm Five Nights at Freddy’s 3, um animatrônico único e aterrorizante chamado Springtrap ronda os corredores, e cada erro pode ser fatal. Além disso, visões de antigos animatrônicos assombram suas noites, deixando você preso entre a paranoia e o medo real. Use os sistemas de ventilação e som para tentar manter Springtrap longe, mas cuidado—um movimento em falso e ele pode estar bem atrás de você.\r\n\r\nPrepare-se para noites de tensão e sustos constantes onde cada segundo conta. Five Nights at Freddy’s 3 te convida a enfrentar os fantasmas do passado, em uma experiência de terror imersiva e inesquecível. Será que você consegue sobreviver ao Fazbear’s Fright e sair ileso dessa nova atração de terror?                                        ', 52),
+(50, 'Five Nights at Freddy\'s', 'Scott Cawthon', 'Terror/Suspense', 10.89, '#FNAF #Animatronics #freddy #fox #5Noites #', 'Fique atento, cada movimento pode ser o último... O pesadelo está à sua porta!', '                                                                        Prepare-se para viver uma experiência aterrorizante em Five Nights at Freddy\'s. Neste jogo de suspense psicológico, você assume o papel de um guarda noturno em uma pizzaria cheia de animatrônicos assustadores. Sua missão é simples: sobreviver até o amanhecer. Mas há um problema… os animatrônicos não estão em modo de descanso durante a noite, e eles têm planos bem sombrios para você.\r\n\r\nCom recursos limitados, como luzes e câmeras de segurança, você precisa controlar a situação sem ser pego de surpresa. Cada noite fica mais intensa à medida que os animatrônicos se tornam mais agressivos e imprevisíveis. O jogo desafia seus reflexos e sua capacidade de lidar com a tensão crescente, enquanto você tenta manter os monstros longe o suficiente para garantir sua sobrevivência.\r\n\r\nFive Nights at Freddy\'s não é apenas um jogo de terror, é uma batalha psicológica contra o medo do desconhecido. Você consegue suportar o terror até o amanhecer, ou será mais uma vítima desses assassinos mecânicos?                                                            ', 53),
+(51, 'Red Dead Redemption 2', 'Rockstar Games', 'Ação/Aventura', 125.00, '#OesteSelvagem #MundoAberto #Acao #Aventura', 'Explore o Wild West, viva a verdadeira liberdade e enfrente o fim de uma era!', 'Red Dead Redemption 2 oferece uma imersão sem precedentes no fim do século XIX, quando a era dos bandidos chega ao seu fim. Jogando como Arthur Morgan, um membro da gangue Van der Linde, você se vê em um mundo aberto vibrante e detalhado, onde cada escolha pode alterar o destino de sua gangue e de sua própria vida. Prepare-se para viver intensas aventuras, envolvendo perseguições, confrontos e uma luta constante pela sobrevivência.\r\n\r\nA narrativa épica de Red Dead Redemption 2 é complementada por um sistema de combate refinado e uma imersão profunda, permitindo que você explore montanhas, florestas, cidades e vilarejos com um realismo impressionante. Caçar, pescar, interagir com outros personagens e até mesmo realizar missões secundárias oferecem uma experiência única de jogo. A cada passo, o jogo desafia sua moralidade e suas lealdades, enquanto o fim do Oeste Selvagem se aproxima.\r\n\r\nCom gráficos cinematográficos e uma trilha sonora memorável, o jogo mergulha você na história de Arthur e sua busca por redenção em meio à crescente civilização e os constantes desafios de um mundo em mudança. Red Dead Redemption 2 é uma obra-prima interativa que oferece mais do que apenas uma aventura: é uma jornada de emoções, surpresas e destinos entrelaçados.                                                                                                    ', 54),
+(52, 'Celeste', 'Maddy Makes Games & Extremely OK Games, ', 'RPG', 89.98, '#Indie #Plataforma #NarrativaProfunda #Superacao #PixelArt #Soundtrack #2D', 'Superar os obstáculos internos e escalar as montanhas da alma em uma jornada de autodescoberta', 'Em Celeste, você embarca na jornada de Madeline, uma jovem determinada a escalar a montanha Celeste, um local desafiador e cheio de perigos. Este jogo de plataforma exige habilidades de precisão, mas também mergulha profundamente em uma narrativa emocional que trata de temas como ansiedade, autoconhecimento e superação pessoal. Cada salto e cada desafio representam mais do que simples obstáculos: eles simbolizam a luta interna da protagonista e sua jornada em direção à aceitação de si mesma.\r\n\r\nO jogo apresenta uma mecânica de plataforma desafiante, onde cada movimento deve ser cuidadosamente calculado, com uma trilha sonora envolvente e gráficos pixelados que capturam a beleza e a dificuldade de cada momento. À medida que Madeline sobe a montanha, ela encontra personagens que ajudam a explorar suas próprias inseguranças e emoções, tornando Celeste não apenas um jogo de habilidade, mas também uma experiência profundamente emocional.\r\n\r\nCom fases criativas, mecânicas de jogo inovadoras e uma história tocante, Celeste oferece uma experiência única que desafia tanto suas habilidades quanto seus sentimentos, fazendo com que cada vitória e derrota se sintam profundamente pessoais. Prepare-se para escalar suas próprias montanhas, tanto virtuais quanto emocionais, neste jogo que é uma verdadeira obra de arte.', 55),
+(53, 'GTA: San Andreas', 'Rockstar Games', 'Ação/Aventura', 69.99, '#GTA #sa #San #Andreas #MundoAberto #CJ #GroveStreet #VidaNoCrime', 'De Grove Street para o mundo: viva, lute e conquiste em uma terra sem limites!', 'Entre na pele de Carl \"CJ\" Johnson e embarque em uma jornada épica por San Andreas, uma terra repleta de desafios, ação e oportunidades. Em GTA: San Andreas, você decide como viver, seja reconquistando o respeito das ruas, desvendando conspirações ou apenas explorando um mundo vasto e dinâmico cheio de aventuras.\r\n\r\nCom missões intensas, perseguições de tirar o fôlego e uma história envolvente, o jogo te coloca no centro de uma batalha pela sobrevivência e pelo poder. Entretiros, corridas e diálogos inesquecíveis, você vai criar sua própria marca em um cenário que mistura cidades vibrantes, desertos, florestas e um espírito dos anos 90 que nunca morre.\r\n\r\nModifique carros, participe de gangues, ou simplesmente curta a liberdade de explorar o que quiser. GTA: San Andreas não é apenas um jogo — é uma experiência que marcou gerações e continua sendo referência no universo gamer. Está pronto para voltar para Grove Street?                    ', 56),
+(54, 'Grand Theft Auto: Vice City', 'Rockstar Games', 'Ação/Aventura', 119.96, '#GTA #Vice #City #TommyVercetti #MundoAberto #Anos80 #Gangues', 'Entre no mundo do crime, estilo e música nos anos 80... Vice City espera por você', '                        Em GTA: Vice City, você assume o papel de Tommy Vercetti, um criminoso ambicioso que busca conquistar o poder em uma cidade cheia de neon, perigo e luxo. Vice City é o paraíso dos anos 80, onde o crime é uma constante e as possibilidades são infinitas. Aqui, você vai precisar de coragem, habilidade e estratégia para crescer, dominar e se tornar o chefão.\r\n\r\nDesfrute de um vasto mundo aberto repleto de carros, motos, barcos e até aviões, com uma trilha sonora inesquecível que te transporta diretamente para a década de 80. A cada esquina, uma nova missão, um novo inimigo e a chance de se infiltrar ainda mais fundo no mundo do crime. Entre assaltos, perseguições e jogadas de poder, Vice City é o seu playground.\r\n\r\nCom personagens inesquecíveis, um mapa diversificado e uma história cheia de reviravoltas, o jogo te convida a viver a vida do crime de uma forma única. Você está pronto para ser o maior nome de Vice City?                    ', 57),
+(55, 'Grand Theft Auto 3', 'Rockstar Games', 'Ação/Aventura', 119.96, '#GTA #3 #LibertyCity #MundoAberto #Anos90 #CidadeDoCrime', 'Vingança, crime e caos: em Liberty City, você faz as regras!', 'Em GTA 3, você assume o controle de Claude, um homem que foi traído e está em busca de vingança nas ruas de Liberty City. Não há limites para o que você pode fazer nesta cidade do crime, onde a lei é apenas uma sugestão e a sobrevivência depende da sua coragem.\r\n\r\nCom um mapa aberto e vasto, você vai explorar ruas caóticas, desvendar mistérios e cumprir missões que desafiam seus limites. Perseguições alucinantes, tiroteios intensos e um enredo recheado de traições e reviravoltas farão de cada missão uma experiência única. A jogabilidade inovadora para a época e a atmosfera sombria de Liberty City garantem que GTA 3 seja um marco na história dos jogos.\r\n\r\nPrepare-se para comandar o caos, com a liberdade de tomar decisões que moldam sua trajetória. De crimes de rua a confrontos com gangues e figuras poderosas, GTA 3 oferece a verdadeira experiência de um mundo sem regras. Está pronto para dominar Liberty City e escrever sua própria história de poder?', 58),
+(56, 'Grand Theft Auto IV', 'Rockstar', 'Ação/Aventura', 79.99, '#GTA #IV #4 #NikoBellic #MundoAberto #CrimeEConquista', 'De um imigrante para o topo, a cidade está esperando para ser conquistada — Liberty City nunca será a mesma', 'Em GTA IV, você entra no mundo de Niko Bellic, um imigrante da Europa Oriental, determinado a deixar para trás seu passado e buscar uma vida melhor em Liberty City. Mas a cidade, repleta de oportunidades e perigos, acaba arrastando Niko de volta ao mundo do crime. Entre traições, buscas por vingança e decisões morais, a linha entre sobrevivência e corrupção se torna cada vez mais tênue.\r\n\r\nLiberty City é mais viva e real do que nunca, com ruas movimentadas, uma enorme gama de veículos e atividades, além de uma trama rica que te mantém imerso do começo ao fim. Junte-se a Niko em sua luta para conquistar a cidade, enfrentando gangues, figuras poderosas e seu próprio destino.\r\n\r\nGTA IV redefine a experiência de mundo aberto, oferecendo uma história madura, personagens profundos e uma jogabilidade que vai te prender em cada missão. Prepare-se para uma aventura sem igual onde cada escolha pode mudar seu futuro. Será que você vai escapar da escuridão ou ser consumido por ela?', 59),
+(57, 'Grand Theft Auto V', 'Rockstar', 'Ação/Aventura', 249.90, '#GTA #V GTA5 #Michael #Trevor #Franklin #LosSantos #CrimesEConquistas #5', 'Três protagonistas, infinitas possibilidades. A vida no crime nunca foi tão emocionante!', 'Em GTA V, você assume os papéis de três protagonistas únicos: Michael, um ex-criminoso buscando uma vida de luxo, Trevor, um psicopata imprevisível, e Franklin, um jovem em busca de uma oportunidade. Juntos, eles se envolvem em assaltos, perseguições e tramas complexas, enfrentando inimigos e desafios, enquanto tentam controlar suas vidas em Los Santos.\r\n\r\nCom um vasto mundo aberto repleto de atividades, missões e eventos aleatórios, GTA V oferece uma liberdade sem igual. Mude entre os personagens a qualquer momento, aproveitando suas habilidades únicas e histórias envolventes. Perseguições alucinantes, assaltos grandiosos, exploração urbana ou rural, e até mesmo esportes radicais — Los Santos tem de tudo.\r\n\r\nAlém da campanha épica, o modo online de GTA V oferece uma experiência ainda mais imersiva, com missões cooperativas, atividades competitivas e uma comunidade ativa que mantém o jogo vivo. Está pronto para viver no limite e fazer história em Los Santos?', 60);
 
 -- --------------------------------------------------------
 
@@ -182,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `tbl_jogo_plataforma` (
   PRIMARY KEY (`id`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_plataforma` (`id_plataforma`)
-) ENGINE=InnoDB AUTO_INCREMENT=300 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=365 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_jogo_plataforma`
@@ -299,26 +313,50 @@ INSERT INTO `tbl_jogo_plataforma` (`id`, `id_jogo`, `id_plataforma`) VALUES
 (270, 22, 2),
 (271, 22, 3),
 (272, 22, 4),
-(276, 50, 3),
-(277, 50, 4),
-(278, 50, 5),
-(279, 49, 1),
-(280, 49, 3),
-(281, 49, 4),
-(282, 49, 5),
-(287, 47, 2),
-(288, 47, 3),
-(289, 47, 4),
-(290, 47, 5),
-(291, 48, 2),
-(292, 48, 3),
-(293, 48, 4),
-(294, 48, 5),
 (295, 46, 1),
 (296, 46, 2),
 (297, 46, 3),
 (298, 46, 4),
-(299, 46, 5);
+(299, 46, 5),
+(315, 51, 1),
+(316, 51, 2),
+(317, 51, 4),
+(318, 52, 1),
+(319, 52, 2),
+(320, 52, 3),
+(321, 52, 4),
+(329, 53, 1),
+(330, 53, 2),
+(331, 53, 4),
+(332, 53, 5),
+(337, 54, 1),
+(338, 54, 2),
+(339, 54, 4),
+(340, 54, 5),
+(341, 55, 1),
+(342, 55, 2),
+(343, 55, 4),
+(344, 56, 1),
+(345, 56, 2),
+(346, 56, 4),
+(347, 57, 1),
+(348, 57, 2),
+(349, 57, 4),
+(350, 47, 2),
+(351, 47, 3),
+(352, 47, 4),
+(353, 47, 5),
+(354, 50, 3),
+(355, 50, 4),
+(356, 50, 5),
+(357, 49, 1),
+(358, 49, 3),
+(359, 49, 4),
+(360, 49, 5),
+(361, 48, 1),
+(362, 48, 3),
+(363, 48, 4),
+(364, 48, 5);
 
 -- --------------------------------------------------------
 
@@ -362,7 +400,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user_jogo` (
   PRIMARY KEY (`id_compra`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_user_jogo`
@@ -382,7 +420,16 @@ INSERT INTO `tbl_user_jogo` (`id_compra`, `versao`, `id_user`, `id_jogo`, `data_
 (25, 'PLAYSTATION', 29, 10, '2024-11-13'),
 (26, 'COMPUTER', 29, 42, '2024-11-13'),
 (27, 'COMPUTER', 30, 7, '2024-11-15'),
-(28, 'COMPUTER', 19, 41, '2024-11-21');
+(28, 'COMPUTER', 19, 41, '2024-11-21'),
+(29, 'PLAYSTATION', 31, 34, '2024-11-22'),
+(30, 'PLAYSTATION', 32, 29, '2024-11-22'),
+(31, 'MOBILE', 32, 35, '2024-11-22'),
+(32, 'COMPUTER', 19, 51, '2024-11-22'),
+(36, 'COMPUTER', 36, 51, '2024-11-22'),
+(37, 'MOBILE', 36, 46, '2024-11-22'),
+(38, 'MOBILE', 36, 32, '2024-11-22'),
+(39, 'PLAYSTATION', 36, 21, '2024-11-22'),
+(40, 'COMPUTER', 36, 19, '2024-11-22');
 
 -- --------------------------------------------------------
 
@@ -401,7 +448,7 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
   `ocupacao` varchar(30) DEFAULT NULL,
   `data_conta` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_usuarios`
@@ -411,7 +458,10 @@ INSERT INTO `tbl_usuarios` (`id_user`, `nome`, `email`, `telefone`, `foto`, `sen
 (19, 'Shandel', 'shandelvm16@gmail.com', '(11)91034-6024', '../profilePhotos/91793c4bc723216c06a573ff8578fa4a.jpg', '$2y$10$KTTzNo76PabmSGpanGcbaO2VHAFYlanj5mUBluo2cozV8eqrvypvW', 'Desenvolvedor', '2024-10-21 20:37:36'),
 (27, 'Thiago', 'thiaguinhometralha@gmail.com', '(11)98775-6168', '../profilePhotos/251f99204ea7955cef79102349dbb513.jpg', '$2y$10$pKa47T2a48V3Rk3vlSufPO4KxT1HcrHm.OvUppbLdqncCsJofUWKu', 'Usuario', '2024-11-13 17:03:49'),
 (29, 'Daniel', 'daniel@gmail.com', '(11)96643-7456', '../profilePhotos/photoPadrao.png', '$2y$10$zbGZW.xy.MjkEsWc3rIYs.KyhC73jZdRNT1s4qG9TiKd4uUDwhucK', 'Usuario', '2024-11-13 17:12:39'),
-(30, 'pug master', 'pug_master1234@gmail.com', '(35)17382-6514', '../profilePhotos/photoPadrao.png', '$2y$10$opq4tItxMHveyoKOhbFoluKeFiSAdLRamOI5LwI0kHMkkNZ7acGc2', 'Desenvolvedor', '2024-11-15 12:24:50');
+(30, 'pug master', 'pug_master1234@gmail.com', '(35)17382-6514', '../profilePhotos/photoPadrao.png', '$2y$10$opq4tItxMHveyoKOhbFoluKeFiSAdLRamOI5LwI0kHMkkNZ7acGc2', 'Desenvolvedor', '2024-11-15 12:24:50'),
+(31, 'João', 'joao_professor@hotmail.com', '(11)93211-4704', '../profilePhotos/photoPadrao.png', '$2y$10$0ez/nrUrJ/U5rJb0ttfMwurmrmb7UZysm1FRoVuUQTghl9TO0W9FO', 'Desenvolvedor', '2024-11-22 14:43:54'),
+(32, 'hercules', 'herculesmarques491@gmail.com', '(11)99306-9786', '../profilePhotos/5e49dd53e55dea40619feec7aeb57797.jpg', '$2y$10$UUsjm7H56D9cxK7f6qf3eeBe.WFzLQJa9xi/L2vn1aUS2n1GvW0ra', 'Usuario', '2024-11-22 14:59:45'),
+(36, 'Shand', 'ShandElPro@gmail.com', '(11)93874-3958', '../profilePhotos/6c43fa0b1935812cdd972121bc0a7706.jpg', '$2y$10$JpENsKPV7H4rqFyaAysVEeiXF.utNX1UTa7puHPGsE6MAiYi.PZae', 'Usuario', '2024-11-22 17:03:45');
 
 --
 -- Restrições para tabelas despejadas

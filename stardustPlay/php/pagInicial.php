@@ -6,6 +6,7 @@
     <?php 
     //include('header.php'); 
     include('navbar.php');
+    include('mensagem.php');
     ?>
 
     <main class="container_pagina">

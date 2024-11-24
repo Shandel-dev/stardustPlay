@@ -38,6 +38,7 @@ function consultaJogos($limite, $categoria, $categoria2 = null, $categoria3 = nu
             JOIN `tbl_user_jogo` as uj
             on uj.id_jogo = j.id_jogo
             GROUP BY uj.id_jogo
+            ORDER BY COUNT(uj.id_jogo) DESC, j.nome
             limit 10;");
 
             $top = 1;
@@ -221,13 +222,13 @@ function consultaJogos($limite, $categoria, $categoria2 = null, $categoria3 = nu
         </div>
     </section> -->
     <section>
-        <h2 class="subtitulo_categoria">Seu coração aguenta? Mergulhe num mundo de terror na penumbra</h2>
+        <h2 class="subtitulo_categoria">Seu coração aguenta? Mergulhe num mundo de terror na penumbra!</h2>
         <div class="swiper swiper-poster">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <?php
-                $jogosIndie = consultaJogos(10, "Terror/Suspense");
+                $jogosIndie = consultaJogos(20, "Terror/Suspense");
 
                 while ($jogo = mysqli_fetch_assoc($jogosIndie)) {
                     echo "<div class='swiper-slide' onclick=javascript:linkJogo($jogo[id_jogo])>";

@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="../css/signUp.css">
 
 <body>
+    <?php include('mensagem.php'); ?>
     <div class="container">
         <a href="pagInicial.php" class="homeLink">
             <i class="fa-solid fa-house-chimney"></i>

@@ -89,9 +89,9 @@ if(mysqli_query($conn, "UPDATE `tbl_jogos` SET
 `slogan` = '$slogan_escape',
 `descricao` = '$descricao_br'
 WHERE `id_jogo` = '$idJogo';")){
-    $msg = "dados atualizados com sucesso!";
+    $msg = "dados atualizados com sucesso! <br>";
 }else{
-    $msg = "erro no envio de dados!" . mysqli_error($conn);
+    $msg = "erro no envio de dados!" . mysqli_error($conn) . "<br>";
 }
 
 //atualizar imagens

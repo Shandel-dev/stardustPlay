@@ -6,6 +6,9 @@
     require('connect.php');
     $texto = $_GET['texto'];
 
+    $texto_hashtags = $_GET['texto'];
+    $texto_hashtags = "#" . str_replace(" ", "%#", $texto_hashtags);
+
     $jogos = mysqli_query(
         $conn,
         "SELECT j.id_jogo, j.categoria, j.nome, j.preco, i.poster\n"
@@ -14,7 +17,7 @@
 
             . "JOIN tbl_images as i\n"
 
-            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%' OR j.hashtag like '%$texto%' OR j.categoria = '$texto'\n"
+            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%' OR j.hashtag like '%$texto_hashtags%' OR j.categoria = '$texto'\n"
 
             . "ORDER BY 
                 CASE 

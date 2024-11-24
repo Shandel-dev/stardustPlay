@@ -24,7 +24,7 @@ header{
     height: 100%;
     -webkit-background-size: cover;
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     filter: blur(20px) brightness(0.4);
     transition: 0.3s ease-in-out;
 }
@@ -32,7 +32,7 @@ header{
 #olho{
     position: absolute;
     opacity: 0.5;
-    top: 90%;
+    bottom: 3%;
     left: 2rem;
     z-index: 5;
     color: var(--cor-terciaria);
@@ -65,7 +65,8 @@ header{
 .swiper-jogo-prev,
 .swiper-jogo-next{
     font-size: 4rem;
-    top: 93%;
+    bottom: 3%;
+    top: unset;
     color: greenyellow;
 }
 
@@ -84,6 +85,7 @@ header{
     display: flex;
     flex-grow: 1;
     padding: 2em;
+    font-size: 1rem;
 }
 
 .container-info{
@@ -100,7 +102,6 @@ header{
 #image-poster{
     height: 40vh;
     aspect-ratio: 2/3;
-    border-radius: 1em;
 }
 
 #image-logo{
@@ -112,7 +113,7 @@ header{
 .info_capa{
     display: flex;
     gap: 1em;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 .info_capa_content{
     display: flex;
@@ -176,7 +177,7 @@ header{
     padding: 0.3rem 1em;
     color: var(--cor-primaria);
     font-weight: 700;
-    opacity: 0.8;
+    opacity: 0.9;
     cursor: pointer;
 }
 .pay_link_money:hover,
@@ -205,7 +206,7 @@ header{
 }
 
 .btn_jogar, .btn_jogo_perfil{
-    opacity: 0.7;
+    opacity: 0.9;
     font-size: 1rem;
     font-weight: 700;
     font-family: var(--fonte-titulo);
@@ -229,7 +230,7 @@ header{
 .descricao-content{
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 4em;
     flex-wrap: wrap;
 }
 .descricao-content>div{
@@ -242,15 +243,15 @@ header{
 }
 
 .descricao_slogan{
-    font-size: 2rem;
+    font-size: 2em;
     font-family: var(--fonte-titulo);
     text-align: center;
 }
 .descricao_empresa{
     font-family: var(--fonte-nome);
     text-align: center;
-    margin-bottom: 3em;
-    font-size: 1.2rem;
+    margin-bottom: 2em;
+    font-size: 1.2em;
 }
 span{
     color: var(--cor-terciaria);
@@ -258,11 +259,12 @@ span{
 
 .descricao_subtitulo{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3em;
     font-family: var(--fonte-nome);
 }
 
 .descricao_texto{
+    font-size: 1em;
     text-align: justify;
 }
 

@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="../css/signIn.css">
 
 <body>
+    <?php include('mensagem.php');?>
+
     <div class="container">
         <a href="pagInicial.php" class="homeLink">
             <i class="fa-solid fa-house-chimney"></i>
@@ -19,12 +21,14 @@
                     <input type="password" name="senha" class="form_pass" id="password_input" placeholder="Digite sua senha" required>
                     <label for="exibir_check" id="exibir_olho"><i class="fa-solid fa-eye-slash"></i></label>
                 </div>
+                <a href="#" style="text-align: end;">Esqueceu a senha?</a>
+
 
                 <input type="checkbox" id="exibir_check" style="display: none;">
 
                 <label for="enviar" class="form_submit"><b>FAZER LOGIN</b></label>
                 <input type="submit" id="enviar" value="FAZER LOGIN" class="form_submit" style="display: none;">
-                <a href="#" style="text-align: end;">Esqueceu a senha?</a>
+                <span style="text-align: end;">Novo por aqui? <a href="signUp.php" style="color:var(--cor-terciaria);">Crie uma nova conta</a></span>
             </form>
         </main>
 

@@ -1,4 +1,5 @@
 <?php
+@session_start();
 require('connect.php');
 
 $id_user = $_POST['idUser'];
@@ -12,4 +13,7 @@ if(mysqli_query($conn, "INSERT INTO `tbl_user_jogo`
 }else{
     $msg = "Falha na compra do jogo<br>" . mysqli_error($conn);
 }
+
+$_SESSION['msg'] = $msg;
+
 header("location: pagGame.php?id=$id_jogo");

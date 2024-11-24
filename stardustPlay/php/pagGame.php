@@ -17,7 +17,8 @@ $preco_str = str_replace(".", ",", "R$" . $jogo['preco']);
 <link rel="stylesheet" href="../css/pagGame.css">
 
 <body>
-    <?php include('navbar.php'); ?>
+    <?php include('navbar.php'); 
+    include('mensagem.php');?>
     <!-- Slider main container -->
     <div class="swiper swiper-jogo">
         <div class="parallax-bg" style="

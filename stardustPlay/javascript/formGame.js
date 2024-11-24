@@ -17,7 +17,7 @@ inputs.forEach(input => {
             img.src = URL.createObjectURL(file); // Atualiza a imagem com a URL do arquivo
             img.style.display = 'block'; // Mostra a imagem
             placeholder.style.display = 'none'; // Esconde o placeholder
-            container.style.border = '2px solid var(--cor-secundaria)';
+            container.style.border = '2px solid var(--cor-terciaria)';
         } else {
             img.style.display = 'none'; // Esconde a imagem se não houver arquivo
             placeholder.style.display = 'inline'; // Mostra o placeholder novamente

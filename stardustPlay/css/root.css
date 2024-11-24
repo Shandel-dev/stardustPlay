@@ -1,29 +1,33 @@
 :root{
     --cor-primaria: #00090e;    /*cor de fundo*/
-    --cor-primaria-glass: #00090ec2;
+    --cor-primaria-glass: #00090ea2;
 
     --cor-secundaria: #0d0f18;    /*cor de fundo*/
-    --cor-secundaria-glass: #131520a6;
+    --cor-secundaria-glass: #1315208a;
 
     --cor-terciaria: #d3e538;
     --cor-terciaria-glass: #d4e538c5;
 
     --cor-quarta: #f1d302;
 
-    --cor-quinta: #c5cab7;   /*cor da fonte*/
+    --cor-quinta: #d4dbc1;   /*cor da fonte*/
 
     --cor-gradiente-um: linear-gradient(45deg, #01233f 0%, #112430 60%);
     --cor-gradiente-dois: linear-gradient(45deg, #0b0f16 0%, #141a27 60%);
     
-    --fonte-titulo: "Exo", sans-serif;
-    --fonte-nome: "Quicksand", sans-serif;
-    --fonte-texto: "lato", sans-serif;
+    --fonte-titulo: "Exo", sans-serif;  /*PARA TITULO E TEXTOS DE DESTAQUE*/
+    --fonte-nome: "Quicksand", sans-serif;  /*NOME, PREÇO E SUBTITULOS DE JOGOS*/
+    --fonte-texto: "lato", sans-serif;  /*FONTE PADRÃO DO SITE*/
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
 }
 
 body{
@@ -37,9 +41,51 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 a{
     text-decoration: none;
     color: var(--cor-quinta);
+}
+
+.message_session{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    font-family: var(--fonte-titulo);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-terciaria);
+    padding: 0.5em 3em;
+    border-radius: 1em;
+    gap: 0.5em;
+    animation: tempo_msg forwards;
+    /*Duração da animação definida no arquivo mensagem.php*/
+}
+
+.message_session span{
+    color: var(--cor-terciaria);
+}
+
+@keyframes tempo_msg{
+    0%{
+        opacity: 1;
+    }
+    5%{
+        top: 15vh;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        top: 15vh;
+        opacity: 0;
+        display: none;
+    }
 }

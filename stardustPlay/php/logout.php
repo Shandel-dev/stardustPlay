@@ -3,7 +3,10 @@
 
 $_SESSION['logado'] = false;
 unset($_SESSION['nome'], $_SESSION['foto']);
-session_destroy();
+
+$_SESSION['msg'] = "Você saiu da sua conta";
+
+//session_destroy();
 
 header("location: pagInicial.php");
 exit();

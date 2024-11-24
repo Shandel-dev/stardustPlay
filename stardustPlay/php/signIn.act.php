@@ -17,6 +17,8 @@ if($usuario ->num_rows == 1){
         $_SESSION['foto'] = $usuario['foto'];
         $_SESSION['ocupacao'] = $usuario['ocupacao'];
         $_SESSION['iduser'] = $usuario['id_user'];
+
+        $msg = "Seja bem vindo <span>" . $_SESSION['nome'] . "</span>";
         $irPara = "location: pagInicial.php";
     } else{
         $msg = "Usuário ou senha incorretos!";

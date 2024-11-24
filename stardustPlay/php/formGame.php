@@ -3,7 +3,8 @@
 
 <body>
 
-    <?php include('navbar.php'); ?>
+    <?php include('navbar.php'); 
+    include('mensagem.php');?>
 
     <h1 class="titulo">Formulário para cadastro de um jogo</h1>
     <form action="formGame.act.php" method="post" enctype="multipart/form-data">
@@ -121,16 +122,6 @@
                 <hr>
                 <div class="submit_message">
                     <p>Atenção! Forneça os dados do jogo de maneira precisa. Lembre-se: a responsabilidade por informações incorretas ou incoerentes no cadastro recai sobre o <strong>DESENVOLVEDOR!</strong></p>
-                    <p class="db_mensage">
-                        <?php
-                        @session_start();
-                        if (isset($_SESSION['msg'])) {
-                            echo "Relatório => ";
-                            echo $_SESSION['msg'];
-                            unset($_SESSION['msg']);
-                        }
-                        ?>
-                    </p>
                 </div>
                 <div>
                     <img src="../imgs/logo_light_stardust.png" alt="logo stardust">

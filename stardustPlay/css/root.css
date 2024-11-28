@@ -2,7 +2,7 @@
     --cor-primaria: #00090e;    /*cor de fundo*/
     --cor-primaria-glass: #00090ea2;
 
-    --cor-secundaria: #0d0f18;    /*cor de fundo*/
+    --cor-secundaria: #151827;    /*cor de fundo*/
     --cor-secundaria-glass: #1315208a;
 
     --cor-terciaria: #d3e538;
@@ -10,7 +10,7 @@
 
     --cor-quarta: #f1d302;
 
-    --cor-quinta: #d4dbc1;   /*cor da fonte*/
+    --cor-quinta: #dae1c6;   /*cor da fonte*/
 
     --cor-gradiente-um: linear-gradient(45deg, #01233f 0%, #112430 60%);
     --cor-gradiente-dois: linear-gradient(45deg, #0b0f16 0%, #141a27 60%);
@@ -36,7 +36,7 @@ body{
     overflow-x: hidden;
     color: var(--cor-quinta);
     font-family: var(--fonte-texto);
-    background: var(--cor-secundaria);
+    background: var(--cor-primaria);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

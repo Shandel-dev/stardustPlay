@@ -17,8 +17,8 @@ $preco_str = str_replace(".", ",", "R$" . $jogo['preco']);
 <link rel="stylesheet" href="../css/pagGame.css">
 
 <body>
-    <?php include('navbar.php'); 
-    include('mensagem.php');?>
+    <?php include('navbar.php');
+    include('mensagem.php')?>
     <!-- Slider main container -->
     <div class="swiper swiper-jogo">
         <div class="parallax-bg" style="
@@ -77,7 +77,6 @@ $preco_str = str_replace(".", ",", "R$" . $jogo['preco']);
                     <article class="info_payment">
                         <?php
 
-
                         if (isset($_SESSION['logado']) && $_SESSION['logado']) {
                             $queryCompra = mysqli_query($conn, "SELECT * FROM `tbl_user_jogo`
                             where `id_user` = '$_SESSION[iduser]' and `id_jogo` = '$id_Jogo'");
@@ -92,6 +91,7 @@ $preco_str = str_replace(".", ",", "R$" . $jogo['preco']);
                         }else{
                             echo "<form action='pagGame.act.php' method='post' class='payment_form'>";
                                 echo "<input type='hidden' name='idJogo' value='$id_Jogo'>";
+                                echo "<input type='hidden' name='nomeJogo' value='$jogo[nome]'>";
                                 echo "<input type='hidden' name='idUser' value=" . (isset($_SESSION['iduser']) ? $_SESSION['iduser'] : "") . ">";
                                 echo "<input type='submit' style='display: none;' id=comprarJogo>";
 

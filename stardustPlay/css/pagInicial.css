@@ -58,6 +58,15 @@ header{
     border: 2px solid var(--cor-terciaria);
 }
 
+.recomendados{
+    display: flex;
+    gap: 1em;
+    font-size: 0.9rem;
+}
+.recomendados a:hover{
+    color: var(--cor-terciaria);
+}
+
 /*--------------------------------------------------------------------------------*/
 
 .section_navegar .navegar-subtitulo{

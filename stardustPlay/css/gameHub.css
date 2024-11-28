@@ -87,13 +87,34 @@
     color: var(--cor-quarta);
 }
 .banner_link{
-    font-family: var(--fonte-nome);
+    position: relative;
+    margin-top: 1.5em;
+    font-family: var(--fonte-titulo);
     font-weight: 700;
-    font-size: 1.5rem;
-    transition: 0.3s ease-in-out;
+    font-size: 2rem;
+    transition: 0.2s ease-in-out;
 }
+
+.banner_link::after{
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 10%;
+    border-radius: 1em;
+    background-color: var(--cor-terciaria);
+    transition: 0.2s ease-in-out;
+}
+
 .banner_link:hover{
     color: var(--cor-terciaria);
+}
+.banner_link:hover::after{
+    width: 80%;
+    transition: 0.2s ease-in-out;
 }
 
 .banner_link:hover > i{
@@ -132,6 +153,9 @@
     object-fit: cover;
     border-radius: 1em;
 }
+.jogo_preco{
+    color: var(--cor-terciaria);
+}
 
 /*---------------------------------------------------------------*/
 .swiper-grupo{
@@ -158,6 +182,7 @@
 .grupo_nome{
     font-size: 16px;
 }
+
 
 /*--------------------------------------------------------------------*/
 

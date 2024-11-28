@@ -104,7 +104,7 @@ if(mysqli_query($conn, "UPDATE `tbl_images` SET
 `screen2` = '$destino[screen2]',
 `screen3` = '$destino[screen3]'
 WHERE `id_image` = '{$imagemAntiga['id_image']}';")) {
-    $msg .= "imagens salvas com sucesso";
+    $msg .= "imagens do jogo salvas";
 }else{
     $msg .= "erro no envio das imagens" . mysqli_error($conn);
 }

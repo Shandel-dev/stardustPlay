@@ -3,7 +3,7 @@
 <header class="cabecalho">
     <a href="pagInicial.php" class="link_index">
         <img src="../imgs/logo_light_stardust.png" alt="" class="link_logo">
-        <h2 class="link_titulo"><b>StarDust</b>Play</h2>
+        <h2 class="link_titulo"><b>StarDust</b> Play</h2>
     </a>
     <ul class="lista_menu">
         <li class="lista_menu_item"><a href="gameHub.php" class="lista_menu_link" style="padding: 0.3em;"><i class="fa-solid fa-gamepad"></i> Jogos</a></li>
@@ -29,7 +29,7 @@
         }
         ?>
         " class="lista_menu_link"><i class="fa-solid fa-code"></i> Desenvolvedor</a></li>
-        <li class="lista_menu_item"><a href="#"><i class="fa-solid fa-headset"></i> Suporte</a></li>
+        <li class="lista_menu_item"><a href="#" onclick="mensagem('Página Indisponível')"><i class="fa-solid fa-headset"></i> Suporte</a></li>
     </ul>
     <div class="container3">
         <form action="pagListar.php" method="get" id="pesquisarNavbar"></form>

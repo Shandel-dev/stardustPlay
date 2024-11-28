@@ -15,12 +15,12 @@ const swiperBanner = new Swiper(".swiper-banner", {
     },
     autoplay: {
         delay: 10000,
-        disableOnInteraction: false
+        disableOnInteraction: true
     },
 });
 
 const swiperCard1 = new Swiper(".swiper-card", {
-    slidesPerView: 2.5,
+    slidesPerView: 2.4,
     spaceBetween: 10,
     lazy: true,
     loop: true,

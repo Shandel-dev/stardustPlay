@@ -48,15 +48,17 @@ header {
     height: 4px;
     width: 0%;
     bottom: -10%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 1em;
     background-color: var(--cor-terciaria);
     transition: 0.3s ease-in-out;
 }
 .lista_menu_item:hover::after{
-    width: 100%;
+    width: 90%;
     transition: 0.3s ease-in-out;
 }
+
 
 #lbl_categoria:checked ~ .lista_categorias_navbar{
     display: flex;

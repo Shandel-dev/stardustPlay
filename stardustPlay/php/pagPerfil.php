@@ -20,8 +20,13 @@ require('connect.php');
     ON uj.id_jogo = j.id_jogo
     JOIN `tbl_images` as i
     ON j.id_imgs = i.id_image
-    WHERE uj.id_user = '$idUser';");
+    WHERE uj.id_user = '$idUser'
+    ORDER BY j.id_jogo desc;");
     ?>
+    <input type='checkbox' id='check-edit' style="display: none;">
+    <article class="modal-editar" id="editar_janela">
+        <label for='check-edit' class="modal_sair"><i class="fa-regular fa-circle-xmark"></i></label>
+    </article>
     <main class="container-perfil">
         <article class="perfil-user">
             <div class="user_data">
@@ -29,8 +34,8 @@ require('connect.php');
                 echo "<div class=user_data_foto>";
                 echo "<img src='$usuario[foto]' class=user_foto>";
                 echo "<div>";
-                echo "<a class='user_excluir' href='javascript:excluirConta($idUser)'><i class='fa-solid fa-trash'></i></a>";
-                echo "<a class='user_perfil' href='#'>Editar Perfil</a>";
+                //echo "<a class='user_excluir' href='javascript:excluirConta($idUser)'><i class='fa-solid fa-trash'></i></a>";
+                echo "<label class='user_perfil' for=check-edit id=btn_editar><i class='fa-solid fa-user-pen'></i> Editar Perfil</label>";
                 echo "</div>";
                 echo "</div>";
 
@@ -49,9 +54,9 @@ require('connect.php');
             </div>
 
             <div class="user_info">
-                <p><?php echo $jogos->num_rows;?> jogos adquiridos</p>
+                <p><?php echo $jogos->num_rows; ?> jogos adquiridos</p>
                 <p><sub>Data de criação de conta</sub></p>
-                <?php echo "<p>" . $usuario['data_conta'] . "</p>";?>
+                <?php echo "<p>" . $usuario['data_conta'] . "</p>"; ?>
                 <p>Redes Sociais</p>
                 <div class="perfil_social">
                     <a href="" class="social_link"><i class="fa-brands fa-instagram"></i></a>
@@ -97,12 +102,12 @@ require('connect.php');
     </main>
 
     <script>
-        function excluirConta(idUser){
+        function excluirConta(idUser) {
             resposta = confirm("Deseja excluir sua conta?\nEsta ação não pode ser revertida!");
 
-            if(resposta){
+            if (resposta) {
                 window.location = "excluirUser?id=" + idUser;
-            }else{
+            } else {
                 alert("Exclusão Cancelada");
             }
         }

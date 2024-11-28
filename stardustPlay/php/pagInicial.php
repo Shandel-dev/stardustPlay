@@ -7,6 +7,7 @@
     //include('header.php'); 
     include('navbar.php');
     include('mensagem.php');
+    include('connect.php')
     ?>
 
     <main class="container_pagina">
@@ -15,6 +16,20 @@
             <h1 class="pesquisar-titulo">StarDust</h1>
             <form action="pagListar.php" method="get" id="pesquisarJogo"></form>
             <input type="search" name="texto" placeholder="O que gostaria de jogar hoje?" form="pesquisarJogo" required>
+            <span class="recomendados">Recomendados: 
+                <?php
+                    $jogosPopular = mysqli_query($conn, "SELECT j.id_jogo, j.nome, COUNT(uj.id_jogo) from `tbl_jogos` as j
+                    JOIN `tbl_user_jogo` as uj
+                    ON uj.id_jogo = j.id_jogo
+                    GROUP BY uj.id_jogo
+                    ORDER BY COUNT(uj.id_jogo) DESC, j.nome
+                    limit 6;");
+
+                    while($jogo = mysqli_fetch_assoc($jogosPopular)){
+                        echo "<a href=pagGame.php?id=" . $jogo['id_jogo'] . ">" . $jogo['nome'] . "</a>";
+                    }
+                ?>
+            </span>
         </section>
 
         <section class="section_navegar">
@@ -39,7 +54,7 @@
 
                 <a href="
                 <?php
-                if(isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor"){
+                if(isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor" && $_SESSION['logado'] == true){
                     echo "pagDev.php";
                 }else{
                     echo "javascript:notDev()";
@@ -69,7 +84,7 @@
 
     <script>
         function notDev() {
-            alert("Você não é um desenvolvedor!");
+            alert("Funções de Desenvolvedor Restritas");
         }
         function notLogado(){
             alert("Entre ou Cadastre-se na StarDust!");

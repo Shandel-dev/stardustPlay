@@ -5,6 +5,7 @@
     <?php include('navbar.php');
     require('connect.php');
     $texto = $_GET['texto'];
+    $textoJogo = str_replace(" ", "%", $texto);
 
     $texto_hashtags = $_GET['texto'];
     $texto_hashtags = "#" . str_replace(" ", "%#", $texto_hashtags);
@@ -17,12 +18,12 @@
 
             . "JOIN tbl_images as i\n"
 
-            . "ON j.id_imgs = i.id_image where j.nome like '%$texto%' OR j.hashtag like '%$texto_hashtags%' OR j.categoria = '$texto'\n"
+            . "ON j.id_imgs = i.id_image where j.nome like '%$textoJogo%' OR j.hashtag like '%$texto_hashtags%' OR j.categoria = '$texto'\n"
 
             . "ORDER BY 
                 CASE 
-                    WHEN j.nome LIKE '%$texto%' THEN 1 
-                    WHEN j.hashtag LIKE '%$texto%' THEN 2 
+                    WHEN j.nome LIKE '%$textoJogo%' THEN 1 
+                    WHEN j.hashtag LIKE '%$texto_hashtags%' THEN 2 
                     ELSE 3 
                 END,
                 j.nome;"

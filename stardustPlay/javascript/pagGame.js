@@ -59,5 +59,5 @@ olho.addEventListener('click', (e) =>{
 })
 
 function notLogin(){
-    alert("Entre ou cadastre-se na StarDust Play")
+    alert("Entre ou cadastre-se na StarDust")
 }

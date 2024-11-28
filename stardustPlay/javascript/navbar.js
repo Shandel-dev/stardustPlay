@@ -14,5 +14,6 @@ avatar.addEventListener('click', (e) => {
 document.addEventListener('click', (event) => {
     if (!avatar.contains(event.target) && !dropdown.contains(event.target)) {
         dropdown.style.display = "none"
+
     }
 })

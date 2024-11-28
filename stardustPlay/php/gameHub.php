@@ -16,7 +16,7 @@ function consultaJogos($limite, $categoria, $categoria2 = null, $categoria3 = nu
     if($categoria3 !== null){
         $consulta .= " or j.categoria = '$categoria3'";
     }
-    $consulta .= " ORDER BY j.nome LIMIT $limite";
+    $consulta .= " ORDER BY j.slogan, j.id_jogo desc LIMIT $limite";
     return mysqli_query($conn, $consulta);
 }
 ?>
@@ -77,7 +77,7 @@ function consultaJogos($limite, $categoria, $categoria2 = null, $categoria3 = nu
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <?php
-                $jogosAcao = consultaJogos(15, "RPG", "Ação/Aventura");
+                $jogosAcao = consultaJogos(20, "RPG", "Ação/Aventura");
                 ?>
                 <?php
                 while ($jogo = mysqli_fetch_assoc($jogosAcao)) {
@@ -86,7 +86,7 @@ function consultaJogos($limite, $categoria, $categoria2 = null, $categoria3 = nu
                     echo "<div class = card1-jogo_info>";
                     echo "<h1 class = 'jogo_nome'>$jogo[nome]</h1>";
                     echo "<p><sup>$jogo[categoria]</sup></p>";
-                    echo "<h2 class = 'jogo_preco'>" . ($jogo['preco'] == 0 ? "GRÁTIS" : "R$$jogo[preco]") . "</h2>";
+                    echo "<h3 class = 'jogo_preco'>" . ($jogo['preco'] == 0 ? "GRÁTIS" : "R$$jogo[preco]") . "</h3>";
                     echo "</div>";
                     echo "</div>";
                 }

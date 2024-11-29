@@ -34,8 +34,6 @@ header {
     font-weight: 500;
 }
 
-
-
 .lista_menu_item{
     position: relative;
     cursor: pointer;
@@ -177,23 +175,22 @@ header {
 
 .container3 input[type="search"] {
     all: unset;
-    border: 2px solid var(--cor-terciaria);
+    border: 1px solid var(--cor-terciaria);
     border-radius: 0.5em;
     padding: 0.3em 0.5em;
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 
 .link_login {
-    border: 1px solid var(--cor-terciaria);
-    border-radius: 2em;
-    padding: 0.5em;
-    font-size: 14px;
     display: flex;
     align-items: center;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 2em;
+    padding: 0.5em;
     gap: 0.5em;
 }
 
 .link_login i {
     color: var(--cor-terciaria);
-    font-size: 1.5rem;
+    font-size: 1.3em;
 }

@@ -22,6 +22,27 @@
     <link rel="stylesheet" href="../css/root.css">
 
     <!-- javascript -->
-    <script src="../javascript/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../javascript/jquery-3.7.1.min.js"></script> <!--JQUERY-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> <!--SWIPER-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--SWEEET ALERT-->
 </head>
+<script>
+    function sweet_message(msg) {
+        tempo = msg.length / 6 * 750
+        Swal.fire({
+            position: "top-end",
+            title: "<i class='fa-regular fa-comment' style='font-size:2em;'></i>",
+            html: `${msg}`,
+            showConfirmButton: false,
+            timer: tempo,
+            backdrop: false,
+            timerProgressBar: true,
+            showCloseButton: true,
+            customClass: {
+                popup: 'swat-message_popup',
+                html: 'swat-message_text',
+                timerProgressBar: 'swat-message_timer'
+            },
+        })
+    }
+</script>

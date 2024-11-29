@@ -23,10 +23,10 @@ require('connect.php');
     WHERE uj.id_user = '$idUser'
     ORDER BY j.id_jogo desc;");
     ?>
-    <input type='checkbox' id='check-edit' style="display: none;">
+    <!-- <input type='checkbox' id='check-edit' style="display: none;">
     <article class="modal-editar" id="editar_janela">
         <label for='check-edit' class="modal_sair"><i class="fa-regular fa-circle-xmark"></i></label>
-    </article>
+    </article> -->
     <main class="container-perfil">
         <article class="perfil-user">
             <div class="user_data">
@@ -35,7 +35,10 @@ require('connect.php');
                 echo "<img src='$usuario[foto]' class=user_foto>";
                 echo "<div>";
                 //echo "<a class='user_excluir' href='javascript:excluirConta($idUser)'><i class='fa-solid fa-trash'></i></a>";
-                echo "<label class='user_perfil' for=check-edit id=btn_editar><i class='fa-solid fa-user-pen'></i> Editar Perfil</label>";
+                ?>
+                <label class='user_perfil' onclick="sweet_message('Em breve...')" id=btn_editar><i class='fa-solid fa-user-pen'></i> Editar Perfil</label>
+                
+                <?php
                 echo "</div>";
                 echo "</div>";
 
@@ -100,18 +103,6 @@ require('connect.php');
             </div>
         </article>
     </main>
-
-    <script>
-        function excluirConta(idUser) {
-            resposta = confirm("Deseja excluir sua conta?\nEsta ação não pode ser revertida!");
-
-            if (resposta) {
-                window.location = "excluirUser?id=" + idUser;
-            } else {
-                alert("Exclusão Cancelada");
-            }
-        }
-    </script>
 
 </body>
 

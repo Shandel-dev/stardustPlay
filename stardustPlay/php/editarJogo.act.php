@@ -89,7 +89,7 @@ if(mysqli_query($conn, "UPDATE `tbl_jogos` SET
 `slogan` = '$slogan_escape',
 `descricao` = '$descricao_br'
 WHERE `id_jogo` = '$idJogo';")){
-    $msg = "dados atualizados com sucesso! <br>";
+    $msg = "dados do jogo <span>$nome_escape</span> atualizados com sucesso! <br>";
 }else{
     $msg = "erro no envio de dados!" . mysqli_error($conn) . "<br>";
 }

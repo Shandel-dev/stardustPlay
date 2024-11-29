@@ -25,11 +25,11 @@
         if (isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor") {
             echo "pagDev.php";
         } else {
-            echo "javascript:notDev()";
+            echo "javascript:sweet_message('Funções de Desenvolvedor Restritas')";
         }
         ?>
         " class="lista_menu_link"><i class="fa-solid fa-code"></i> Desenvolvedor</a></li>
-        <li class="lista_menu_item"><a href="#" onclick="mensagem('Página Indisponível')"><i class="fa-solid fa-headset"></i> Suporte</a></li>
+        <li class="lista_menu_item"><a href="#" onclick="sweet_message('Em breve...')"><i class="fa-solid fa-headset"></i> Suporte</a></li>
     </ul>
     <div class="container3">
         <form action="pagListar.php" method="get" id="pesquisarNavbar"></form>

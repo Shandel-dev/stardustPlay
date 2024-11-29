@@ -6,7 +6,7 @@
     --cor-secundaria-glass: #1315208a;
 
     --cor-terciaria: #d3e538;
-    --cor-terciaria-glass: #d4e538c5;
+    --cor-terciaria-glass: #d4e538d8;
 
     --cor-quarta: #f1d302;
 
@@ -27,7 +27,8 @@
 }
 
 html{
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 14px;
 }
 
 body{
@@ -73,6 +74,19 @@ a{
     color: var(--cor-terciaria);
 }
 
+.swat-message_popup{
+    top: 5em;
+    background-color: var(--cor-primaria);
+    color: var(--cor-quinta);
+}
+.swat-message_popup span{
+    color: var(--cor-terciaria);
+}
+
+.swat-message_timer{
+    background-color: var(--cor-terciaria);
+}
+
 @keyframes tempo_msg{
     0%{
         opacity: 1;
@@ -87,5 +101,10 @@ a{
         top: 15vh;
         opacity: 0;
         display: none;
+    }
+}
+@media screen and (min-width: 1290px){
+    html{
+        font-size: 16px;
     }
 }

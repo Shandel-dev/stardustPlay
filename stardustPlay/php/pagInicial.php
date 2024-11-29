@@ -44,7 +44,7 @@
                 if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
                     echo "pagPerfil.php";
                 } else{
-                    echo "javascript:notLogado()";
+                    echo "javascript:sweet_message('Entre ou cadastre-se na StarDust Play!')";
                 }
                 ?>
                 " class="button_link">
@@ -57,7 +57,7 @@
                 if(isset($_SESSION['ocupacao']) && $_SESSION['ocupacao'] == "Desenvolvedor" && $_SESSION['logado'] == true){
                     echo "pagDev.php";
                 }else{
-                    echo "javascript:notDev()";
+                    echo "javascript:sweet_message('Funções de Desenvolvedor Restritas!')";
                 }
                 ?>
                 " class="button_link">
@@ -81,15 +81,6 @@
         </section>
 
     </main>
-
-    <script>
-        function notDev() {
-            alert("Funções de Desenvolvedor Restritas");
-        }
-        function notLogado(){
-            alert("Entre ou Cadastre-se na StarDust!");
-        }
-    </script>
 </body>
 
 </html>

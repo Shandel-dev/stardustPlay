@@ -2,7 +2,7 @@
 @session_start();
 
 $_SESSION['logado'] = false;
-unset($_SESSION['nome'], $_SESSION['foto']);
+unset($_SESSION['nome'], $_SESSION['foto'], $_SESSION['ocupacao']);
 
 $_SESSION['msg'] = "Você saiu da sua conta";
 

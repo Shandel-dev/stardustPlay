@@ -51,7 +51,7 @@ $preco_str = str_replace(".", ",", "R$" . $jogo['preco']);
                             <p class="capa_hashtag"><?php echo $jogo['hashtag']; ?></p>
                             <p class="capa_categoria"><?php echo $jogo['categoria']; ?></p>
                             <?php
-                            $preco = str_replace(".", ",", $jogo['preco']);
+                                $preco = str_replace(".", ",", $jogo['preco']);
                             ?>
                             <h2 class="capa_preco"><?php echo ($jogo['preco'] == 0 ? "GRATUITO" : "R$" . $preco); ?></h2>
                         </div>
@@ -82,7 +82,7 @@ $preco_str = str_replace(".", ",", "R$" . $jogo['preco']);
                             where `id_user` = '$_SESSION[iduser]' and `id_jogo` = '$id_Jogo'");
                             $linkSubmit = "for=comprarJogo";
                         }else{
-                            $linkSubmit = "onclick=javascript:notLogin()";
+                            $linkSubmit = "onclick='sweet_message(\"Entre ou Cadastre-se na StarDust!\")'";
                         }
 
                         if (isset($queryCompra) && mysqli_num_rows($queryCompra) == 1) {

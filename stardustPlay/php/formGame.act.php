@@ -71,7 +71,7 @@ move_uploaded_file($screen3['tmp_name'], $screen3_hash);
 if(mysqli_query($conn, "INSERT INTO `tbl_images`
 (`id_image`,`poster`,`logo`,`banner`, `trailer`, `screen1`,`screen2`,`screen3`) VALUES
 (DEFAULT, '$poster_hash', '$logo_hash', '$banner_hash', '$trailer_embed', '$screen1_hash', '$screen2_hash', '$screen3_hash');")){
-    $msg_image = "Imagens guardadas com sucesso! - ";
+    $msg_image = "Imagens armazenadas com sucesso! - ";
 } else{
     $msg_image = "Algo deu errado no upload das imagens (" . mysqli_error($conn) . ") - ";
 }

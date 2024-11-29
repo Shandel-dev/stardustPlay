@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 28/11/2024 às 02:40
+-- Tempo de geração: 29/11/2024 às 02:20
 -- Versão do servidor: 8.3.0
 -- Versão do PHP: 8.0.30
 
@@ -134,7 +134,7 @@ INSERT INTO `tbl_jogos` (`id_jogo`, `nome`, `empresa`, `categoria`, `preco`, `ha
 (9, 'Marvel\'s Spider-Man', 'Insomniac Games', 'Ação/Aventura', 169.00, '#HomemAranha #Heroi #Marvel #Console', 'Balance entre arranha-céus, proteja Nova York, seja o herói!', 'É hora de balançar pelas ruas de Nova York como nunca antes! Em Marvel’s Spider-Man, você assume o papel de Peter Parker, já estabelecido como o Homem-Aranha, mas ainda lidando com os desafios da vida cotidiana. Prepare-se para viver uma aventura repleta de ação, onde você vai combater vilões icônicos, desbravar a cidade em uma liberdade impressionante e explorar a história de Peter de uma maneira profunda e emocionante.\r\n\r\nAs batalhas são intensas e frenéticas, mas você também vai se ver em situações mais pessoais e emocionantes, onde as escolhas de Peter impactam sua jornada. Além disso, o jogo traz uma Nova York viva, com ruas movimentadas, prédios altos e oportunidades para fazer o bem, seja combatendo crimes ou ajudando os moradores da cidade.\r\n\r\nCom uma jogabilidade dinâmica, gráficos incríveis e uma narrativa que te prende, Marvel’s Spider-Man é a experiência definitiva de ser o herói. Prepare-se para voar entre os arranha-céus e enfrentar seus maiores inimigos. E lembre-se: “Com grandes poderes, vêm grandes responsabilidades.”                    ', 12),
 (10, 'Uncharted 4: A Thief\'s End', 'Naughty Dog', 'Ação/Aventura', 76.90, '#Tesouro #Aventura #Exploracao', 'Em busca do último tesouro, mas será que a verdade vale mais que a riqueza?', 'Em Uncharted 4, Nathan Drake retorna para sua última aventura, enfrentando dilemas sobre o que realmente importa: tesouros ou a família. Após uma vida cheia de aventuras e descobertas, Nathan tenta se afastar do mundo dos saqueadores, mas o passado nunca fica para trás. Quando um antigo parceiro aparece, ele é puxado para uma busca perigosa por um tesouro perdido que pode mudar tudo.\r\n\r\nO jogo traz cenas de ação de tirar o fôlego, exploração em paisagens deslumbrantes e uma narrativa envolvente que faz você sentir cada emoção dos personagens. A jogabilidade é mais fluida do que nunca, com combates emocionantes e plataformas que desafiam a agilidade do jogador. O visual é cinematográfico, cada cena mais impressionante do que a outra.\r\n\r\nA história de Uncharted 4 é uma despedida épica para Nathan Drake, onde você vai se ver entre as ruínas de civilizações antigas e a luta pela sobrevivência. Prepare-se para emoção, reviravoltas e, claro, muita ação. O fim de uma era está próximo, mas o impacto dessa aventura será eterno.', 13),
 (11, 'Days Gone', 'Bend Studio', 'Sobrevivência', 39.99, '#PosApocalipse #MundoDesolado #Zumbis #Exploracao', 'Em um mundo devastado, a luta pela sobrevivência nunca foi tão intensa', 'Em Days Gone, a Terra foi tomada por hordas de criaturas, e a única regra que importa é: sobreviver. Você joga como Deacon St. John, um ex-motociclista e caçador de recompensas, que navega por um mundo pós-apocalíptico tentando encontrar propósito e redenção. Com paisagens desoladas, criaturas mutantes e grupos de sobreviventes, cada dia é uma batalha constante pela vida.\r\n\r\nA jogabilidade mistura ação, exploração e combate em um cenário aberto, onde suas escolhas realmente importam. Em Days Gone, você não está apenas enfrentando zumbis; as hordas podem ser esmagadoras, e o ambiente selvagem traz um desafio constante, seja com as condições climáticas imprevisíveis ou com os outros humanos, que podem ser tão perigosos quanto os monstros.\r\n\r\nO jogo também é repleto de momentos emocionantes, enquanto Deacon tenta lidar com seu passado e seguir em frente. A história é intensa, a ação, imersiva, e o sentimento de solidão, palpável. Prepare-se para pegar a estrada e lutar por sua sobrevivência em um mundo onde a cada curva pode surgir uma nova ameaça.', 14),
-(12, 'Subnautica', 'Unknown Worlds Ent.', 'Sobrevivência', 351.27, '#Exploracao #Subaquatica #MundoSubmerso #Oceado', 'Explore as profundezas do oceano e descubra os segredos de um planeta alienígena', 'Em Subnautica, o abismo é sua casa e a exploração, sua missão. Após um acidente, você cai em um misterioso planeta oceânico, e a única saída é explorar o fundo do mar para encontrar recursos, construir bases e sobreviver. Com paisagens deslumbrantes, criaturas fantásticas e uma história envolvente, Subnautica oferece uma das experiências de exploração mais imersivas e emocionantes do mundo dos videogames.\r\n\r\nA beleza do jogo vai além de seus gráficos impressionantes: a sensação de estar sozinho em um planeta desconhecido e as decisões que você toma enquanto luta pela sobrevivência são o que realmente tornam Subnautica especial. O oceano é vasto, e o que você encontra pode ser tanto deslumbrante quanto aterrorizante.\r\n\r\nCom uma mistura de exploração, construção e sobrevivência, Subnautica te desafia a desbravar os mares e a desvendar os mistérios que ele esconde. Aventura, perigo e descobertas esperam por você a cada mergulho. Pronto para descer às profundezas?', 15),
+(12, 'Subnautica', 'Unknown Worlds Ent.', 'Sobrevivência', 351.27, '#Exploracao #Subaquatica #MundoSubmerso #Oceado', 'Explore as profundezas do oceano e descubra os segredos de um planeta alienígena', '                                                Em Subnautica, o abismo é sua casa e a exploração, sua missão. Após um acidente, você cai em um misterioso planeta oceânico, e a única saída é explorar o fundo do mar para encontrar recursos, construir bases e sobreviver. Com paisagens deslumbrantes, criaturas fantásticas e uma história envolvente, Subnautica oferece uma das experiências de exploração mais imersivas e emocionantes do mundo dos videogames.\r\n\r\nA beleza do jogo vai além de seus gráficos impressionantes: a sensação de estar sozinho em um planeta desconhecido e as decisões que você toma enquanto luta pela sobrevivência são o que realmente tornam Subnautica especial. O oceano é vasto, e o que você encontra pode ser tanto deslumbrante quanto aterrorizante.\r\n\r\nCom uma mistura de exploração, construção e sobrevivência, Subnautica te desafia a desbravar os mares e a desvendar os mistérios que ele esconde. Aventura, perigo e descobertas esperam por você a cada mergulho. Pronto para descer às profundezas?                                                            ', 15),
 (13, 'The Forest', 'Endnight Games', 'Sobrevivência', 104.90, '#MundoHostil #ConstrucaoEDefesa #CriaturasSombrias #Tensao', 'Sobreviva na selva, mas o verdadeiro perigo pode estar mais perto do que você imagina', 'Em The Forest, a sobrevivência não é apenas sobre caçar e coletar. Após um acidente aéreo, você se vê em uma floresta cheia de perigos inimagináveis, e o objetivo é claro: sobreviver. Mas o que você não sabe é que a floresta esconde segredos mais sombrios do que qualquer ameaça natural. Criaturas monstruosas e canibais aguardam a menor fraqueza, e a cada passo, o ambiente te testa de maneiras inesperadas.\r\n\r\nA verdadeira tensão do jogo vem de sua mistura de sobrevivência, construção e horror psicológico. À medida que você constrói seu abrigo, caça e explora, precisa ficar atento ao comportamento dos inimigos, cujas táticas de ataque podem ser imprevisíveis e mortais. O jogo também é ainda mais intenso quando jogado em modo cooperativo, onde você e seus amigos precisam trabalhar juntos para se proteger dos horrores que a floresta oferece.\r\n\r\nThe Forest é um jogo onde cada noite é um risco e cada decisão pode ser a diferença entre a vida e a morte. A selva está cheia de mistérios que você vai querer desvendar, mas o verdadeiro desafio é: você vai sobreviver?', 16),
 (14, 'EA SPORTS FC 25', 'EA Sports', 'Esportes/Corrida', 299.00, '#Futebol #Jogadores #Competitivo #JogosImersivos', 'Prepare-se para o jogo, onde cada gol conta e a paixão pelo futebol nunca para!', 'EA Sports FC 25 traz o futebol de volta aos seus pés, com uma experiência mais realista e imersiva do que nunca. A cada drible, passe e gol, você sente a emoção de estar no campo, disputando as partidas mais épicas do mundo. Com gráficos melhorados e jogabilidade refinada, o jogo coloca você no controle de suas equipes favoritas, em ligas de todo o planeta.\r\n\r\nO realismo vai além das partidas. O sistema de IA inteligente faz com que cada jogador se mova e reaja de forma única, trazendo uma abordagem mais dinâmica ao jogo. Personalize sua equipe, enfrente adversários em modos desafiadores e crie o seu legado no futebol, seja com seu time dos sonhos ou com estrelas emergentes.\r\n\r\nCom EA Sports FC 25, cada momento é uma oportunidade para provar que você é o melhor. Prepare-se para a ação no campo e leve a paixão do futebol a um novo nível!', 17),
 (15, 'NBA 2K25', 'Visual Concepts', 'Esportes/Corrida', 299.99, '#Basquete #Competitivo #Realismo #Esporte #NBA', 'Comande a quadra, brilhe nos arremessos e crie sua lenda no basquete!', 'NBA 2K25 te coloca no centro da ação, onde cada drible, passe e enterrada podem te transformar em uma lenda. Sinta a emoção do basquete com gráficos ultrarrealistas, mecânicas refinadas e animações tão fluidas que parece um jogo de verdade. Seja no modo MyCareer, construindo sua trajetória desde as quadras de rua até a NBA, ou no modo MyTeam, formando o esquadrão dos seus sonhos, você terá controle total da sua história.\r\n\r\nDesafie amigos, enfrente jogadores do mundo todo ou mergulhe em partidas emocionantes com os maiores ícones do esporte. Novas funcionalidades como modos de temporada dinâmicos e personalizações inéditas trazem mais possibilidades para viver a paixão pelo basquete.\r\n\r\nCom NBA 2K25, a quadra é sua, o jogo é seu, e a vitória está a um arremesso de distância. Prepare-se para dominar o basquete em grande estilo!', 18),
@@ -196,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `tbl_jogo_plataforma` (
   PRIMARY KEY (`id`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_plataforma` (`id_plataforma`)
-) ENGINE=InnoDB AUTO_INCREMENT=377 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=383 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_jogo_plataforma`
@@ -262,8 +262,6 @@ INSERT INTO `tbl_jogo_plataforma` (`id`, `id_jogo`, `id_plataforma`) VALUES
 (227, 45, 3),
 (228, 45, 4),
 (229, 45, 5),
-(230, 12, 1),
-(231, 12, 4),
 (232, 13, 1),
 (233, 13, 2),
 (234, 13, 4),
@@ -356,7 +354,9 @@ INSERT INTO `tbl_jogo_plataforma` (`id`, `id_jogo`, `id_plataforma`) VALUES
 (373, 26, 4),
 (374, 21, 1),
 (375, 21, 2),
-(376, 21, 4);
+(376, 21, 4),
+(381, 12, 1),
+(382, 12, 4);
 
 -- --------------------------------------------------------
 
@@ -400,7 +400,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user_jogo` (
   PRIMARY KEY (`id_compra`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Despejando dados para a tabela `tbl_user_jogo`
@@ -431,7 +431,8 @@ INSERT INTO `tbl_user_jogo` (`id_compra`, `versao`, `id_user`, `id_jogo`, `data_
 (39, 'PLAYSTATION', 36, 21, '2024-11-22'),
 (40, 'COMPUTER', 36, 19, '2024-11-22'),
 (41, 'COMPUTER', 19, 57, '2024-11-24'),
-(42, 'PLAYSTATION', 36, 57, '2024-11-24');
+(42, 'PLAYSTATION', 36, 57, '2024-11-24'),
+(43, 'COMPUTER', 36, 16, '2024-11-28');
 
 -- --------------------------------------------------------
 

@@ -51,36 +51,6 @@
     text-align: center;
 }
 
-.modal-editar{
-    position: fixed;
-    display: none;
-    top: 50vh;
-    left: 50vw;
-    transform: translateX(-50%) translateY(-50%);
-    background-color: var(--cor-primaria);
-    border-radius: 2em;
-    z-index: 20;
-    padding: 3em;
-    height: 70vh;
-    width: 80vw;
-    border: 2px solid var(--cor-terciaria);
-}
-.modal_sair{
-    position: absolute;
-    right: 0.5em;
-    top: 0.5em;
-    font-size: 2rem;
-    color: var(--cor-terciaria);
-    cursor: pointer;
-}
-.modal_sair:active{
-    color: red;
-}
-
-#check-edit:checked + .modal-editar{
-    display: flex;
-}
-
 .user_foto {
     border: 3px double var(--cor-quarta);
     border-radius: 1em;
@@ -93,15 +63,6 @@
     font-size: 12px;
     margin-top: 1em;
 }
-
-/* .user_editar {
-    text-align: center;
-    padding: 0.5em 0;
-    width: 10em;
-    color: var(--cor-primaria);
-    background-color: var(--cor-terciaria);
-} */
-
 
 .user_info{
     display: flex;
@@ -160,7 +121,7 @@
 
 .card-jogo_image{
     aspect-ratio: 1/1;
-    height: 20vh;
+    height: 17vh;
     border-radius: 1em;
     box-shadow: 3px 3px 5px black;
     background-color: black;

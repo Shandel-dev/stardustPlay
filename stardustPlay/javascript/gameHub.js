@@ -4,6 +4,7 @@ const swiperBanner = new Swiper(".swiper-banner", {
     effect: "fade",
     lazy: true,
     loop: true,
+    allowTouchMove: false,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

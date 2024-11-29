@@ -45,7 +45,7 @@
                     <i class="fa-solid fa-circle-xmark"></i>
                 </label>
             </div>
-            <img src="../imgs/printDatabase.png" alt="">
+            <img src="../imgs/db_stardust_logico.png" alt="">
         </span>
 
         <label for="paleta" class="opcoes_item_dev"> <!--quarto item-->
@@ -67,7 +67,7 @@
                     <i class="fa-solid fa-circle-xmark"></i>
                 </label>
             </div>
-            <img src="../imgs/print_pallete.png" alt="Paleta de cores">
+            <img src="../imgs/stardust_pallete_oficial.png" alt="Paleta de cores">
         </span>
     </main>
 

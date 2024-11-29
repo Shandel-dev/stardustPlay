@@ -2,6 +2,10 @@ header{
     position: fixed !important;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 .swiper-jogo{
     height: 100vh;
     width: 100vw;
@@ -13,6 +17,7 @@ header{
     background: linear-gradient(0deg, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 30%);
     opacity: 1;
     transition: 0.3s ease-in-out;
+    overflow: auto;
 }
 
 /*BANNER DO JOGO*/
@@ -34,7 +39,7 @@ header{
     opacity: 0.5;
     bottom: 3%;
     left: 2rem;
-    z-index: 5;
+    z-index: 30;
     color: var(--cor-terciaria);
     text-shadow: 5px 5px 0 black;
     font-size: 3rem;
@@ -84,30 +89,35 @@ header{
 .swiper-slide > section{
     display: flex;
     flex-grow: 1;
-    padding: 2em;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    overflow: auto;
 }
 
 .container-info{
+    padding: 4em;
     flex-direction: column;
     gap: 2em;
     flex-grow: 1;
 }
 
 .container-descricao{
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 10em;
     flex-direction: column;
 }
 
 
 #image-poster{
-    height: 40vh;
+    height: 45vh;
     aspect-ratio: 2/3;
+    border-radius: 0.5rem;
 }
 
 #image-logo{
     height: 10vh;
     width: 10vh;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .info_capa{
@@ -156,7 +166,7 @@ header{
     gap: 1em;
 }
 .plataformas_images img{
-    height: 2em;
+    height: 1.75em;
     aspect-ratio: 1/1;
 }
 
@@ -232,6 +242,7 @@ header{
     align-items: center;
     gap: 4em;
     flex-wrap: wrap;
+    margin-bottom: 6em;
 }
 .descricao-content>div{
     flex: 1 1 20em;
@@ -246,11 +257,12 @@ header{
     font-size: 2em;
     font-family: var(--fonte-titulo);
     text-align: center;
+    padding: 0 3rem;
 }
 .descricao_empresa{
     font-family: var(--fonte-nome);
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     font-size: 1.2em;
 }
 span{
@@ -259,7 +271,7 @@ span{
 
 .descricao_subtitulo{
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-family: var(--fonte-nome);
 }
 
@@ -275,6 +287,7 @@ span{
     aspect-ratio: 16/9;
     border-radius: 1em;
     border: 3px solid var(--cor-primaria);
+    overflow: visible;
 }
 
 .swiper-gallery .swiper-slide{
@@ -285,6 +298,14 @@ span{
 .swiper-gallery-next{
     color: var(--cor-terciaria);
     text-shadow: 5px 5px 8px black;
+}
+.swiper-gallery-prev{
+    left: unset;
+    right: 102%;
+}
+.swiper-gallery-next{
+    right: unset;
+    left: 102%;
 }
 
 .galeria_subtitulo{
@@ -297,9 +318,11 @@ span{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1em;
 }
 .galeria_imgs img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1em;
 }

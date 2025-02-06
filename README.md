@@ -22,7 +22,7 @@ Sou um estudante de desenvolvimento de sistemas, gosto de criar e inovar em prog
 ![Shandel-dev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shandel-dev&show_icons=true&theme=radical)
 
 ## 🔗 Conecte-se comigo
--[Instagram](Indisponível...)
+- [Instagram](Indisponível...)
 - [LinkedIn](Indisponível...)
 - [Portfolio](Indisponível...)
 

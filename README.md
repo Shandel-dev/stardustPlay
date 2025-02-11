@@ -21,4 +21,7 @@ Sou um estudante de desenvolvimento de sistemas, gosto de criar e inovar em prog
 
 ![Shandel-dev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shandel-dev&show_icons=true&theme=radical)
 
-Obrigado por visitar meu perfil! Me siga, veja e colabore com meus projetos.
+## 📄 Licença
+🔒 Este projeto é licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+__Obrigado por visitar meu perfil! Me siga, veja e dê sugestões aos meus projetos.__

@@ -21,17 +21,4 @@ Sou um estudante de desenvolvimento de sistemas, gosto de criar e inovar em prog
 
 ![Shandel-dev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shandel-dev&show_icons=true&theme=radical)
 
-## 🔗 Conecte-se comigo
-- [Instagram](Indisponível...)
-- [LinkedIn](Indisponível...)
-- [Portfolio](Indisponível...)
-
-
-## 🏆 Cosquistas
-
-- Contributed to X open-source projects.
-- Developed Y applications used by Z users.
-- Speaker at A tech conferences.
-
-Thank you for visiting my profile! Let's connect and collaborate on exciting projects.
 Obrigado por visitar meu perfil! Me siga, veja e colabore com meus projetos.

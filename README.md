@@ -22,6 +22,6 @@ Sou um estudante de desenvolvimento de sistemas, gosto de criar e inovar em prog
 ![Shandel-dev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shandel-dev&show_icons=true&theme=radical)
 
 ## 📄 Licença
-🔒 Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](LICENSE.md). Para mais informações, veja o arquivo [LICENSE]([LICENSE.md](https://github.com/Shandel-dev/stardustPlay?tab=License-1-ov-file)).
+🔒 Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](LICENSE.md). Para mais informações, veja o arquivo [LICENSE](https://github.com/Shandel-dev/stardustPlay?tab=License-1-ov-file).
 
 __Obrigado por visitar meu perfil! Me siga, veja e dê sugestões aos meus projetos.__

@@ -55,7 +55,7 @@
             echo "</ul>";
             echo "</div>";
         } else {
-            echo "<a href='signIn' class=link_login><i class='fa-regular fa-circle-user'></i> Fazer Login</a>";
+            echo "<a href='signIn.php' class=link_login><i class='fa-regular fa-circle-user'></i> Fazer Login</a>";
         }
         ?>
     </div>

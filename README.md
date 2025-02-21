@@ -1,27 +1,29 @@
-# Olá, meu nome é Shandel! 👋
+# StarDust Play [emoji aqui]
 
-Sou um estudante de desenvolvimento de sistemas, gosto de criar e inovar em programas, sempre em busca de aperfeiçoar minhas habilidades. Aqui esta um pouco sobre mim:
+StardustPlay é um projeto de desenvolvimento em PHP focado no tema de jogos. O objetivo é criar uma plataforma inovadora e envolvente para os amantes de jogos, oferecendo uma experiência única e imersiva.
 
-## 🚀 Sobre mim
+## 🚀 Autor do projeto
+[Shandel-dev](https://github.com/Shandel-dev)
 
-- 🌱 Atualmente estou estudando novas tecnologias e tendências do momento.
-- 👯 Estou participando de um grupo de projeto de TCC.
-- 💬 Pode me perguntas sobre tecnologias referentes a Web e DataBase.
-- 📫 Caso queira saber mais sobre mim, segue o link @shandel-dev
-- ⚡ Fato curioso: Gosto de jogos e gatos :)
+## WireFrame
+Confira o WireFrame detalhado do projeto no [Canva](algumlink.com)
 
-## 🛠️ Ferramentas e linguagens
+## 🛠️ Tecnologias utilizadas
+- HTML5
+- CSS3
+- JavaScript
+- MySql
+- PHP
 
-- **Linguagens de programação:** JavaScript, PHP, Java & C#
-- **Desenvolvimento Web:** HTML, CSS, JavaScript, AJAX
-- **Bando de dados:** MySQL
-- **Ferramentas e plataformas:** Git, VSCode, Eclipse
-
-## 📈 GitHub Stats
-
-![Shandel-dev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shandel-dev&show_icons=true&theme=radical)
+## Como Executar o Projeto 🚀
+Para executar o projeto localmente:
+1. Clone o repositório: `git clone https://github.com/Shandel-dev/stardustPlay.git`
+2. Navegue até o diretório do projeto: `cd stardustPlay`
+3. Configure o ambiente conforme necessário (ex: configure o servidor web, banco de dados, etc.)
+4. Inicie o servidor local
 
 ## 📄 Licença
 🔒 Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](LICENSE.md). Para mais informações, veja o arquivo [LICENSE](https://github.com/Shandel-dev/stardustPlay?tab=License-1-ov-file).
 
-__Obrigado por visitar meu perfil! Me siga, veja e dê sugestões aos meus projetos.__
+## Agradecimentos 🙌
+Agradecimentos especiais a todos que contribuíram direta ou indiretamente para o desenvolvimento deste projeto. Seu apoio e incentivo foram fundamentais para a realização deste trabalho.

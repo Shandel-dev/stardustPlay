@@ -22,6 +22,12 @@ Para executar o projeto localmente:
 3. Configure o ambiente conforme necessário (ex: configure o servidor web, banco de dados, etc.)
 4. Inicie o servidor local
 
+##Considerações finais
+- Este projeto é público para todos para fins de estudos.
+- Não  é permitido a sua distribuição/modificação para fins comerciais.
+- Para mais informações, segue o arquivo de licença do repositório e termos de uso.
+
+
 ## Licença :bookmark_tabs:
 🔒 Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](LICENSE.md). Para mais informações, veja o arquivo [LICENSE](https://github.com/Shandel-dev/stardustPlay?tab=License-1-ov-file).
 
